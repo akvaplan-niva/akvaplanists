@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-env --allow-net=:8000,support.akvaplan.com server.ts"
+  }
+}
