@@ -49,7 +49,7 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
 
   const en = { title: ad.Title, unit: ad.ExtensionAttribute5 };
   const no = {
-    title: ad.ExtensionAttribute4,
+    title: ad.extensionAttribute4,
     unit: ad.ExtensionAttribute3,
   };
   const intl = { en, no };
