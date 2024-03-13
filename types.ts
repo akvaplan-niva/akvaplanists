@@ -2,7 +2,7 @@ export interface AkvaplanAdPerson {
   ExtensionAttribute1: string;
   ExtensionAttribute2: string;
   ExtensionAttribute3: string;
-  ExtensionAttribute4: string;
+  extensionAttribute4: string;
   ExtensionAttribute5: string;
   sAMAccountName: string;
   GivenName: string;
