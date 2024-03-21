@@ -1,5 +1,8 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-env --allow-net=:8000,support.akvaplan.com server.ts"
-  }
+    "dev": "deno run --watch --env --allow-env --allow-net=:8000,support.akvaplan.com,api.deno.com,us-east4.txnproxy.deno-gcp.net server.ts",
+    "kv_ingest": "deno run --unstable-kv --env --allow-env --allow-net task_kv_ingest.ts",
+    "kv_list": "deno run --unstable-kv --env --allow-env --allow-net task_kv_list.ts"
+  },
+  "unstable": ["kv"]
 }

@@ -4,13 +4,10 @@ import {
   parseNorwegianDate,
   parseWeirdUsDate,
 } from "./crazy_dates.ts";
-import type { AkvaplanAdPerson, Akvaplanist } from "./types.ts";
+import { patches } from "./patches.ts";
+import type { Akvaplanist } from "./types.ts";
+import type { AkvaplanAdPerson } from "./ad_types.ts";
 
-export const patches = new Map([
-  ["aen", { unit: "LEDELS", management: true }],
-  ["odj", { given: "Ólöf Dóra Bartels", family: "Jónsdóttir" }],
-  ["aki", { given: "Albert K. D." }], //Kjartan Dagbjartarson
-]);
 export const countryFromWorkplace = (w: string) => {
   if (/Reykjav[íi]k/ui.test(w)) {
     return "IS";
@@ -25,10 +22,8 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
   const workplace = ad.city === "Reykjavik" ? "Reykjavík" : ad.city.trim();
   const tel = ad.telephoneNumber.replace(/\s/g, "");
   const country = countryFromWorkplace(workplace);
-  const shallowpatch = patches.has(id) ? patches.get(id) : {};
   const management = "LEDELS" === ad.Department ? true : undefined;
   const section = ad.Department;
-
   const created = parseNorwegianDate(ad.whencreated);
   const updated = new Date(cache.headers.get("last-modified") as string);
 
@@ -53,6 +48,7 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
     unit: ad.ExtensionAttribute3,
   };
   const intl = { en, no };
+  const shallowpatch = patches.has(id) ? patches.get(id) : {};
 
   const akvaplanist: Akvaplanist = {
     family,
