@@ -12,6 +12,13 @@ Deno.test(function parseAdTimeTest() {
   );
 });
 
+Deno.test(function parseAdTimeTest2() {
+  assertEquals(
+    parseAdTime(133801596000000000),
+    new Date("2024-12-31T23:00:00.000Z"),
+  );
+});
+
 Deno.test(function parseWeirdUsDateTest() {
   assertEquals(
     parseWeirdUsDate("03/01/0024 01:23:47"),
