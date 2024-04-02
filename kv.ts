@@ -1,6 +1,9 @@
+import { valibotSafeParse } from "./validate.ts";
 import { Akvaplanist, ExpiredAkvaplanist } from "./types.ts";
 
-export const kv = await Deno.openKv();
+export const kv = await Deno.openKv(
+  //"https://api.deno.com/databases/4d8b08fa-92cc-4f38-9abd-ac60b6e755c9/connect",
+);
 
 export const person0 = "person";
 
@@ -20,10 +23,52 @@ export const prefix = [person0];
 export const getAkvaplanist = (id: string) =>
   kv.get<Akvaplanist>([person0, id]);
 
+export const getExpiredAkvaplanist = (id: string) =>
+  kv.get<ExpiredAkvaplanist>([expired0, id]);
+
 export const list = <T>(prefix: Deno.KvKey, options?: Deno.KvListOptions) =>
   kv.list<T>({ prefix }, options);
 
-export const listAkvaplanists = () => kv.list<Akvaplanist>({ prefix });
+export const listAkvaplanists = (options?: Deno.KvListOptions) =>
+  list<Akvaplanist>(prefix, options);
 
-export const listExpiredAkvaplanists = () =>
-  kv.list<ExpiredAkvaplanist>({ prefix: [expired0] });
+export const listExpiredAkvaplanists = (options?: Deno.KvListOptions) =>
+  list<ExpiredAkvaplanist>([expired0], options);
+
+const toExpired = (akvaplanist: Akvaplanist) => {
+  const { id, family, given, from, expired, created, updated } = akvaplanist;
+  return {
+    id,
+    family,
+    given,
+    from,
+    expired,
+    created,
+    updated,
+  } as ExpiredAkvaplanist;
+};
+
+export const setAkvaplanistOperation = (
+  akvaplanist: Akvaplanist,
+  tx: Deno.AtomicOperation,
+) => {
+  const { id, expired, family, given } = akvaplanist;
+  const { success, output, issues } = valibotSafeParse(akvaplanist);
+  if (!success) {
+    const messages = issues.map((i) => i.message);
+    console.error(JSON.stringify({ error: { id, given, family, messages } }));
+  }
+
+  const key = [person0, id];
+  const expkey = [expired0, id];
+
+  if (expired) {
+    const minimal = toExpired(output as Akvaplanist);
+    tx.set(expkey, minimal);
+    if (new Date() > new Date(expired)) {
+      //console.warn("expired", minimal);
+      tx.set(key, minimal);
+    }
+  }
+  return tx.set(key, output);
+};
