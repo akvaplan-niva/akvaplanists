@@ -1,40 +1,56 @@
+import "./cron.ts";
 import { getAkvaplanistsFromAd } from "./fetch.ts";
 import {
   getAkvaplanist,
+  getExpiredAkvaplanist,
   listAkvaplanists,
   listExpiredAkvaplanists,
 } from "./kv.ts";
-import { error, extractParams, ptrn, response } from "./api_helpers.ts";
+import {
+  error,
+  extractParams,
+  ptrn,
+  response,
+  responseFromKvList,
+} from "./api_helpers.ts";
 import type { RequestHandler } from "./types.ts";
 
-async function responseFromKvList<T>(
-  list: Deno.KvListIterator<T>,
-  req: Request,
-) {
-  return response(await Array.fromAsync(list), req);
-}
+const ptrnKvPersonId = ptrn("/kv/person/:id");
+const ptrnKvExpiredId = ptrn("/kv/expired/:id");
 
-const kvPersonPattern = ptrn("/kv/person/:id");
-
-const akvaplanistsInKv = (req: Request) =>
+const listAkvaplanistsInKvHandler = (req: Request) =>
   responseFromKvList(listAkvaplanists(), req);
 
-const oneAkvaplanistInKv = async (req: Request) => {
-  const { id } = extractParams<{ id: string }>(kvPersonPattern, req);
-  return response(await getAkvaplanist(id), req);
+const personInKvHandler = async (req: Request) => {
+  const { id } = extractParams<{ id: string }>(ptrnKvPersonId, req);
+  const apn = await getAkvaplanist(id);
+  if (!apn) {
+    return error(404);
+  }
+  return response(apn, req);
 };
 
-const expiredInKv = (req: Request) =>
+const expiredInKvHandler = async (req: Request) => {
+  const { id } = extractParams<{ id: string }>(ptrnKvExpiredId, req);
+  const apn = await getExpiredAkvaplanist(id);
+  if (!apn) {
+    return error(404);
+  }
+  return response(apn, req);
+};
+
+const listExpiredInKvHandler = (req: Request) =>
   responseFromKvList(listExpiredAkvaplanists(), req);
 
-const akvaplanistsFromAdExport = async (req: Request) =>
+const ListAkvaplanistsInAdExportHandler = async (req: Request) =>
   response(await getAkvaplanistsFromAd(), req);
 
 const handlers = new Map<URLPattern, RequestHandler>([
-  [ptrn("/"), akvaplanistsFromAdExport],
-  [kvPersonPattern, oneAkvaplanistInKv],
-  [ptrn("/kv/person"), akvaplanistsInKv],
-  [ptrn("/kv/expired/:id?"), expiredInKv],
+  [ptrn("/"), ListAkvaplanistsInAdExportHandler],
+  [ptrnKvPersonId, personInKvHandler],
+  [ptrn("/kv/person"), listAkvaplanistsInKvHandler],
+  [ptrnKvExpiredId, expiredInKvHandler],
+  [ptrn("/kv/expired"), listExpiredInKvHandler],
 ]);
 
 const handler = (req: Request) => {
@@ -45,5 +61,4 @@ const handler = (req: Request) => {
   }
   return error(400);
 };
-
 Deno.serve(handler);
