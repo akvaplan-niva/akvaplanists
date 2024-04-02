@@ -1,7 +1,7 @@
 import { fetchAkvaplanists, getAkvaplanistsFromAd } from "./fetch.ts";
 import { cache } from "./cache.ts";
-import { expired0, person0 } from "./kv.ts";
-import type { Akvaplanist, ExpiredAkvaplanist } from "./types.ts";
+import { setAkvaplanistOperation } from "./kv.ts";
+import type { Akvaplanist } from "./types.ts";
 
 // https://www.30secondsofcode.org/js/s/split-array-into-chunks/
 const chunkArray = <T>(arr: T[], size: number) =>
@@ -11,17 +11,17 @@ const chunkArray = <T>(arr: T[], size: number) =>
   );
 
 export const fetchAndIngestAkvaplanists = async (kv: Deno.Kv) => {
-  const { value } = await kv.get(["headers"]);
-  if (value) {
-    const { status } = await fetchAkvaplanists({
-      method: "HEAD",
-      etag: value.etag,
-    });
-    if (304 === status) {
-      console.warn({ status });
-      return;
-    }
+  const { value } = await kv.get<{ etag?: string }>(["headers"]);
+  const response = await fetchAkvaplanists({
+    method: "HEAD",
+    etag: value?.etag,
+  });
+
+  if (![200, 304].includes(response.status)) {
+    console.error("Failed fetching akvaplanists from AD");
+    return;
   }
+
   for (
     const chunk of chunkArray<Akvaplanist>(
       await getAkvaplanistsFromAd(),
@@ -30,29 +30,15 @@ export const fetchAndIngestAkvaplanists = async (kv: Deno.Kv) => {
   ) {
     const tx = kv.atomic();
     for (const akvaplanist of chunk) {
-      const { id, family, given, from, expired, created, updated } =
-        akvaplanist;
-      if (expired) {
-        const minimal: ExpiredAkvaplanist = {
-          id,
-          family,
-          given,
-          from,
-          expired,
-          created,
-          updated,
-        };
-        tx.set([expired0, id], minimal);
-        if (new Date() > new Date(expired)) {
-          console.warn("expired", minimal);
-          tx.set([person0, id], minimal);
-        }
-      } else {
-        tx.set([person0, id], akvaplanist);
-      }
+      setAkvaplanistOperation(akvaplanist, tx);
     }
-    const res = await tx.commit();
-    console.warn(res);
+    const { ok } = await tx.commit();
+    const msg = { commit: { ok, affected: chunk.length } };
+    if (ok) {
+      console.log(msg);
+    } else {
+      console.error(msg);
+    }
   }
   const etag = cache.headers.get("etag");
   const lastMod = cache.headers.get("last-modified") as string;
