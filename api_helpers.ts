@@ -19,3 +19,8 @@ export const ndjsonResponse = (arr: unknown[]) =>
   new Response(arr?.map((a) => JSON.stringify(a)).join("\n"), {
     headers: { "content-type": "text/plain; charset=utf8" },
   });
+
+export const responseFromKvList = async <T>(
+  list: Deno.KvListIterator<T>,
+  req: Request,
+) => response(await Array.fromAsync(list), req);
