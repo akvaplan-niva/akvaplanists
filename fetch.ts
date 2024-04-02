@@ -2,9 +2,8 @@ import { cache } from "./cache.ts";
 import { generateAkvaplanistsFromCrazyDatesAdStream } from "./ad.ts";
 import type { Akvaplanist } from "./types.ts";
 
-import { CsvParseStream } from "https://deno.land/std@0.217.0/csv/csv_parse_stream.ts";
-import { toTransformStream } from "https://deno.land/std@0.217.0/streams/to_transform_stream.ts";
-
+import { CsvParseStream } from "@std/csv";
+import { toTransformStream } from "@std/streams";
 export const fetchAkvaplanists = async (
   { etag = "", method = "GET" }: { etag?: string; method?: "GET" | "HEAD" },
 ) =>
