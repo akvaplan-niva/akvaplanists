@@ -2,6 +2,7 @@ export interface Akvaplanist {
   given: string;
   family: string;
   position: IntlString;
+  responsibility?: IntlString;
   tel: string;
   section: string;
   management: true | undefined;
