@@ -1,25 +1,20 @@
 export interface Akvaplanist {
   given: string;
   family: string;
-  intl: AkvaplanistIntl;
+  position: IntlString;
   tel: string;
   section: string;
   management: true | undefined;
   workplace: string;
   country: string;
   id: string;
-  from: Date | string;
-  expired: Date | string;
+  from?: Date | string;
+  expired?: Date | string;
   created: Date | string;
   updated: Date | string;
 }
-interface AkvaplanistIntl {
-  [lang: string]: AkvaplanistIntlRecord;
-}
-
-interface AkvaplanistIntlRecord {
-  title: string;
-  unit: string;
+interface IntlString {
+  [lang: string]: string;
 }
 
 export type ExpiredAkvaplanist = Pick<
