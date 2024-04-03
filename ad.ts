@@ -42,6 +42,10 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
 
   const from = parseWeirdUsDate(ad.APNStartDate);
   const position = { en: ad.Title, no: ad.extensionAttribute4 };
+
+  const responsibility = "LEDELS" === section
+    ? { en: ad.ExtensionAttribute5, no: ad.ExtensionAttribute3 }
+    : undefined;
   const shallowpatch = patches.has(id) ? patches.get(id) : {};
 
   const akvaplanist: Akvaplanist = {
@@ -51,6 +55,7 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
     tel,
     workplace,
     country,
+    responsibility,
     section,
     management,
     position,
