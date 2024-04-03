@@ -12,13 +12,7 @@ import {
   string,
 } from "valibot";
 import { Akvaplanist } from "./types.ts";
-
-// https://github.com/fabian-hiller/valibot/issues/454#issuecomment-1646864414
-// const blankOrMinLength = (n: number) =>
-//   coerce(
-//     nullable(string([minLength(n)])),
-//     (input) => (typeof input === "string" && input.trim()) || null,
-//   );
+import { offices, sections } from "./constants.ts";
 
 const stringSet = (set: Set<string>, name = "member") =>
   string([
@@ -29,27 +23,27 @@ const stringSet = (set: Set<string>, name = "member") =>
     ),
   ]);
 
-const sections = new Set<string>(JSON.parse(
-  `["BIOLT","DIGIS","FILOG","FISK","INNOV","INSPM","KJEMI","LEDELS","MILPÅ","OSEAN","PRODB","SENSE","STABS","UTRED","ØKOSY"]`,
-));
-const offices = new Set<string>(JSON.parse(
-  `["Alta","Bergen","Bodø","Oslo","Reykjavík","Ski","Stord","Tromsø","Trondheim"]`,
-));
-
 const id = string([length(3)]);
 const given = string([minLength(2), maxLength(64)]);
 const family = string([minLength(2), maxLength(64)]);
 const section = stringSet(sections, "section");
 const workplace = stringSet(offices, "workplace");
-const IntlSchema = object({
-  title: string([
-    minLength(3, "Missing: intl position (job title)"),
-    maxLength(64),
-  ]),
-  unit: string([minLength(0, "Missing: intl unit"), maxLength(64)]),
-});
+const positionSchema = string([
+  minLength(3, "Missing: intl position (job title)"),
+  maxLength(64),
+]);
 
-const intl = object({ en: IntlSchema, no: IntlSchema });
+const responsibilitySchema = string([
+  minLength(3, "Missing: intl responsibility"),
+  maxLength(64),
+]);
+
+const position = object({ en: positionSchema, no: positionSchema });
+
+const responsibility = optional(object({
+  en: responsibilitySchema,
+  no: responsibilitySchema,
+}));
 
 const AkvaplanistSchema = object({
   id,
@@ -64,16 +58,16 @@ const AkvaplanistSchema = object({
   from: optional(date()),
   expired: optional(date()),
   management: optional(boolean()),
-  intl,
+  position,
+  responsibility,
 });
 
-const ExpiredAkvaplanistSchema = object({
-  id,
-  given,
-  family,
-});
-
-//type Akvaplanist2 = Output<typeof AkvaplanistSchema>; // { email: string; password: string }
+// const ExpiredAkvaplanistSchema = object({
+//   id,
+//   given,
+//   family,
+// });
+//type Akvaplanist2 = Output<typeof AkvaplanistSchema>;
 
 export const valibotParse = (akvaplanist: Akvaplanist) => {
   try {

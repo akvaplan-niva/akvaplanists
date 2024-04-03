@@ -11,7 +11,7 @@ export const expired0 = "expired";
 
 export const prefix = [person0];
 
-// export const delete = async (prefix: Deno.KvKey) => {
+// export const deleteByPrefix = async (prefix: Deno.KvKey) => {
 //   const tx = kv.atomic();
 //   for await (const { key } of kv.list({ prefix })) {
 //     tx.delete(key);
@@ -64,10 +64,15 @@ export const setAkvaplanistOperation = (
 
   if (expired) {
     const minimal = toExpired(output as Akvaplanist);
-    tx.set(expkey, minimal);
+    kv.get(expkey).then(({ versionstamp }) => {
+      if (!versionstamp) {
+        tx.set(expkey, minimal);
+        console.warn("Adding expired", expkey, minimal);
+      }
+    });
+    // Delete regular record after expiration
     if (new Date() > new Date(expired)) {
-      //console.warn("expired", minimal);
-      tx.set(key, minimal);
+      tx.delete(key);
     }
   }
   return tx.set(key, output);

@@ -1,11 +1,16 @@
 import "./cron.ts";
+
 import { getAkvaplanistsFromAd } from "./fetch.ts";
+
+import { sectionList } from "./constants.ts";
+
 import {
   getAkvaplanist,
   getExpiredAkvaplanist,
   listAkvaplanists,
   listExpiredAkvaplanists,
 } from "./kv.ts";
+
 import {
   error,
   extractParams,
@@ -13,6 +18,7 @@ import {
   response,
   responseFromKvList,
 } from "./api_helpers.ts";
+
 import type { RequestHandler } from "./types.ts";
 
 const ptrnKvPersonId = ptrn("/kv/person/:id");
@@ -45,12 +51,18 @@ const listExpiredInKvHandler = (req: Request) =>
 const ListAkvaplanistsInAdExportHandler = async (req: Request) =>
   response(await getAkvaplanistsFromAd(), req);
 
+const getSections = async () => await sectionList;
+
+const listSectionsHandler = async (req: Request) =>
+  response(await getSections(), req);
+
 const handlers = new Map<URLPattern, RequestHandler>([
   [ptrn("/"), ListAkvaplanistsInAdExportHandler],
   [ptrnKvPersonId, personInKvHandler],
   [ptrn("/kv/person"), listAkvaplanistsInKvHandler],
   [ptrnKvExpiredId, expiredInKvHandler],
   [ptrn("/kv/expired"), listExpiredInKvHandler],
+  [ptrn("/section"), listSectionsHandler],
 ]);
 
 const handler = (req: Request) => {
