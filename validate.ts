@@ -33,7 +33,17 @@ const positionSchema = string([
   maxLength(64),
 ]);
 
+const responsibilitySchema = string([
+  minLength(3, "Missing: intl responsibility"),
+  maxLength(64),
+]);
+
 const position = object({ en: positionSchema, no: positionSchema });
+
+const responsibility = optional(object({
+  en: responsibilitySchema,
+  no: responsibilitySchema,
+}));
 
 const AkvaplanistSchema = object({
   id,
@@ -49,6 +59,7 @@ const AkvaplanistSchema = object({
   expired: optional(date()),
   management: optional(boolean()),
   position,
+  responsibility,
 });
 
 // const ExpiredAkvaplanistSchema = object({
