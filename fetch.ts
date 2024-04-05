@@ -23,19 +23,24 @@ export const getAkvaplanistsFromAd = async () => {
   if (head.status === 200) {
     console.warn(200);
     const res = await fetchAkvaplanists({ method: "GET", etag });
-    cache.headers.set("etag", res.headers.get("etag") ?? "");
-    cache.headers.set("last-modified", res.headers.get("last-modified") ?? "");
-
-    const body = res.body
-      .pipeThrough(new TextDecoderStream())
-      .pipeThrough(new CsvParseStream({ skipFirstRow: true }))
-      .pipeThrough(
-        toTransformStream(generateAkvaplanistsFromCrazyDatesAdStream),
+    if (res.status === 200 && res.body) {
+      cache.headers.set("etag", res.headers.get("etag") ?? "");
+      cache.headers.set(
+        "last-modified",
+        res.headers.get("last-modified") ?? "",
       );
 
-    cache.people = (await Array.fromAsync(
-      body,
-    )).sort(sortFamilyGiven);
+      const body = res.body
+        .pipeThrough(new TextDecoderStream())
+        .pipeThrough(new CsvParseStream({ skipFirstRow: true }))
+        .pipeThrough(
+          toTransformStream(generateAkvaplanistsFromCrazyDatesAdStream),
+        );
+
+      cache.people = (await Array.fromAsync(
+        body,
+      )).sort(sortFamilyGiven);
+    }
   } else if (head.status === 304) {
     console.warn(304);
   }
