@@ -19,8 +19,10 @@ const sortFamilyGiven = (a: Akvaplanist, b: Akvaplanist) =>
 
 export const getAkvaplanistsFromAd = async () => {
   const etag = cache.headers.get("etag") ?? "";
-  const res = await fetchAkvaplanists({ etag });
-  if (res.status !== 304 && res.body) {
+  const head = await fetchAkvaplanists({ method: "HEAD", etag });
+  if (head.status === 200) {
+    console.warn(200);
+    const res = await fetchAkvaplanists({ method: "GET", etag });
     cache.headers.set("etag", res.headers.get("etag") ?? "");
     cache.headers.set("last-modified", res.headers.get("last-modified") ?? "");
 
@@ -34,9 +36,11 @@ export const getAkvaplanistsFromAd = async () => {
     cache.people = (await Array.fromAsync(
       body,
     )).sort(sortFamilyGiven);
+  } else if (head.status === 304) {
+    console.warn(304);
   }
   if (!cache.people) {
-    throw "Failed getting people";
+    throw "Failed getting Akvaplanists";
   }
   return cache.people;
 };
