@@ -11,11 +11,11 @@ export const expired0 = "expired";
 
 export const prefix = [person0];
 
-// export const deleteByPrefix = async (prefix: Deno.KvKey) => {
+// export const deletePrefix = async (prefix: Deno.KvKey) => {
 //   const tx = kv.atomic();
 //   for await (const { key } of kv.list({ prefix })) {
+//     console.warn("DELETE", key);
 //     tx.delete(key);
-//     console.warn("delete", { key });
 //   }
 //   tx.commit();
 // };
@@ -26,14 +26,16 @@ export const getAkvaplanist = (id: string) =>
 export const getExpiredAkvaplanist = (id: string) =>
   kv.get<ExpiredAkvaplanist>([expired0, id]);
 
-export const list = <T>(prefix: Deno.KvKey, options?: Deno.KvListOptions) =>
-  kv.list<T>({ prefix }, options);
+export const listPrefix = <T>(
+  prefix: Deno.KvKey,
+  options?: Deno.KvListOptions,
+) => kv.list<T>({ prefix }, options);
 
 export const listAkvaplanists = (options?: Deno.KvListOptions) =>
-  list<Akvaplanist>(prefix, options);
+  listPrefix<Akvaplanist>(prefix, options);
 
 export const listExpiredAkvaplanists = (options?: Deno.KvListOptions) =>
-  list<ExpiredAkvaplanist>([expired0], options);
+  listPrefix<ExpiredAkvaplanist>([expired0], options);
 
 const toExpired = (akvaplanist: Akvaplanist) => {
   const { id, family, given, from, expired, created, updated } = akvaplanist;
@@ -48,32 +50,52 @@ const toExpired = (akvaplanist: Akvaplanist) => {
   } as ExpiredAkvaplanist;
 };
 
-export const setAkvaplanistOperation = (
+export const setAkvaplanistTx = async (
   akvaplanist: Akvaplanist,
   tx: Deno.AtomicOperation,
 ) => {
-  const { id, expired, family, given } = akvaplanist;
-  const { success, output, issues } = valibotSafeParse(akvaplanist);
+  const { success, issues } = valibotSafeParse(akvaplanist);
   if (!success) {
     const messages = issues.map((i) => i.message);
-    console.error(JSON.stringify({ error: { id, given, family, messages } }));
+    console.error(
+      JSON.stringify({ error: { input: akvaplanist, messages } }),
+    );
   }
-
+  const { id, expired } = akvaplanist;
   const key = [person0, id];
-  const expkey = [expired0, id];
+  if (!expired) {
+    tx.set(key, akvaplanist);
+  } else {
+    const expkey = [expired0, id];
 
-  if (expired) {
-    const minimal = toExpired(output as Akvaplanist);
-    kv.get(expkey).then(({ versionstamp }) => {
-      if (!versionstamp) {
-        tx.set(expkey, minimal);
-        console.warn("Adding expired", expkey, minimal);
-      }
-    });
-    // Delete regular record after expiration
-    if (new Date() > new Date(expired)) {
+    // INSERT expired record
+    const { versionstamp } = await kv.get(expkey);
+    if (!versionstamp) {
+      const minimal = toExpired(akvaplanist);
+      console.warn("INSERT", expkey, minimal);
+      tx.set(expkey, akvaplanist);
+    }
+    // DELETE regular record after expiration
+    if (new Date() >= new Date(expired)) {
+      console.warn("DELETE", key, "expired", expired);
       tx.delete(key);
+    } else {
+      tx.set(key, akvaplanist);
     }
   }
-  return tx.set(key, output);
+};
+
+export const setAkvaplanists = async (chunk: Akvaplanist[]) => {
+  const tx = kv.atomic();
+  for await (const akvaplanist of chunk) {
+    await setAkvaplanistTx(akvaplanist, tx);
+  }
+  await tx.commit();
+  // const { ok } = await tx.commit();
+  // const msg = { commit: { ok, affected: chunk.length } };
+  // if (ok) {
+  //   console.warn(msg);
+  // } else {
+  //   console.error(msg);
+  // }
 };
