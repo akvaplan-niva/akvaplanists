@@ -9,17 +9,14 @@ export const person0 = "person";
 
 export const expired0 = "expired";
 
-export const prefix = [person0];
-
-// export const deletePrefix = async (prefix: Deno.KvKey) => {
-//   const tx = kv.atomic();
-//   for await (const { key } of kv.list({ prefix })) {
-//     console.warn("DELETE", key);
-//     tx.delete(key);
-//   }
-//   tx.commit();
-// };
-
+export async function* prefix(
+  prefix: Deno.KvKey,
+  options: Deno.KvListOptions,
+) {
+  for await (const entry of kv.list({ prefix }, options)) {
+    yield entry;
+  }
+}
 export const getAkvaplanist = (id: string) =>
   kv.get<Akvaplanist>([person0, id]);
 
@@ -32,7 +29,7 @@ export const listPrefix = <T>(
 ) => kv.list<T>({ prefix }, options);
 
 export const listAkvaplanists = (options?: Deno.KvListOptions) =>
-  listPrefix<Akvaplanist>(prefix, options);
+  listPrefix<Akvaplanist>([person0], options);
 
 export const listExpiredAkvaplanists = (options?: Deno.KvListOptions) =>
   listPrefix<ExpiredAkvaplanist>([expired0], options);
