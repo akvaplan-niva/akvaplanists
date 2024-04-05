@@ -29,14 +29,11 @@ const family = string([minLength(2), maxLength(64)]);
 const section = stringSet(sections, "section");
 const workplace = stringSet(offices, "workplace");
 const positionSchema = string([
-  minLength(3, "Missing: intl position (job title)"),
+  //minLength(3, "Missing: intl position (job title)"),
   maxLength(64),
 ]);
 
-const responsibilitySchema = string([
-  minLength(3, "Missing: intl responsibility"),
-  maxLength(64),
-]);
+const responsibilitySchema = string([maxLength(64)]);
 
 const position = object({ en: positionSchema, no: positionSchema });
 
