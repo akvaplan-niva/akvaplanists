@@ -2,7 +2,7 @@ import { valibotSafeParse } from "./validate.ts";
 import { Akvaplanist, ExpiredAkvaplanist } from "./types.ts";
 
 export const kv = await Deno.openKv(
-  //"https://api.deno.com/databases/4d8b08fa-92cc-4f38-9abd-ac60b6e755c9/connect",
+  "https://api.deno.com/databases/4d8b08fa-92cc-4f38-9abd-ac60b6e755c9/connect",
 );
 
 export const person0 = "person";
@@ -60,12 +60,12 @@ export const setAkvaplanistTx = async (
   }
   const { id, expired } = akvaplanist;
   const key = [person0, id];
+
   if (!expired) {
     tx.set(key, akvaplanist);
   } else {
-    const expkey = [expired0, id];
-
     // INSERT expired record
+    const expkey = [expired0, id];
     const { versionstamp } = await kv.get(expkey);
     if (!versionstamp) {
       const minimal = toExpired(akvaplanist);
@@ -74,8 +74,11 @@ export const setAkvaplanistTx = async (
     }
     // DELETE regular record after expiration
     if (new Date() >= new Date(expired)) {
-      console.warn("DELETE", key, "expired", expired);
-      tx.delete(key);
+      const { versionstamp, value } = await kv.get(key);
+      if (versionstamp) {
+        console.warn("DELETE (expired)", key, value);
+        tx.delete(key);
+      }
     } else {
       tx.set(key, akvaplanist);
     }
