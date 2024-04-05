@@ -21,7 +21,6 @@ export const getAkvaplanistsFromAd = async () => {
   const etag = cache.headers.get("etag") ?? "";
   const head = await fetchAkvaplanists({ method: "HEAD", etag });
   if (head.status === 200) {
-    console.warn(200);
     const res = await fetchAkvaplanists({ method: "GET", etag });
     if (res.status === 200 && res.body) {
       cache.headers.set("etag", res.headers.get("etag") ?? "");
