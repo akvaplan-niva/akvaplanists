@@ -5,4 +5,5 @@ export const patches = new Map([
   ["skc", { from: new Date("1992-01-01T12:00:00Z") }],
   ["ref", { section: "INNOV" }],
   ["kkr", { workplace: "Tromsø" }],
+  ["per", { given: "Paul E." }],
 ]);
