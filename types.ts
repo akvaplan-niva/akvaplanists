@@ -1,6 +1,7 @@
 export interface Akvaplanist {
-  given: string;
+  id: string;
   family: string;
+  given: string;
   position: IntlString;
   responsibility?: IntlString;
   tel: string;
@@ -8,7 +9,6 @@ export interface Akvaplanist {
   management: true | undefined;
   workplace: string;
   country: string;
-  id: string;
   from?: Date | string;
   expired?: Date | string;
   created: Date | string;
