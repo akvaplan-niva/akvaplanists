@@ -89,7 +89,6 @@ export const setAkvaplanists = async (chunk: Akvaplanist[]) => {
     //console.debug(akvaplanist);
     await setAkvaplanistTx(akvaplanist, tx);
   }
-  await tx.commit();
   const { ok } = await tx.commit();
   const msg = { commit: { ok, affected: chunk.length } };
   if (ok) {
