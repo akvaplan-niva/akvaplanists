@@ -10,7 +10,7 @@ import {
   parse,
   safeParse,
   string,
-} from "valibot";
+} from "@valibot/valibot";
 import { Akvaplanist } from "./types.ts";
 import { offices, sections } from "./constants.ts";
 

@@ -48,7 +48,7 @@ const expiredInKvHandler = async (req: Request) => {
 const listExpiredInKvHandler = (req: Request) =>
   responseFromKvList(listExpiredAkvaplanists(), req);
 
-const ListAkvaplanistsInAdExportHandler = async (req: Request) =>
+const listAkvaplanistsInAdExportHandler = async (req: Request) =>
   response(await getAkvaplanistsFromAd(), req);
 
 const getSections = async () => await sectionList;
@@ -57,7 +57,7 @@ const listSectionsHandler = async (req: Request) =>
   response(await getSections(), req);
 
 const handlers = new Map<URLPattern, RequestHandler>([
-  [ptrn("/"), ListAkvaplanistsInAdExportHandler],
+  [ptrn("/"), listAkvaplanistsInAdExportHandler],
   [ptrnKvPersonId, personInKvHandler],
   [ptrn("/kv/person"), listAkvaplanistsInKvHandler],
   [ptrnKvExpiredId, expiredInKvHandler],
