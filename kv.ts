@@ -73,7 +73,8 @@ export const setAkvaplanistTx = async (
       const expkey = [expired0, id];
       const minimal = toExpired(akvaplanist);
       console.warn("INSERT", expkey, minimal);
-      atomic.check({ key, versionstamp: null })
+      atomic
+        .check({ key: expkey, versionstamp: null })
         .set(expkey, minimal);
 
       // COMMIT
