@@ -29,7 +29,7 @@ const family = string([minLength(2), maxLength(64)]);
 const section = stringSet(sections, "section");
 const workplace = stringSet(offices, "workplace");
 const positionSchema = string([
-  //minLength(3, "Missing: intl position (job title)"),
+  minLength(2, "Missing: intl position (job title)"),
   maxLength(64),
 ]);
 
@@ -57,6 +57,8 @@ const AkvaplanistSchema = object({
   management: optional(boolean()),
   position,
   responsibility,
+  orcid: optional(string()),
+  openalex: optional(string()),
 });
 
 // const ExpiredAkvaplanistSchema = object({
