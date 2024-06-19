@@ -57,8 +57,8 @@ const AkvaplanistSchema = object({
   management: optional(boolean()),
   position,
   responsibility,
-  orcid: optional(string()),
-  openalex: optional(string()),
+  // orcid: optional(string()),
+  // openalex: optional(string()),
 });
 
 // const ExpiredAkvaplanistSchema = object({

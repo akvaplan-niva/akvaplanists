@@ -47,6 +47,8 @@ export const patches = new Map([
   //
   ["aen", { management: true }],
   ["aki", { given: "Albert K. D.", openalex: "A5029634972" }],
+  ["fma", { workplace: "Sortland" }],
+  ["lla", { workplace: "Sortland" }],
   ["odj", {
     given: "Ólöf Dóra Bartels",
     family: "Jónsdóttir",

@@ -2,7 +2,7 @@ export const sections = new Set<string>(JSON.parse(
   `["BIOLT","DIGIS","FILOG","FISK","INNOV","INSPM","KJEMI","LEDELS","MILPÅ","OSEAN","PRODB","SENSE","STABS","UTRED","ØKOSY"]`,
 ));
 export const offices = new Set<string>(JSON.parse(
-  `["Alta","Bergen","Bodø","Oslo","Reykjavík","Ski","Stord","Tromsø","Trondheim"]`,
+  `["Alta","Bergen","Bodø","Oslo","Reykjavík","Ski","Sortland", "Stord","Tromsø","Trondheim"]`,
 ));
 
 const EN = new Map([
