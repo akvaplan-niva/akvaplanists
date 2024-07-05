@@ -15,6 +15,22 @@ export const countryFromWorkplace = (w: string) => {
   return "NO";
 };
 
+const getExpiredTimeOrUndefinedIfInFuture = (
+  ad: AkvaplanAdPerson,
+) => {
+  const accountExpires = ad.accountExpires === "0"
+    ? 0
+    : Number(ad.accountExpires);
+
+  const _expired = accountExpires > 0 && accountExpires < 9e18
+    ? parseAdTime(accountExpires)
+    : undefined;
+
+  return _expired && _expired.getTime() < new Date().getTime()
+    ? _expired
+    : undefined;
+};
+
 export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
   const id = ad.sAMAccountName.trim().toLowerCase();
   const family = ad.Sn.trim();
@@ -28,18 +44,7 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
   const updated = new Date(cache.headers.get("last-modified") as string);
 
   // Only expose expired if it's in the past (ie. prior employee)
-  const accountExpires = ad.accountExpires === "0"
-    ? 0
-    : Number(ad.accountExpires);
-
-  const _expired = accountExpires > 0 && accountExpires < 9e18
-    ? parseAdTime(accountExpires)
-    : undefined;
-
-  const expired = _expired && _expired.getTime() < new Date().getTime()
-    ? _expired
-    : undefined;
-
+  const expired = getExpiredTimeOrUndefinedIfInFuture(ad);
   const from = parseWeirdUsDate(ad.APNStartDate);
   const position = { en: ad.Title, no: ad.extensionAttribute4 };
 
