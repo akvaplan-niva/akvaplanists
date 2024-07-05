@@ -6,13 +6,15 @@ export interface Akvaplanist {
   responsibility?: IntlString;
   tel: string;
   section: string;
-  management: true | undefined;
+  management?: true | false | null;
   workplace: string;
   country: string;
   from?: Date | string;
   expired?: Date | string;
   created: Date | string;
   updated: Date | string;
+  orcid?: string | null;
+  openalex?: string | null;
 }
 interface IntlString {
   [lang: string]: string;

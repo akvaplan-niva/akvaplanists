@@ -1,10 +1,12 @@
+import type { Akvaplanist } from "./types.ts";
+
 // "openalex" resolve at https://api.openalex.org/people/{openalex}
 // "orcid" resolve at https://orcid.org/{orcid}
-
-//$ cat current_expired_priors.ndjson akvaplanists_in_openalex.ndjson \
+// Created from OpenAlex
+// $ cat current_expired_priors.ndjson akvaplanists_in_openalex.ndjson \
 // | nd-map '{display_name,family,given}=d, name=display_name ?? given+" "+family, {name,...d}' | nd-group d.name | nd-filter 'd[1].length>1' | nd-map 'Object.assign(d[1][0],d[1][1])' | nd-sort --on given | nd-sort --on family | nd-map --select id,orcid,openalex | nd-map '{id,...r}=d, [id,r]' | sort | nd-group 1
 
-export const patches = new Map([
+const externalIdentities: [string, Partial<Akvaplanist>][] = [
   ["aev", { "orcid": "0000-0003-2881-2388", "openalex": "A5069781805" }],
   ["anb", { "orcid": null, "openalex": "A5043667853" }],
   ["asa", { "orcid": null, "openalex": "A5003744506" }],
@@ -16,8 +18,6 @@ export const patches = new Map([
   ["eva", { "orcid": null, "openalex": "A5027101557" }],
   ["frb", { "orcid": null, "openalex": "A5061241408" }],
   ["gnc", { "orcid": null, "openalex": "A5082125560" }],
-  // ["gwl", { "orcid": null, "openalex": null }],
-  // ["ihw", { "orcid": null, "openalex": null }],
   ["jlc", { "orcid": null, "openalex": "A5017034272" }],
   ["kba", { "orcid": "0000-0003-0669-0260", "openalex": "A5004934736" }],
   ["ksa", { "orcid": null, "openalex": "A5076035177" }],
@@ -28,23 +28,20 @@ export const patches = new Map([
   ["mlc", { "orcid": "0000-0002-1530-6016", "openalex": "A5065410394" }],
   ["maa", { "orcid": "0000-0002-1470-2383", "openalex": "A5029495039" }],
   ["oan", { "orcid": "0000-0002-6139-4088", "openalex": "A5027876546" }],
-  //["odj", { "orcid": null, "openalex": "A5072969625"}],
   ["pbl", { "orcid": "0000-0002-5919-0246", "openalex": "A5060575896" }],
-  //["per", { "orcid": "0000-0003-3821-5974", "openalex": "A5053761479" }],
   ["pgh", { "orcid": null, "openalex": "A5071685890" }],
   ["qin", { "orcid": "0000-0002-1706-1948", "openalex": "A5029882487" }],
   ["rap", { "orcid": null, "openalex": "A5061436403" }],
-  //["ref", { "orcid": null, "openalex": null }],
   ["sam", { "orcid": "0000-0002-0183-2314", "openalex": "A5090781270" }],
   ["sda", { "orcid": null, "openalex": "A5061407088" }],
-  //["sdo", { "orcid": null, "openalex": null }],
   ["sgu", { "orcid": null, "openalex": "A5021608102" }],
-  //["skc", { "orcid": null, "openalex": "A5013860772" }],
   ["sta", { "orcid": null, "openalex": "A5045949568" }],
   ["tbo", { "orcid": null, "openalex": "A5051099438" }],
   ["tmj", { "orcid": null, "openalex": "A5020580681" }],
-  //["vre", { "orcid": null, "openalex": null }],
-  //
+  ["xwa", { "orcid": "0000-0002-4255-5106", "openalex": "A5008225300" }],
+];
+
+const manualPatches: [string, Partial<Akvaplanist>][] = [
   ["aen", { management: true }],
   ["aki", { given: "Albert K. D.", openalex: "A5029634972" }],
   ["fma", { workplace: "Sortland" }],
@@ -66,4 +63,9 @@ export const patches = new Map([
     "orcid": "0000-0003-3821-5974",
     "openalex": "A5053761479",
   }],
+];
+
+export const patches = new Map([
+  ...externalIdentities,
+  ...manualPatches,
 ]);
