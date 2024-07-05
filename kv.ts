@@ -1,8 +1,9 @@
 import { valibotSafeParse } from "./validate.ts";
 import { Akvaplanist, ExpiredAkvaplanist } from "./types.ts";
+import { ndjson } from "./cli_helpers.ts";
 
 export const kv = await Deno.openKv(
-  //"https://api.deno.com/databases/4d8b08fa-92cc-4f38-9abd-ac60b6e755c9/connect",
+  "https://api.deno.com/databases/4d8b08fa-92cc-4f38-9abd-ac60b6e755c9/connect",
 );
 
 export const person0 = "person";
@@ -58,28 +59,39 @@ export const setAkvaplanistTx = async (
       JSON.stringify({ error: { input: akvaplanist, messages } }),
     );
   } else {
-    const { id, expired } = akvaplanist;
+    const { id, expired, family, given } = akvaplanist;
     const key = [person0, id];
+    const expiredkey = [expired0, id];
 
     if (expired && new Date() >= new Date(expired)) {
       // BEGIN
       const atomic = kv.atomic();
 
       // DELETE regular record
-      console.warn("DELETE", key);
+      // console.warn("DELETE", key);
       atomic.delete(key);
 
       // INSERT expired record
-      const expkey = [expired0, id];
       const minimal = toExpired(akvaplanist);
-      console.warn("INSERT", expkey, minimal);
+      //console.warn("INSERT", expiredkey, minimal);
       atomic
-        .check({ key: expkey, versionstamp: null })
-        .set(expkey, minimal);
+        .check({ key: expiredkey, versionstamp: null })
+        .set(expiredkey, minimal);
 
       // COMMIT
       await atomic.commit();
     } else {
+      const { versionstamp, value } = await getExpiredAkvaplanist(id);
+      if (versionstamp) {
+        console.warn("Also in expired", akvaplanist, value);
+        if (value.family === family && value.given === given) {
+          // console.warn("Deleting no-longer expired person", expiredkey, {
+          //   family,
+          //   given,
+          // });
+          // console.warn(await kv.delete(expiredkey));
+        }
+      }
       tx.set(key, akvaplanist);
     }
   }
@@ -98,3 +110,30 @@ export const setAkvaplanists = async (chunk: Akvaplanist[]) => {
     console.error(msg);
   }
 };
+
+export const listTask = async () => {
+  for await (const akvaplanist of listAkvaplanists()) {
+    ndjson(akvaplanist);
+  }
+};
+
+export const listExpiredTask = async () => {
+  for await (const akvaplanist of listExpiredAkvaplanists()) {
+    ndjson(akvaplanist);
+  }
+};
+
+if (import.meta.main) {
+  const [action] = Deno.args;
+  switch (action) {
+    case "list":
+    case "person":
+      await listTask();
+      break;
+    case "expired":
+      await listExpiredTask();
+      break;
+    default:
+      throw "Unknown action";
+  }
+}
