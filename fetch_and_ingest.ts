@@ -1,4 +1,4 @@
-import { getAkvaplanistsFromAd } from "./fetch.ts";
+import { getAkvaplanistStreamFromAdCsvExport } from "./fetch.ts";
 import { setAkvaplanists } from "./kv.ts";
 import type { Akvaplanist } from "./types.ts";
 
@@ -12,7 +12,7 @@ const chunkArray = <T>(arr: T[], size: number) =>
 export const fetchAndIngestAkvaplanists = async () => {
   for await (
     const chunk of chunkArray<Akvaplanist>(
-      await getAkvaplanistsFromAd(),
+      await getAkvaplanistStreamFromAdCsvExport(),
       50,
     )
   ) {

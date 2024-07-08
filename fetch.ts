@@ -17,7 +17,7 @@ const { compare } = new Intl.Collator("no");
 const sortFamilyGiven = (a: Akvaplanist, b: Akvaplanist) =>
   compare(`${a.family} ${a.given}`, `${b.family} ${b.given}`);
 
-export const getAkvaplanistsFromAd = async () => {
+export const getAkvaplanistStreamFromAdCsvExport = async () => {
   const etag = cache.headers.get("etag") ?? "";
   const head = await fetchAkvaplanists({ method: "HEAD", etag });
   if (head.status === 200) {
@@ -38,7 +38,7 @@ export const getAkvaplanistsFromAd = async () => {
 
       cache.people = (await Array.fromAsync(
         body,
-      )).sort(sortFamilyGiven);
+      ) as Akvaplanist[]).sort(sortFamilyGiven);
     }
   } else if (head.status === 304) {
     console.warn(304);

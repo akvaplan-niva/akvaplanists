@@ -9,10 +9,10 @@ export interface Akvaplanist {
   management?: true | false | null;
   workplace: string;
   country: string;
-  from?: Date | string;
-  expired?: Date | string;
-  created: Date | string;
-  updated: Date | string;
+  from?: Date;
+  expired?: Date;
+  created: Date;
+  updated: Date;
   orcid?: string | null;
   openalex?: string | null;
 }

@@ -3,7 +3,7 @@ import { akvaplanistFromAdPerson } from "./ad.ts";
 import { AkvaplanAdPerson } from "./ad_types.ts";
 
 const xyz: AkvaplanAdPerson = {
-  ExtensionAttribute1: "Coasts and IndustryÆØÅ",
+  ExtensionAttribute1: "?",
   sAMAccountName: "xyz",
   GivenName: "Xx",
   Sn: "Yz",
@@ -15,35 +15,51 @@ const xyz: AkvaplanAdPerson = {
   ExtensionAttribute2: "",
   Department: "LEDELS",
   city: "Tromsø",
-  physicalDeliveryOfficeName: "Fram-1",
+  physicalDeliveryOfficeName: "Ignored",
   telephoneNumber: "+47 999 88 777",
-  "msRTCSIP-PrimaryUserAddress": "sip:x.yz@akvaplan.niva.no",
+  "msRTCSIP-PrimaryUserAddress": "sip:ign@akvaplan.niva.no",
   whencreated: "09.02.2022 16:49:21",
   APNStartDate: "",
   accountExpires: "0",
 };
 
+const expected = {
+  family: "Yz",
+  given: "Xx",
+  id: "xyz",
+  tel: "+4799988777",
+  workplace: "Tromsø",
+  country: "NO",
+  from: undefined,
+  expired: undefined,
+  "responsibility": {
+    "en": "Responsibility",
+    "no": "Ansvarsområde",
+  },
+  "section": "LEDELS",
+  "management": true,
+  "position": { "en": "Position", "no": "Stilling" },
+  "created": new Date("2022-02-09T15:49:21.000Z"),
+  "updated": new Date(0),
+};
+
 Deno.test(function akvaplanistFromAdPersonTest() {
   assertEquals(
     akvaplanistFromAdPerson(xyz),
-    {
-      family: "Yz",
-      given: "Xx",
-      id: "xyz",
-      tel: "+4799988777",
-      workplace: "Tromsø",
-      country: "NO",
-      from: undefined,
-      expired: undefined,
-      "responsibility": {
-        "en": "Responsibility",
-        "no": "Ansvarsområde",
-      },
-      "section": "LEDELS",
-      "management": true,
-      "position": { "en": "Position", "no": "Stilling" },
-      "created": new Date("2022-02-09T15:49:21.000Z"),
-      "updated": new Date(0),
-    },
+    expected,
+  );
+  assertEquals(
+    akvaplanistFromAdPerson({ ...xyz, city: "Reykjavik" }).country,
+    "IS",
+  );
+  assertEquals(
+    akvaplanistFromAdPerson({ ...xyz, accountExpires: "133532028000000000" })
+      .expired,
+    new Date("2024-02-23T23:00:00.000Z"),
+  );
+  assertEquals(
+    akvaplanistFromAdPerson({ ...xyz, accountExpires: "999589016000000000" })
+      .expired,
+    undefined,
   );
 });
