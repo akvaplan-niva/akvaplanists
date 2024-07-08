@@ -1,6 +1,6 @@
 import { cache } from "./cache.ts";
 import {
-  parseAdTime,
+  getAdTimeOrUndefinedIfInFuture,
   parseNorwegianDate,
   parseWeirdUsDate,
 } from "./crazy_dates.ts";
@@ -15,22 +15,6 @@ export const countryFromWorkplace = (w: string) => {
   return "NO";
 };
 
-const getExpiredTimeOrUndefinedIfInFuture = (
-  ad: AkvaplanAdPerson,
-) => {
-  const accountExpires = ad.accountExpires === "0"
-    ? 0
-    : Number(ad.accountExpires);
-
-  const _expired = accountExpires > 0 && accountExpires < 9e18
-    ? parseAdTime(accountExpires)
-    : undefined;
-
-  return _expired && _expired.getTime() < new Date().getTime()
-    ? _expired
-    : undefined;
-};
-
 export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
   const id = ad.sAMAccountName.trim().toLowerCase();
   const family = ad.Sn.trim();
@@ -43,8 +27,8 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
   const created = parseNorwegianDate(ad.whencreated);
   const updated = new Date(cache.headers.get("last-modified") as string);
 
-  // Only expose expired if it's in the past (ie. prior employee)
-  const expired = getExpiredTimeOrUndefinedIfInFuture(ad);
+  // Only expose `expired` for prior employees (ie. expired is in the past)
+  const expired = getAdTimeOrUndefinedIfInFuture(ad.accountExpires);
   const from = parseWeirdUsDate(ad.APNStartDate);
   const position = { en: ad.Title, no: ad.extensionAttribute4 };
 
@@ -76,7 +60,14 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
 export async function* generateAkvaplanistsFromCrazyDatesAdStream(
   rs: ReadableStream,
 ) {
+  const now = new Date().getTime();
   for await (const ad of rs) {
-    yield akvaplanistFromAdPerson(ad);
+    const apn = akvaplanistFromAdPerson(ad);
+    const { from } = apn;
+    if (from && from.getTime() >= now) {
+      // no-op: do not expose if the person has not yet started (ie. `from` is in the future)
+    } else {
+      yield apn;
+    }
   }
 }
