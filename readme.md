@@ -1,5 +1,7 @@
 # Akvaplanists
 
+Data source for https://akvaplan.no/en/people
+
 ## Service
 
 **AD**
@@ -9,8 +11,6 @@ https://akvaplanists.deno.dev/?format=ndjson
 
 **KV** Persisted employees in KV:
 https://akvaplanists.deno.dev/kv/person?format=ndjson
-
-Note: This is the data source for https://akvaplan.no/en/people
 
 Expired (former employees):
 https://akvaplanists.deno.dev/kv/expired?format=ndjson
