@@ -112,11 +112,6 @@
     "spelling": {
       "gn": [
         "Emmelie K.L.",
-        "John Fredrik",
-        "Hallvard",
-        "John F.",
-        "Jens",
-        "J F",
         "EKL",
         "H"
       ],
@@ -254,7 +249,7 @@
     "family": "Smith",
     "prior": true,
     "id": "01hs99np0j3pktgg6s2fvrz8d0",
-    "spelling": { "gn": ["J.N.", "T.J.", "S.L.", "Tim"], "fn": [] }
+    "spelling": { "gn": [ "T.J."], "fn": [] }
   },
   {
     "given": "Jofrid",
