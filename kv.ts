@@ -66,10 +66,12 @@ export const setAkvaplanistTx = async (
     const { id, expired, family, given } = akvaplanist;
     if (spelling.has(id)) {
       const { gn, fn } = spelling.get(id)!;
-      akvaplanist.spelling = {
-        gn: gn.filter((g) => g !== given),
-        fn: fn.filter((f) => f !== family),
-      };
+      if (gn || fn) {
+        akvaplanist.spelling = {
+          gn: gn.filter((g) => g !== given),
+          fn: fn.filter((f) => f !== family),
+        };
+      }
     }
     const key = [person0, id];
     const expiredkey = [expired0, id];
