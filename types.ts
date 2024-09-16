@@ -15,6 +15,12 @@ export interface Akvaplanist {
   updated: Date;
   orcid?: string | null;
   openalex?: string | null;
+  spelling: Spelling;
+}
+
+interface Spelling {
+  fn: string[];
+  gn: string[];
 }
 interface IntlString {
   [lang: string]: string;

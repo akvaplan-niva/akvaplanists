@@ -1,7 +1,9 @@
 import { valibotSafeParse } from "./validate.ts";
 import { Akvaplanist, ExpiredAkvaplanist } from "./types.ts";
 import { ndjson } from "./cli_helpers.ts";
+import _spelling from "./data/spelling.json" with { type: "json" };
 
+const spelling = new Map(_spelling.map(({ id, spelling }) => [id, spelling]));
 export const kv = await Deno.openKv(
   //"https://api.deno.com/databases/4d8b08fa-92cc-4f38-9abd-ac60b6e755c9/connect",
 );
@@ -36,12 +38,15 @@ export const listExpiredAkvaplanists = (options?: Deno.KvListOptions) =>
   listPrefix<ExpiredAkvaplanist>([expired0], options);
 
 const toExpired = (akvaplanist: Akvaplanist) => {
-  const { id, family, given, from, expired, created, updated } = akvaplanist;
+  const { id, family, given, spelling, from, expired, created, updated } =
+    akvaplanist;
   return {
     id,
     family,
     given,
     from,
+    spelling,
+    prior: true,
     expired,
     created,
     updated,
@@ -53,6 +58,7 @@ export const setAkvaplanistTx = async (
   tx: Deno.AtomicOperation,
 ) => {
   const { success, issues } = valibotSafeParse(akvaplanist);
+
   if (!success) {
     const messages = issues.map((i) => i.message);
     console.error(
@@ -60,6 +66,13 @@ export const setAkvaplanistTx = async (
     );
   } else {
     const { id, expired, family, given } = akvaplanist;
+    if (spelling.has(id)) {
+      const { gn, fn } = spelling.get(id)!;
+      akvaplanist.spelling = {
+        gn: gn.filter((g) => g !== given),
+        fn: fn.filter((f) => f !== family),
+      };
+    }
     const key = [person0, id];
     const expiredkey = [expired0, id];
 
