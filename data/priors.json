@@ -1,0 +1,614 @@
+[
+  {
+    "given": "Anatoly A.",
+    "family": "Lukin",
+    "prior": true,
+    "id": "01hs99np0jb4k56x0ermkkbnps",
+    "spelling": { "gn": ["A. A.", "A."], "fn": [] }
+  },
+  {
+    "given": "Adriana E.",
+    "family": "Sardi",
+    "prior": true,
+    "id": "01hs99np0j99074tks20cqh3y0"
+  },
+  {
+    "given": "A.",
+    "family": "Moldes-Anaya",
+    "prior": true,
+    "id": "01hs99np0j856e1m23skr2f6z5"
+  },
+  {
+    "given": "Alexey K.",
+    "family": "Pavlov",
+    "prior": true,
+    "id": "01hs99np0jatc3d65jnq4k5jgd",
+    "spelling": { "gn": ["Alexey"], "fn": [] }
+  },
+  {
+    "given": "Ann Merete",
+    "family": "Hjelset",
+    "prior": true,
+    "id": "01hs99np0j75x48cy561r80tr6",
+    "spelling": { "gn": ["A. M."], "fn": [] }
+  },
+  {
+    "given": "Ana Sofia",
+    "family": "Aniceto",
+    "prior": true,
+    "id": "asa",
+    "expired": "2022-09-02",
+    "spelling": { "gn": ["Ana S.", "A. S.", "Sofia", "Ana"], "fn": [] }
+  },
+  {
+    "given": "Anna Helena",
+    "family": "Falk",
+    "prior": true,
+    "id": "01hs99np0j5vyn85ve23h5q77t"
+  },
+  {
+    "given": "Arnþór",
+    "family": "Gústavsson",
+    "prior": true,
+    "id": "01hs99np0jsxwmgxdpkhvpbwps",
+    "spelling": { "gn": ["A."], "fn": [] }
+  },
+  {
+    "given": "B.",
+    "family": "Anselme",
+    "prior": true,
+    "id": "01j7k9rfk57sza84m9mntjf5qd"
+  },
+  {
+    "given": "Barbara",
+    "family": "Vögele",
+    "prior": true,
+    "id": "01j7k9qzwpt7ffzpajk84mbr37",
+    "spelling": { "gn": ["B.", "B"], "fn": [] }
+  },
+  {
+    "given": "Benjamin",
+    "family": "Merkel",
+    "prior": true,
+    "expired": "2024-01-12",
+    "id": "bme",
+    "spelling": { "gn": ["B.", "B"], "fn": [] }
+  },
+  {
+    "given": "Børge",
+    "family": "Holte",
+    "prior": true,
+    "id": "01hs99np0jjm4bycynt43y2h0t",
+    "spelling": { "gn": ["B."], "fn": [] }
+  },
+  {
+    "given": "Erik",
+    "family": "Vikingstad",
+    "prior": true,
+    "id": "01hs99np0j20958369jhksr2ax",
+    "spelling": { "gn": ["E."], "fn": [] }
+  },
+  {
+    "given": "Eli",
+    "family": "Børve",
+    "prior": true,
+    "id": "elb"
+  },
+  {
+    "given": "Marit Nøst",
+    "family": "Hegseth",
+    "prior": true,
+    "id": "01hs99np0jhyqyyefrnqdb3rmc",
+    "spelling": {
+      "gn": ["Marit N."],
+      "fn": []
+    }
+  },
+  {
+    "given": "Emmelie K. L.",
+    "family": "Åström",
+    "prior": true,
+    "id": "01hs99np0hfvpvj4s8ry8at81p",
+    "spelling": {
+      "gn": [
+        "Emmelie K.L.",
+        "John Fredrik",
+        "Hallvard",
+        "John F.",
+        "Jens",
+        "J F",
+        "EKL",
+        "H"
+      ],
+      "fn": ["Strøm"]
+    }
+  },
+  {
+    "given": "Frank",
+    "family": "Beuchel",
+    "prior": true,
+    "id": "frb",
+    "spelling": { "gn": ["F."], "fn": [] }
+  },
+  {
+    "given": "Frank",
+    "family": "Gaardsted",
+    "expired": "2022-03-31",
+    "prior": true,
+    "id": "fga",
+    "spelling": { "gn": ["F.", "F"], "fn": [] }
+  },
+  {
+    "given": "Fredrik",
+    "family": "Broms",
+    "prior": true,
+    "id": "01hs99np0hrk52targawxgw671"
+  },
+  {
+    "given": "Gérald",
+    "family": "Darnis",
+    "prior": true,
+    "id": "01hs99np0h1f8z6qjvjr9d9wmh",
+    "spelling": { "gn": ["Gerald", "G."], "fn": [] }
+  },
+  {
+    "given": "G.S.",
+    "family": "Eriksen",
+    "prior": true,
+    "id": "01hs99np0h4r27kqtmw9twbwkt"
+  },
+  {
+    "given": "Gunnar",
+    "family": "Pedersen",
+    "prior": true,
+    "id": "01hs99np0jej7dkfmy1spxrj5e"
+  },
+  {
+    "given": "Johannes",
+    "family": "Wolkers",
+    "prior": true,
+    "id": "01hs99np0j1sk42swb7097k29f",
+    "spelling": { "gn": ["Hans", "J.", "J"], "fn": [] }
+  },
+  {
+    "given": "Hector",
+    "family": "Andrade",
+    "prior": true,
+    "id": "01hs99np0hn51jcjk13fmzwgym",
+    "spelling": { "gn": ["H.", "H"], "fn": [] }
+  },
+  {
+    "given": "Hilde Cecilie",
+    "family": "Trannum",
+    "prior": true,
+    "id": "01hs99np0jkmdrq5ew43q8ezbj",
+    "spelling": { "gn": ["Hilde C.", "Hilde", "H. C."], "fn": [] }
+  },
+  {
+    "given": "Håvard",
+    "family": "Espenes",
+    "prior": true,
+    "id": "hes"
+  },
+  {
+    "given": "Ingar H.",
+    "family": "Wasbotten",
+    "prior": true,
+    "id": "ihw"
+  },
+  {
+    "given": "Iris",
+    "family": "Jæger",
+    "prior": true,
+    "id": "01hs99np0jns773p33hzfmyme8",
+    "spelling": { "gn": ["I."], "fn": [] }
+  },
+  {
+    "given": "Janne E.",
+    "family": "Søreide",
+    "prior": true,
+    "id": "01hs99np0jft7rbfqark6d54z0",
+    "expired": "2009-12-31",
+    "spelling": {
+      "gn": [
+        "JANNE E.",
+        "Janne E",
+        "J. E.",
+        "Janne",
+        "J.E.",
+        "Elin",
+        "J.",
+        "JE"
+      ],
+      "fn": ["E. Søreide","SØREIDE"]
+    }
+  },
+  {
+    "given": "Jasmine",
+    "family": "Nahrgang",
+    "prior": true,
+    "id": "01hs99np0j8xf29fh8nzpyd8hq",
+    "spelling": { "gn": ["J."], "fn": [] }
+  },
+  {
+    "given": "Jenny",
+    "family": "Bytingsvik",
+    "prior": true,
+    "id": "01hs99np0h7skc7q5my27ardn8",
+    "spelling": { "gn": ["J."], "fn": [] }
+  },
+  {
+    "given": "Kristin",
+    "family": "Sæther",
+    "prior": true,
+    "id": "01hs99np0j58rdz1a47wbb7a0g"
+  },
+  {
+    "given": "Kristina",
+    "family": "Olsson",
+    "prior": true,
+    "id": "01j7wvjmqk4z24zs690mej9bp7"
+  },
+  {
+    "given": "Timothy J.",
+    "family": "Smith",
+    "prior": true,
+    "id": "01hs99np0j3pktgg6s2fvrz8d0",
+    "spelling": { "gn": ["J.N.", "T.J.", "S.L.", "Tim"], "fn": [] }
+  },
+  {
+    "given": "Jofrid",
+    "family": "Skarðhamar",
+    "prior": true,
+    "id": "01hs99np0jk55b72eye9x9g6ye",
+    "spelling": { "gn": ["JOFRID", "J"], "fn": ["SkarĐhamar", "SKARÐHAMAR"] }
+  },
+  {
+    "given": "Johanna S.",
+    "family": "Kottmann",
+    "prior": true,
+    "id": "01hs99np0jeyftz3cwvzss13hh",
+    "spelling": { "gn": ["Johanna"], "fn": [] }
+  },
+  {
+    "given": "Jani O.",
+    "family": "Honkanen",
+    "prior": true,
+    "from": "2008-01-01",
+    "expired": "2015-09-30",
+    "id": "01hs99np0jf5d7px7dsdw850d3",
+    "spelling": { "gn": ["J.O."], "fn": [] }
+  },
+  {
+    "given": "Jo Lynn",
+    "family": "Carroll",
+    "prior": true,
+    "id": "jlc",
+    "expired": "2022-06-10",
+    "spelling": {
+      "gn": ["JoLynn", "Jolynn", "J.L", "J.", "J"],
+      "fn": ["Butts"]
+    }
+  },
+  {
+    "given": "Jørgen",
+    "family": "Berge",
+    "prior": true,
+    "id": "01hs99np0he7pp7mf469qtavpg",
+    "spelling": { "gn": ["JÃ¸rgen", "JØRGEN", "J.", "J"], "fn": ["BERGE"] }
+  },
+  {
+    "given": "Karin",
+    "family": "Bloch-Hansen",
+    "prior": true,
+    "id": "01hs99np0hdrp1ardye3ajbvb7"
+  },
+  {
+    "given": "Katherine M.",
+    "family": "Dunlop",
+    "prior": true,
+    "id": "01hs99np0hs0zgcktvmh8sd99g",
+    "spelling": {
+      "gn": ["Kathrine M.", "Katherine", "Kathy M.", "K.", "K"],
+      "fn": []
+    }
+  },
+  {
+    "given": "K.",
+    "family": "Hatlen",
+    "prior": true,
+    "id": "01hs99np0jykhwn8jtnfcswdjg"
+  },
+  {
+    "given": "Knut",
+    "family": "Forberg",
+    "prior": true,
+    "id": "01hs99np0j4a75q06bhgcajq4e"
+  },
+  {
+    "given": "Leif M.",
+    "family": "Sunde",
+    "prior": true,
+    "id": "01hs99np0jwkxx12epndw26n7t",
+    "spelling": { "gn": ["L. M."], "fn": [] }
+  },
+  {
+    "given": "Lis Lindal",
+    "family": "Jørgensen",
+    "prior": true,
+    "id": "01hs99np0jk8txk2nksym7b1mg",
+    "spelling": {
+      "gn": [
+        "Lis L.",
+        "LL"
+      ],
+      "fn": ["JÃ¸rgensen"]
+    }
+  },
+  {
+    "given": "Lindsay",
+    "family": "Wilson",
+    "prior": true,
+    "id": "01hs99np0jqp4na53trrn1jw6y",
+    "spelling": { "gn": ["L.J.", "L."], "fn": [] }
+  },
+  {
+    "given": "Luca",
+    "family": "Tassara",
+    "prior": true,
+    "id": "lut",
+    "spelling": { "gn": ["L."], "fn": [] }
+  },
+  {
+    "given": "Louise Kiel",
+    "family": "Jensen",
+    "prior": true,
+    "id": "01hs99np0j7sq4mceawz8gvvdj"
+  },
+  {
+    "given": "Magnus",
+    "family": "Aune",
+    "prior": true,
+    "id": "maa",
+    "spelling": {
+      "gn": ["Magnus Aune", "MAGNUS AUNE", "Magnus A.", "Magnus A", "MA"],
+      "fn": ["WIEDMANN", "Wiedmann"]
+    }
+  },
+  {
+    "given": "Martin",
+    "family": "Biuw",
+    "prior": true,
+    "id": "01hs99np0hmbybezqs5jy5w5m3",
+    "spelling": { "gn": ["Erik Martin", "M.", "M"], "fn": [] }
+  },
+  {
+    "given": "Martin T.",
+    "family": "Dahl",
+    "prior": true,
+    "id": "01hs99np0hmm24q0c2h060sj4m"
+  },
+  {
+    "given": "Mette",
+    "family": "Remen",
+    "prior": true,
+    "expired": "2022-07-31",
+    "id": "01hs99np0jfgs69krzq16hymc4",
+    "spelling": { "gn": ["M"], "fn": [] }
+  },
+  {
+    "given": "Michael L.",
+    "family": "Carroll",
+    "prior": true,
+    "id": "mlc",
+    "expired": "2022-05-06",
+    "spelling": {
+      "gn": ["MICHAEL L.", "Michael L", "Michael", "M.L", "M.", "ML", "M"],
+      "fn": ["CARROLL"]
+    }
+  },
+  {
+    "given": "Michael J.",
+    "family": "Greenacre",
+    "prior": true,
+    "id": "01hs99np0j8rp6pyncw90r6cvg",
+    "spelling": { "gn": ["Michael", "MICHAEL", "M.", "M"], "fn": ["GREENACRE"] }
+  },
+  {
+    "given": "M L",
+    "family": "Madsen",
+    "prior": true,
+    "id": "01hs99np0jqp5y3038hk40z5pa"
+  },
+  {
+    "given": "Muriel Barbara",
+    "family": "Dunn",
+    "prior": true,
+    "id": "mbd",
+    "spelling": { "gn": ["Muriel"], "fn": [] }
+  },
+  {
+    "given": "Nina Mari",
+    "family": "Jørgensen",
+    "prior": true,
+    "id": "01hs99np0j2gf703bnhap2e1yk",
+    "spelling": { "gn": ["Nina M.", "NM"], "fn": [] }
+  },
+  {
+    "given": "Nathalie",
+    "family": "Morata",
+    "prior": true,
+    "id": "01hs99np0j7knysqrbmpj8thcs",
+    "spelling": { "gn": ["N.", "N"], "fn": [] }
+  },
+  {
+    "given": "Ole Anders",
+    "family": "Nøst",
+    "prior": true,
+    "expired": "2022-03-31",
+    "id": "oan",
+    "spelling": {
+      "gn": ["Ole A.", "O. A.", "O.-A.", "O.A.", "Ole", "OA"],
+      "fn": ["Nost"]
+    }
+  },
+  {
+    "given": "Ole Jørgen",
+    "family": "Lønne",
+    "prior": true,
+    "id": "01hs99np0jbp4dq8yc26h4mrzv",
+    "spelling": {
+      "gn": ["Ole-Jørgen", "OLE JØRGEN", "Ole J.", "O. J.", "O.J.", "Ole"],
+      "fn": ["LØNNE"]
+    }
+  },
+  {
+    "given": "Perrine",
+    "family": "Geraudie",
+    "prior": true,
+    "id": "01hs99np0jtcmwsrsytck4p8cw",
+    "spelling": { "gn": ["P."], "fn": [] }
+  },
+  {
+    "given": "Patrick",
+    "family": "White",
+    "prior": true,
+    "id": "01hs99np0jybdf6xda3qwh4s61",
+    "spelling": { "gn": ["P."], "fn": [] }
+  },
+  {
+    "given": "Reinhold",
+    "family": "Fieler",
+    "prior": true,
+    "id": "ref",
+    "spelling": { "gn": ["R."], "fn": [] }
+  },
+  {
+    "given": "Rosalie",
+    "family": "Evans",
+    "prior": true,
+    "id": "01hs99np0heqp9d2wqp46kwhw9"
+  },
+  {
+    "given": "Rosalyn",
+    "family": "Fredriksen",
+    "prior": true,
+    "id": "rfr"
+  },
+  {
+    "given": "Sam",
+    "family": "Eglund-Newby",
+    "prior": true,
+    "id": "01hs99np0hc097nk8qb0qjvtsb"
+  },
+  {
+    "given": "Sanna",
+    "family": "Matsson",
+    "prior": true,
+    "id": "01hs99np0jv055ec6vh4t3s9zr"
+  },
+  {
+    "given": "Starrlight",
+    "family": "Augustine",
+    "prior": true,
+    "id": "sta",
+    "spelling": { "gn": ["S."], "fn": [] }
+  },
+  {
+    "given": "Stig Falk",
+    "family": "Falk‐Petersen",
+    "prior": true,
+    "id": "sfp",
+    "spelling": {
+      "gn": ["Stig", "S.", "S"],
+      "fn": ["Falk-Petersen", "Falk Petersen", "Falk-petersen", "Petersen"]
+    }
+  },
+  {
+    "given": "T.",
+    "family": "Scanlon",
+    "prior": true,
+    "id": "01hs99np0jk9b2xq7zx2ch0j7r"
+  },
+  {
+    "given": "Thomas",
+    "family": "Hansen",
+    "prior": true,
+    "id": "thh",
+    "spelling": { "gn": ["THOMAS", "T."], "fn": ["HANSEN"] }
+  },
+  {
+    "given": "Thor Arne",
+    "family": "Hangstad",
+    "prior": true,
+    "id": "01hs99np0jx06g5cqrvt8ab8dm",
+    "spelling": { "gn": ["Thor-Arne", "Thor A.", "Thor A"], "fn": [] }
+  },
+  {
+    "given": "Thomas H.",
+    "family": "Pearson",
+    "prior": true,
+    "id": "01hs99np0j0fh82kf1aa6b3546",
+    "spelling": { "gn": ["T. H.", "T.H.", "TH"], "fn": [] }
+  },
+  {
+    "given": "Tatjana N.",
+    "family": "Savinova",
+    "prior": true,
+    "id": "01hs99np0j6vvgxptv4tarhk3q",
+    "spelling": {
+      "gn": [
+        "Tatiana N.",
+        "Tatiana I.",
+        "Tatiana N",
+        "Tatiana",
+        "T. N.",
+        "T.N.",
+        "T.",
+        "T"
+      ],
+      "fn": []
+    }
+  },
+  {
+    "given": "Tore",
+    "family": "Hattermann",
+    "prior": true,
+    "from": "2015-01-01",
+    "expired": "2019-12-31",
+    "id": "01hs99np0jd5039vbmkkbrpg86",
+    "spelling": { "gn": ["T."], "fn": [] }
+  },
+  {
+    "given": "Victor",
+    "family": "Øiestad",
+    "prior": true,
+    "id": "01hs99np0j6cqt496wgp0dah3v",
+    "spelling": { "gn": ["V.", "V"], "fn": ["Oiestad", "ØIestad"] }
+  },
+  {
+    "given": "William G.",
+    "family": "AMBROSE, JR.",
+    "prior": true,
+    "id": "01hs99np0hgdyy9cs5njfrj3vj",
+    "spelling": {
+      "gn": [
+        "William G.",
+        "WILLIAM G.",
+        "William G",
+        "William",
+        "W.G.",
+        "WG",
+        "Jr"
+      ],
+      "fn": ["Ambrose Jr.", "Ambrose WG", "Ambrose", "AMBROSE"]
+    }
+  },
+  {
+    "given": "Øystein",
+    "family": "Varpe",
+    "prior": true,
+    "id": "01hs99np0jz79f6e1677wx8ntv",
+    "spelling": { "gn": ["Ø.", "O.", "Ø"], "fn": [] }
+  }
+]

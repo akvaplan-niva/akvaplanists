@@ -1,0 +1,207 @@
+[
+  { "id": "aev", "spelling": { "gn": ["A."], "fn": [] } },
+  { "id": "ahz", "spelling": { "gn": ["A"], "fn": [] } },
+  {
+    "id": "aki",
+    "spelling": {
+      "gn": [
+        "Albert Kjartansson D.",
+        "Albert Kjartansson",
+        "Albert Kjartan D.",
+        "Albert K. D.",
+        "Albert K.D.",
+        "Albert K D",
+        "Albert K.",
+        "Albert K",
+        "Albert",
+        "A.K.D.",
+        "AKD",
+        "A. K.",
+        "A.K.",
+        "A K.",
+        "A.K",
+        "A K",
+        "A.",
+        "AK",
+        "A"
+      ],
+      "fn": ["K. Imsland", "Imsland"]
+    }
+  },
+  { "id": "anb", "spelling": { "gn": ["A. N.", "A."], "fn": [] } },
+  { "id": "ara", "spelling": { "gn": ["A."], "fn": [] } },
+  { "id": "asi", "spelling": { "gn": ["ANNA", "A."], "fn": ["SIWERTSSON"] } },
+  { "id": "atf", "spelling": { "gn": ["A.", "A"], "fn": [] } },
+  { "id": "avn", "spelling": { "gn": ["Ane V."], "fn": [] } },
+  {
+    "id": "avs",
+    "spelling": {
+      "gn": [
+        "ANDREY V.",
+        "Andrey V.",
+        "Andrej",
+        "Andrey",
+        "ANDREY",
+        "A. V.",
+        "A.V.",
+        "A.",
+        "А. В."
+      ],
+      "fn": ["SIKORSKI", "Sikorsky", "Сикорский"]
+    }
+  },
+  {
+    "id": "azi",
+    "spelling": {
+      "gn": ["Amanda F.", "Amanda F", "Amanda", "A.F.", "AF"],
+      "fn": []
+    }
+  },
+  {
+    "id": "clh",
+    "spelling": { "gn": ["C.", "C"], "fn": ["Halsband-Lenk", "Halsband"] }
+  },
+  { "id": "cse", "spelling": { "gn": ["C"], "fn": [] } },
+  {
+    "id": "ctw",
+    "spelling": { "gn": ["Charlotte T.", "Charlotte"], "fn": [] }
+  },
+  {
+    "id": "ehh",
+    "spelling": { "gn": ["Eirik H.", "E. O.", "E. H.", "E H"], "fn": [] }
+  },
+  {
+    "id": "eva",
+    "spelling": { "gn": ["Eva", "EVA", "E.", "E"], "fn": ["LEU"] }
+  },
+  {
+    "id": "gdh",
+    "spelling": {
+      "gn": ["Geir A.P.", "G. A. P.", "Geir A.", "G. A."],
+      "fn": []
+    }
+  },
+  {
+    "id": "ghr",
+    "spelling": { "gn": ["Gro H.", "G. H.", "G.H."], "fn": ["Refseth"] }
+  },
+  { "id": "gms", "spelling": { "gn": ["G. M."], "fn": [] } },
+  {
+    "id": "gnc",
+    "spelling": {
+      "gn": ["Guttorm N.", "Guttorm N", "Guttorm", "G. N.", "G.N.", "G.", "GN"],
+      "fn": []
+    }
+  },
+  { "id": "hpm", "spelling": { "gn": ["Hans Petter", "H-P."], "fn": [] } },
+  {
+    "id": "jen",
+    "spelling": { "gn": ["Jenny L.A.", "J. L. A.", "J L A"], "fn": [] }
+  },
+  { "id": "jha", "spelling": { "gn": ["JESPER", "J."], "fn": ["HANSEN"] } },
+  { "id": "jhp", "spelling": { "gn": ["J."], "fn": [] } },
+  {
+    "id": "jwk",
+    "spelling": { "gn": ["J. W.", "J.W.", "Jos", "J.", "J"], "fn": ["Kogeler"] }
+  },
+  { "id": "kba", "spelling": { "gn": ["K.", "K"], "fn": [] } },
+  {
+    "id": "kbo",
+    "spelling": {
+      "gn": ["Kristine B.", "Kristine", "Rolf B."],
+      "fn": ["B. Pedersen", "Pedersen"]
+    }
+  },
+  { "id": "kpb", "spelling": { "gn": ["K."], "fn": [] } },
+  { "id": "ksa", "spelling": { "gn": ["K."], "fn": [] } },
+  { "id": "ksz", "spelling": { "gn": ["K."], "fn": [] } },
+  { "id": "lca", "spelling": { "gn": ["L.", "L"], "fn": ["CAMUS"] } },
+  { "id": "lit", "spelling": { "gn": [], "fn": ["Toske"] } },
+  { "id": "lka", "spelling": { "gn": ["L."], "fn": [] } },
+  { "id": "los", "spelling": { "gn": ["L. O."], "fn": [] } },
+  { "id": "mad", "spelling": { "gn": ["M."], "fn": [] } },
+  { "id": "mar", "spelling": { "gn": ["M."], "fn": [] } },
+  { "id": "mfr", "spelling": { "gn": ["M."], "fn": [] } },
+  { "id": "mib", "spelling": { "gn": ["M."], "fn": [] } },
+  { "id": "nmi", "spelling": { "gn": ["N.", "N"], "fn": [] } },
+  { "id": "obw", "spelling": { "gn": ["S."], "fn": [] } },
+  {
+    "id": "odj",
+    "spelling": { "gn": ["Ólöf D. B.", "Ólöf D.B.", "Ólöf D B", "O"], "fn": [] }
+  },
+  { "id": "pae", "spelling": { "gn": ["PA"], "fn": [] } },
+  { "id": "pbl", "spelling": { "gn": ["P.", "P"], "fn": ["Blevin"] } },
+  {
+    "id": "per",
+    "spelling": {
+      "gn": [
+        "Paul E.",
+        "PAUL E.",
+        "Paul E",
+        "P. E.",
+        "P.E.",
+        "Paul",
+        "PE",
+        "P.",
+        "P"
+      ],
+      "fn": ["RENAUD"]
+    }
+  },
+  { "id": "pgh", "spelling": { "gn": ["P."], "fn": [] } },
+  { "id": "qin", "spelling": { "gn": ["Q.", "Q"], "fn": [] } },
+  { "id": "rap", "spelling": { "gn": ["R."], "fn": [] } },
+  { "id": "rpa", "spelling": { "gn": ["R.", "R"], "fn": [] } },
+  { "id": "sam", "spelling": { "gn": ["S.", "S"], "fn": [] } },
+  { "id": "sda", "spelling": { "gn": ["S.", "S"], "fn": [] } },
+  {
+    "id": "sgu",
+    "spelling": { "gn": ["Snorri", "G.S.", "G.S", "S."], "fn": [] }
+  },
+  {
+    "id": "skc",
+    "spelling": {
+      "gn": [
+        "Sabine K.J.",
+        "SABINE K.J.",
+        "Sabine J.",
+        "Sabine K.",
+        "S. K.J.",
+        "Sabine",
+        "S.K.J.",
+        "S. J.",
+        "S.J.",
+        "S."
+      ],
+      "fn": ["COCHRANE"]
+    }
+  },
+  { "id": "svl", "spelling": { "gn": ["Sondre"], "fn": [] } },
+  { "id": "tbo", "spelling": { "gn": ["Trude", "T."], "fn": [] } },
+  {
+    "id": "tmj",
+    "spelling": {
+      "gn": ["Thor M.", "Thor M", "T. M.", "M.O.", "T M.", "T"],
+      "fn": []
+    }
+  },
+  { "id": "tom", "spelling": { "gn": ["Tom", "T."], "fn": [] } },
+  { "id": "tri", "spelling": { "gn": ["T.", "T"], "fn": [] } },
+  { "id": "vra", "spelling": { "gn": ["V"], "fn": [] } },
+  {
+    "id": "vsa",
+    "spelling": {
+      "gn": [
+        "Vladimir M",
+        "Vladimir",
+        "V. M.",
+        "M. V.",
+        "V.M.",
+        "V.M",
+        "V.",
+        "V"
+      ],
+      "fn": []
+    }
+  }
+]
