@@ -1,15 +1,26 @@
 [
-  { "id": "aev", "spelling": { "gn": ["A."], "fn": [] } },
-  { "id": "ahz", "spelling": { "gn": ["A"], "fn": [] } },
+  {
+    "id": "aev",
+    "given": "Anita",
+    "family": "Evenset",
+    "spelling": { "gn": ["A."], "fn": [] }
+  },
+  {
+    "id": "ahz",
+    "given": "Astrid",
+    "family": "Harendza",
+    "spelling": { "gn": ["A"], "fn": [] }
+  },
   {
     "id": "aki",
+    "given": "Albert K. D.",
+    "family": "Imsland",
     "spelling": {
       "gn": [
         "Albert Kjartan Dagbjartarson",
         "Albert Kjartansson D.",
         "Albert Kjartansson",
         "Albert Kjartan D.",
-        "Albert K. D.",
         "Albert K.D.",
         "Albert K D",
         "Albert K.",
@@ -26,21 +37,48 @@
         "AK",
         "A"
       ],
-      "fn": ["K. Imsland", "Imsland"]
+      "fn": ["Dagbjartarson Imsland", "K. Imsland"]
     }
   },
-  { "id": "anb", "spelling": { "gn": ["A. N.", "A."], "fn": [] } },
-  { "id": "ara", "spelling": { "gn": ["A."], "fn": [] } },
-  { "id": "asi", "spelling": { "gn": ["ANNA", "A."], "fn": ["SIWERTSSON"] } },
-  { "id": "atf", "spelling": { "gn": ["A.", "A"], "fn": [] } },
-  { "id": "avn", "spelling": { "gn": ["Ane V."], "fn": [] } },
+  {
+    "id": "anb",
+    "given": "Alexei",
+    "family": "Bambulyak",
+    "spelling": { "gn": ["A. N.", "A."], "fn": [] }
+  },
+  {
+    "id": "ara",
+    "given": "Achim",
+    "family": "Randelhoff",
+    "spelling": { "gn": ["A."], "fn": [] }
+  },
+  {
+    "id": "asi",
+    "given": "Anna",
+    "family": "Siwertsson",
+    "spelling": { "gn": ["ANNA", "A."], "fn": ["SIWERTSSON"] }
+  },
+  {
+    "id": "atf",
+    "given": "Atle",
+    "family": "Foss",
+    "spelling": { "gn": ["A.", "A"], "fn": [] }
+  },
+  {
+    "id": "avn",
+    "given": "Ane Vigdisdatter",
+    "family": "Nytrø",
+    "spelling": { "gn": ["Ane V."], "fn": [] }
+  },
   {
     "id": "avs",
+    "given": "Andrej",
+    "family": "Sikorski",
     "spelling": {
       "gn": [
+        "Andrej Vladimirovich",
         "ANDREY V.",
         "Andrey V.",
-        "Andrej",
         "Andrey",
         "ANDREY",
         "A. V.",
@@ -53,87 +91,262 @@
   },
   {
     "id": "azi",
+    "given": "Amanda",
+    "family": "Ziegler",
     "spelling": {
-      "gn": ["Amanda F.", "Amanda F", "Amanda", "A.F.", "AF"],
+      "gn": ["Amanda Fern", "Amanda F.", "Amanda F", "A.F.", "AF"],
       "fn": []
     }
   },
   {
     "id": "clh",
-    "spelling": { "gn": ["C.", "C"], "fn": ["Halsband-Lenk", "Halsband"] }
+    "given": "Claudia",
+    "family": "Halsband",
+    "spelling": { "gn": ["C.", "C"], "fn": ["Halsband‐Lenk", "Halsband-Lenk"] }
   },
-  { "id": "cse", "spelling": { "gn": ["C"], "fn": [] } },
+  {
+    "id": "cse",
+    "given": "Chris",
+    "family": "Emblow",
+    "spelling": { "gn": ["C"], "fn": [] }
+  },
   {
     "id": "ctw",
+    "given": "Charlotte Teresa",
+    "family": "Weber",
     "spelling": { "gn": ["Charlotte T.", "Charlotte"], "fn": [] }
   },
   {
     "id": "ehh",
+    "given": "Eirik Haugstvedt",
+    "family": "Henriksen",
     "spelling": { "gn": ["Eirik H.", "E. O.", "E. H.", "E H"], "fn": [] }
   },
   {
+    "id": "ekr",
+    "given": "Elise Kathinka",
+    "family": "Rønningen",
+    "spelling": { "gn": ["Jon"], "fn": ["Rønning"] }
+  },
+  {
     "id": "eva",
-    "spelling": { "gn": ["Eva", "EVA", "E.", "E"], "fn": ["LEU"] }
+    "given": "Eva",
+    "family": "Leu",
+    "spelling": { "gn": ["Eva S.", "EVA", "E.", "E"], "fn": ["LEU"] }
+  },
+  {
+    "id": "fma",
+    "given": "Felipe",
+    "family": "Matos",
+    "spelling": { "gn": ["FELIPE"], "fn": ["MATOS"] }
+  },
+  {
+    "id": "fst",
+    "given": "Fredrik",
+    "family": "Staven",
+    "spelling": { "gn": ["Fredrik R."], "fn": [] }
   },
   {
     "id": "gdh",
+    "given": "Geir",
+    "family": "Dahl-Hansen",
     "spelling": {
-      "gn": ["Geir A.P.", "G. A. P.", "Geir A.", "G. A."],
+      "gn": ["Geir A. P.", "Geir A.P.", "G. A. P.", "Geir A.", "G. A."],
       "fn": []
     }
   },
   {
     "id": "ghr",
-    "spelling": { "gn": ["Gro H.", "G. H.", "G.H."], "fn": ["Refseth"] }
+    "given": "Gro Harlaug",
+    "family": "Refseth",
+    "spelling": { "gn": ["Gro H.", "G. H.", "G.H."], "fn": ["Olsen"] }
   },
-  { "id": "gms", "spelling": { "gn": ["G. M."], "fn": [] } },
+  {
+    "id": "gms",
+    "given": "Geir Morten",
+    "family": "Skeie",
+    "spelling": { "gn": ["G. M."], "fn": [] }
+  },
   {
     "id": "gnc",
+    "given": "Guttorm",
+    "family": "Christensen",
     "spelling": {
-      "gn": ["Guttorm N.", "Guttorm N", "Guttorm", "G. N.", "G.N.", "G.", "GN"],
+      "gn": [
+        "Guttorm Normann",
+        "Guttorm N.",
+        "Guttorm N",
+        "G. N.",
+        "G.N.",
+        "G.",
+        "GN"
+      ],
       "fn": []
     }
   },
-  { "id": "hpm", "spelling": { "gn": ["Hans Petter", "H-P."], "fn": [] } },
+  {
+    "id": "hpm",
+    "given": "Hans Petter",
+    "family": "Mannvik",
+    "spelling": { "gn": ["Hans-Petter", "H-P."], "fn": [] }
+  },
   {
     "id": "jen",
-    "spelling": { "gn": ["Jenny L.A.", "J. L. A.", "J L A"], "fn": [] }
-  },
-  { "id": "jha", "spelling": { "gn": ["JESPER", "J."], "fn": ["HANSEN"] } },
-  { "id": "jhp", "spelling": { "gn": ["J."], "fn": [] } },
-  {
-    "id": "jwk",
-    "spelling": { "gn": ["J. W.", "J.W.", "Jos", "J.", "J"], "fn": ["Kogeler"] }
-  },
-  { "id": "kba", "spelling": { "gn": ["K.", "K"], "fn": [] } },
-  {
-    "id": "kbo",
+    "given": "Jenny",
+    "family": "Jensen",
     "spelling": {
-      "gn": ["Kristine B.", "Kristine", "Rolf B."],
-      "fn": ["B. Pedersen", "Pedersen"]
+      "gn": ["Jenny L. A.", "Jenny L.A.", "J. L. A.", "J L A"],
+      "fn": []
     }
   },
-  { "id": "kpb", "spelling": { "gn": ["K."], "fn": [] } },
-  { "id": "ksa", "spelling": { "gn": ["K."], "fn": [] } },
-  { "id": "ksz", "spelling": { "gn": ["K."], "fn": [] } },
-  { "id": "lca", "spelling": { "gn": ["L.", "L"], "fn": ["CAMUS"] } },
-  { "id": "lit", "spelling": { "gn": [], "fn": ["Toske"] } },
-  { "id": "lka", "spelling": { "gn": ["L."], "fn": [] } },
-  { "id": "los", "spelling": { "gn": ["L. O."], "fn": [] } },
-  { "id": "mad", "spelling": { "gn": ["M."], "fn": [] } },
-  { "id": "mar", "spelling": { "gn": ["M."], "fn": [] } },
-  { "id": "mfr", "spelling": { "gn": ["M."], "fn": [] } },
-  { "id": "mib", "spelling": { "gn": ["M."], "fn": [] } },
-  { "id": "nmi", "spelling": { "gn": ["N.", "N"], "fn": [] } },
-  { "id": "obw", "spelling": { "gn": ["S."], "fn": [] } },
+  {
+    "id": "jha",
+    "given": "Jesper",
+    "family": "Hansen",
+    "spelling": { "gn": ["JESPER", "J."], "fn": ["HANSEN"] }
+  },
+  {
+    "id": "jhp",
+    "given": "Jocelyn",
+    "family": "Palerud",
+    "spelling": { "gn": ["J."], "fn": [] }
+  },
+  {
+    "id": "jwk",
+    "given": "Jos",
+    "family": "Kögeler",
+    "spelling": {
+      "gn": ["Johannes W.", "J. W.", "J.W.", "J.", "J"],
+      "fn": ["Kogeler"]
+    }
+  },
+  {
+    "id": "kba",
+    "given": "Kanchana",
+    "family": "Bandara",
+    "spelling": { "gn": ["K.", "K"], "fn": [] }
+  },
+  {
+    "id": "kbo",
+    "given": "Kristine Bondo",
+    "family": "Pedersen",
+    "spelling": {
+      "gn": ["Kristine B.", "Kristine", "Rolf B."],
+      "fn": ["Bondo Pedersen", "B. Pedersen"]
+    }
+  },
+  {
+    "id": "kpb",
+    "given": "Katrin",
+    "family": "Bluhm",
+    "spelling": { "gn": ["K."], "fn": [] }
+  },
+  {
+    "id": "ksa",
+    "given": "Kjetil",
+    "family": "Sagerup",
+    "spelling": { "gn": ["K."], "fn": [] }
+  },
+  {
+    "id": "ksz",
+    "given": "Kamila",
+    "family": "Sztybor",
+    "spelling": { "gn": ["K."], "fn": [] }
+  },
+  {
+    "id": "lca",
+    "given": "Lionel",
+    "family": "Camus",
+    "spelling": { "gn": ["L.", "L"], "fn": ["CAMUS"] }
+  },
+  {
+    "id": "lit",
+    "given": "Lisa",
+    "family": "Torske",
+    "spelling": { "gn": [], "fn": ["Toske"] }
+  },
+  {
+    "id": "lka",
+    "given": "Lauri",
+    "family": "Kapari",
+    "spelling": { "gn": ["L."], "fn": [] }
+  },
+  {
+    "id": "los",
+    "given": "Lars Olav",
+    "family": "Sparboe",
+    "spelling": { "gn": ["L. O."], "fn": [] }
+  },
+  {
+    "id": "lsi",
+    "given": "Linda",
+    "family": "Simensen",
+    "spelling": { "gn": ["Linda M"], "fn": [] }
+  },
+  {
+    "id": "mad",
+    "given": "Magnus",
+    "family": "Drivdal",
+    "spelling": { "gn": ["M."], "fn": [] }
+  },
+  {
+    "id": "mar",
+    "given": "Maj",
+    "family": "Arnberg",
+    "spelling": { "gn": ["M."], "fn": [] }
+  },
+  {
+    "id": "mfr",
+    "given": "Marianne",
+    "family": "Frantzen",
+    "spelling": { "gn": ["M."], "fn": [] }
+  },
+  {
+    "id": "mib",
+    "given": "Michael",
+    "family": "Bedington",
+    "spelling": { "gn": ["M."], "fn": [] }
+  },
+  {
+    "id": "mva",
+    "given": "Marina Vàzquez",
+    "family": "Alonso",
+    "spelling": { "gn": ["M"], "fn": ["Vázquez Alonso"] }
+  },
+  {
+    "id": "nmi",
+    "given": "Nina",
+    "family": "Mikkelsen",
+    "spelling": { "gn": ["N.", "N"], "fn": [] }
+  },
+  {
+    "id": "obw",
+    "given": "Oda Sofie Bye",
+    "family": "Wilhelmsen",
+    "spelling": { "gn": ["Oda S. B.", "S."], "fn": [] }
+  },
   {
     "id": "odj",
+    "given": "Ólöf Dóra Bartels",
+    "family": "Jónsdóttir",
     "spelling": { "gn": ["Ólöf D. B.", "Ólöf D.B.", "Ólöf D B", "O"], "fn": [] }
   },
-  { "id": "pae", "spelling": { "gn": ["PA"], "fn": [] } },
-  { "id": "pbl", "spelling": { "gn": ["P.", "P"], "fn": ["Blevin"] } },
+  {
+    "id": "pae",
+    "given": "Per-Arne",
+    "family": "Emaus",
+    "spelling": { "gn": ["PA"], "fn": [] }
+  },
+  {
+    "id": "pbl",
+    "given": "Pierre",
+    "family": "Blévin",
+    "spelling": { "gn": ["P.", "P"], "fn": ["Blevin"] }
+  },
   {
     "id": "per",
+    "given": "Paul E.",
+    "family": "Renaud",
     "spelling": {
       "gn": [
         "Paul E.",
@@ -149,26 +362,60 @@
       "fn": ["RENAUD"]
     }
   },
-  { "id": "pgh", "spelling": { "gn": ["P."], "fn": [] } },
-  { "id": "qin", "spelling": { "gn": ["Q.", "Q"], "fn": [] } },
-  { "id": "rap", "spelling": { "gn": ["R."], "fn": [] } },
-  { "id": "rpa", "spelling": { "gn": ["R.", "R"], "fn": [] } },
-  { "id": "sam", "spelling": { "gn": ["S.", "S"], "fn": [] } },
-  { "id": "sda", "spelling": { "gn": ["S.", "S"], "fn": [] } },
+  {
+    "id": "pgh",
+    "given": "Peygham",
+    "family": "Ghaffari",
+    "spelling": { "gn": ["P."], "fn": [] }
+  },
+  {
+    "id": "qin",
+    "given": "Qin",
+    "family": "Zhou",
+    "spelling": { "gn": ["Q.", "Q"], "fn": [] }
+  },
+  {
+    "id": "rap",
+    "given": "Ragnhild",
+    "family": "Pettersen",
+    "spelling": { "gn": ["R."], "fn": [] }
+  },
+  {
+    "id": "rpa",
+    "given": "Rune",
+    "family": "Palerud",
+    "spelling": { "gn": ["R.", "R"], "fn": [] }
+  },
+  {
+    "id": "sam",
+    "given": "Sanna",
+    "family": "Majaneva",
+    "spelling": { "gn": ["S.", "S"], "fn": [] }
+  },
+  {
+    "id": "sda",
+    "given": "Salve",
+    "family": "Dahle",
+    "spelling": { "gn": ["S.", "S"], "fn": [] }
+  },
   {
     "id": "sgu",
-    "spelling": { "gn": ["Snorri", "G.S.", "G.S", "S."], "fn": [] }
+    "given": "Snorri",
+    "family": "Gunnarsson",
+    "spelling": { "gn": ["Gunnar S.", "G.S.", "G.S", "S."], "fn": [] }
   },
   {
     "id": "skc",
+    "given": "Sabine",
+    "family": "Cochrane",
     "spelling": {
       "gn": [
+        "Sabine K. J.",
         "Sabine K.J.",
         "SABINE K.J.",
         "Sabine J.",
         "Sabine K.",
         "S. K.J.",
-        "Sabine",
         "S.K.J.",
         "S. J.",
         "S.J.",
@@ -177,24 +424,59 @@
       "fn": ["COCHRANE"]
     }
   },
-  { "id": "svl", "spelling": { "gn": ["Sondre"], "fn": [] } },
-  { "id": "tbo", "spelling": { "gn": ["Trude", "T."], "fn": [] } },
+  {
+    "id": "svl",
+    "given": "Sondre Veberg",
+    "family": "Larsen",
+    "spelling": { "gn": ["Sondre V.", "Sondre"], "fn": [] }
+  },
+  {
+    "id": "tbo",
+    "given": "Trude",
+    "family": "Borch",
+    "spelling": { "gn": ["Trude Kristin", "T."], "fn": [] }
+  },
+  {
+    "id": "tko",
+    "given": "Tarald",
+    "family": "Øvrebø",
+    "spelling": { "gn": ["Tarald Kleppa"], "fn": [] }
+  },
   {
     "id": "tmj",
+    "given": "Thor Magne",
+    "family": "Jonassen",
     "spelling": {
       "gn": ["Thor M.", "Thor M", "T. M.", "M.O.", "T M.", "T"],
       "fn": []
     }
   },
-  { "id": "tom", "spelling": { "gn": ["Tom", "T."], "fn": [] } },
-  { "id": "tri", "spelling": { "gn": ["T.", "T"], "fn": [] } },
-  { "id": "vra", "spelling": { "gn": ["V"], "fn": [] } },
+  {
+    "id": "tom",
+    "given": "Tom",
+    "family": "Sørnes",
+    "spelling": { "gn": ["Tom A.", "T."], "fn": [] }
+  },
+  {
+    "id": "tri",
+    "given": "Trond",
+    "family": "Ivarjord",
+    "spelling": { "gn": ["T.", "T"], "fn": [] }
+  },
+  {
+    "id": "vra",
+    "given": "Virginie",
+    "family": "Ramasco",
+    "spelling": { "gn": ["V"], "fn": [] }
+  },
   {
     "id": "vsa",
+    "given": "Vladimir",
+    "family": "Savinov",
     "spelling": {
       "gn": [
+        "Vladimir M.",
         "Vladimir M",
-        "Vladimir",
         "V. M.",
         "M. V.",
         "V.M.",
