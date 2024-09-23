@@ -43,7 +43,7 @@ const externalIdentities: [string, Pick<Akvaplanist, "orcid" | "openalex">][] =
   ];
 
 const manualPatches: [string, Partial<Akvaplanist>][] = [
-  ["aen", { management: true }],
+  ["aen", { management: true, section: "LEDELS" }],
   ["aki", { given: "Albert K. D.", openalex: "A5029634972" }],
   ["fma", { workplace: "Sortland" }],
   ["lli", { workplace: "Sortland" }],
