@@ -9,8 +9,9 @@ Data source for https://akvaplan.no/en/people
 List of employees from last AD export:
 https://akvaplanists.deno.dev/?format=ndjson
 
-**KV** Persisted employees in KV:
-https://akvaplanists.deno.dev/kv/person?format=ndjson
+**KV**
+
+Persisted employees in KV: https://akvaplanists.deno.dev/kv/person?format=ndjson
 
 Expired (former employees):
 https://akvaplanists.deno.dev/kv/expired?format=ndjson
@@ -21,7 +22,11 @@ Internal section codes: https://akvaplanists.deno.dev/section?format=ndjson
 
 ## Fetch and ingest into KV
 
-Current employees are put into KV key `["person", id]`,
+Current employees are put into KV key `["person", id]`, priors into
+`["expired", id]` with reduced metadata.
+
+Name variants are updated from the local file `data/spelling.json` before
+persisting in KV.
 
 ```
 deno task fetch
