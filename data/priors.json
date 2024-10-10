@@ -170,7 +170,10 @@
     "family": "Andrade",
     "prior": true,
     "id": "01hs99np0hn51jcjk13fmzwgym",
-    "spelling": { "gn": ["Hector Antonio", "H.", "H"], "fn": ["Andrade Rodriguez"] }
+    "spelling": {
+      "gn": ["Hector Antonio", "H.", "H"],
+      "fn": ["Andrade Rodriguez"]
+    }
   },
   {
     "given": "Hilde Cecilie",
@@ -510,13 +513,13 @@
     "spelling": { "gn": ["S."], "fn": [] }
   },
   {
-    "given": "Stig Falk",
-    "family": "Falk‐Petersen",
+    "given": "Stig",
+    "family": "Falk-Petersen",
     "prior": true,
     "id": "sfp",
     "spelling": {
-      "gn": ["Stig", "S.", "S"],
-      "fn": ["Falk-Petersen", "Falk Petersen", "Falk-petersen", "Petersen"]
+      "gn": ["Stig", "Stig Falk", "S.", "S"],
+      "fn": ["Falk‐Petersen", "Falk Petersen", "Falk-petersen", "Petersen"]
     }
   },
   {
@@ -583,7 +586,7 @@
   },
   {
     "given": "William G.",
-    "family": "AMBROSE, JR.",
+    "family": "Ambrose Jr.",
     "prior": true,
     "id": "01hs99np0hgdyy9cs5njfrj3vj",
     "spelling": {
@@ -596,7 +599,7 @@
         "WG",
         "Jr"
       ],
-      "fn": ["Ambrose Jr.", "Ambrose WG", "Ambrose", "AMBROSE"]
+      "fn": ["AMBROSE, JR.", "Ambrose WG", "Ambrose", "AMBROSE"]
     }
   },
   {

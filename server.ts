@@ -1,6 +1,6 @@
 import "./cron.ts";
 
-import { getAkvaplanistStreamFromAdCsvExport } from "./fetch.ts";
+import { getAkvaplanistFromAdCsvExport } from "./fetch.ts";
 
 import { sectionList } from "./constants.ts";
 
@@ -49,7 +49,7 @@ const listExpiredInKvHandler = (req: Request) =>
   responseFromKvList(listExpiredAkvaplanists(), req);
 
 const listAkvaplanistsInAdExportHandler = async (req: Request) =>
-  response(await getAkvaplanistStreamFromAdCsvExport(), req);
+  response(await getAkvaplanistFromAdCsvExport(), req);
 
 const getSections = async () => await sectionList;
 

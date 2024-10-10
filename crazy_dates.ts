@@ -26,7 +26,7 @@ export const parseWeirdUsDate = (weird: string) => {
   return undefined;
 };
 
-export const getAdTimeOrUndefinedIfInFuture = (
+export const getAdTime = (
   _adtime: number | string,
 ) => {
   const adtime = _adtime === "0" ? 0 : Number(_adtime);
@@ -35,9 +35,15 @@ export const getAdTimeOrUndefinedIfInFuture = (
     ? parseAdTime(adtime)
     : undefined;
 
-  return _expired && _expired.getTime() < new Date().getTime()
-    ? _expired
-    : undefined;
+  return _expired ? _expired : undefined;
+};
+
+export const getAdTimeOrUndefinedIfInFuture = (
+  _adtime: number | string,
+) => {
+  const adtime = getAdTime(_adtime);
+
+  return adtime && adtime.getTime() < new Date().getTime() ? adtime : undefined;
 };
 
 export const getWeirdUsTimeOrUndefinedIfInFuture = (_w: string) => {
