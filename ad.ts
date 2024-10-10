@@ -29,6 +29,7 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
 
   // Only expose `expired` for prior employees (ie. expired is in the past)
   const expired = getAdTimeOrUndefinedIfInFuture(ad.accountExpires);
+  //const _expired = getAdTime(ad.accountExpires);
   const from = parseWeirdUsDate(ad.APNStartDate);
   const position = { en: ad.Title, no: ad.extensionAttribute4 };
 
