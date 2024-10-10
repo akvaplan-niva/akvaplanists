@@ -108,7 +108,7 @@
     "id": "cse",
     "given": "Chris",
     "family": "Emblow",
-    "spelling": { "gn": ["C"], "fn": [] }
+    "spelling": { "gn": ["Chris S.", "CS","C"], "fn": [] }
   },
   {
     "id": "ctw",
@@ -120,13 +120,12 @@
     "id": "ehh",
     "given": "Eirik Haugstvedt",
     "family": "Henriksen",
-    "spelling": { "gn": ["Eirik H.", "E. O.", "E. H.", "E H"], "fn": [] }
+    "spelling": { "gn": ["Eirik H.", "E. H.", "E H"], "fn": [] }
   },
   {
     "id": "ekr",
     "given": "Elise Kathinka",
-    "family": "Rønningen",
-    "spelling": { "gn": ["Jon"], "fn": ["Rønning"] }
+    "family": "Rønningen"
   },
   {
     "id": "eva",
@@ -258,6 +257,12 @@
     "given": "Lionel",
     "family": "Camus",
     "spelling": { "gn": ["L.", "L"], "fn": ["CAMUS"] }
+  },
+  {
+    "id": "lhl",
+    "given": "Lars-Henrik",
+    "family": "Larsen",
+    "spelling": { "gn": ["Lars Henrik"] }
   },
   {
     "id": "lit",
@@ -419,6 +424,7 @@
         "S.K.J.",
         "S. J.",
         "S.J.",
+        "SJ",
         "S."
       ],
       "fn": ["COCHRANE"]
