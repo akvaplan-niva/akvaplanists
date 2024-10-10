@@ -17,7 +17,7 @@ const { compare } = new Intl.Collator("no");
 const sortFamilyGiven = (a: Akvaplanist, b: Akvaplanist) =>
   compare(`${a.family} ${a.given}`, `${b.family} ${b.given}`);
 
-export const getAkvaplanistStreamFromAdCsvExport = async () => {
+export const getAkvaplanistFromAdCsvExport = async () => {
   const etag = cache.headers.get("etag") ?? "";
   const head = await fetchAkvaplanists({ method: "HEAD", etag });
   if (head.status === 200) {

@@ -15,7 +15,8 @@ export interface Akvaplanist {
   updated: Date;
   orcid?: string | null;
   openalex?: string | null;
-  spelling: Spelling;
+  cristin?: number | null;
+  spelling?: Spelling;
 }
 
 interface Spelling {
