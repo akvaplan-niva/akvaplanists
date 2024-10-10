@@ -2,6 +2,7 @@ import { valibotSafeParse } from "./validate.ts";
 import { Akvaplanist, ExpiredAkvaplanist } from "./types.ts";
 import { ndjson } from "./cli_helpers.ts";
 import _spelling from "./data/spelling.json" with { type: "json" };
+import { externalIdentities } from "./patches.ts";
 
 const spelling = new Map(_spelling.map(({ id, spelling }) => [id, spelling]));
 export const kv = await Deno.openKv(Deno.env.get("DENO_KV_DATABASE"));
@@ -65,13 +66,23 @@ export const setAkvaplanistTx = async (
   } else {
     const { id, expired, family, given } = akvaplanist;
     if (spelling.has(id)) {
-      const { gn, fn } = spelling.get(id)!;
+      const { gn, fn } = spelling.get(id) ?? {};
       if (gn || fn) {
         akvaplanist.spelling = {
-          gn: gn.filter((g) => g !== given),
-          fn: fn.filter((f) => f !== family),
+          gn: gn?.filter((g) => g !== given) ?? [],
+          fn: fn?.filter((f) => f !== family) ?? [],
         };
       }
+    }
+    const external = externalIdentities.has(id)
+      ? externalIdentities.get(id)
+      : null;
+    if (external) {
+      console.warn({ id, external });
+      const { cristin, orcid, openalex } = external;
+      akvaplanist.cristin = cristin;
+      akvaplanist.orcid = orcid;
+      akvaplanist.openalex = openalex;
     }
     const key = [person0, id];
     const expiredkey = [expired0, id];
@@ -105,6 +116,7 @@ export const setAkvaplanistTx = async (
           // console.warn(await kv.delete(expiredkey));
         }
       }
+
       tx.set(key, akvaplanist);
     }
   }
