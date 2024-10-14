@@ -143,7 +143,7 @@
     "id": "fst",
     "given": "Fredrik",
     "family": "Staven",
-    "spelling": { "gn": ["Fredrik R."], "fn": [] }
+    "spelling": { "gn": ["Fredrik Ribsskog", "Fredrik R."], "fn": [] }
   },
   {
     "id": "gdh",
@@ -358,6 +358,7 @@
     "family": "Renaud",
     "spelling": {
       "gn": [
+        "Paul Eric",
         "Paul E.",
         "PAUL E.",
         "Paul E",
