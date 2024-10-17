@@ -137,7 +137,7 @@
     "id": "fma",
     "given": "Felipe",
     "family": "Matos",
-    "spelling": { "gn": ["FELIPE"], "fn": ["MATOS"] }
+    "spelling": { "gn": ["FELIPE"], "fn": ["Matos Heredia Dos Santos","MATOS"] }
   },
   {
     "id": "fst",
@@ -227,7 +227,7 @@
     "id": "kba",
     "given": "Kanchana",
     "family": "Bandara",
-    "spelling": { "gn": ["K.", "K"], "fn": [] }
+    "spelling": { "gn": ["K.", "K"], "fn": ["Bandara W. M. Dumindu"] }
   },
   {
     "id": "kbo",
