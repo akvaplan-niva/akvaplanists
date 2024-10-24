@@ -3,6 +3,7 @@
   { "id": "01hs99np0jeyftz3cwvzss13hh", "cristin": 1241826 },
   { "id": "01hs99np0jtcmwsrsytck4p8cw", "cristin": 1517593 },
   { "id": "01hs99np0jx06g5cqrvt8ab8dm", "cristin": 1538729 },
+  { "id": "aar", "cristin": 932944, "openalex": "A5038390149" },
   { "id": "ach", "cristin": 1491025 },
   {
     "id": "aev",
@@ -15,7 +16,12 @@
   { "id": "aki", "openalex": "A5029634972", "cristin": 50629 },
   { "id": "amn", "cristin": 1491027 },
   { "id": "anb", "orcid": null, "openalex": "A5043667853", "cristin": 385858 },
-  { "id": "ara", "cristin": 445331 },
+  {
+    "id": "ara",
+    "cristin": 445331,
+    "openalex": "A5052264291",
+    "orcid": "0000-0001-7947-9090"
+  },
   { "id": "asa", "orcid": null, "openalex": "A5003744506" },
   { "id": "asi", "orcid": "0009-0008-7805-8962", "cristin": 56335 },
   { "id": "ata", "cristin": 2004 },
@@ -48,7 +54,12 @@
   { "id": "esz", "cristin": 1491034 },
   { "id": "eva", "orcid": null, "openalex": "A5027101557", "cristin": 22677 },
   { "id": "frb", "orcid": null, "openalex": "A5061241408" },
-  { "id": "fst", "orcid": "0000-0002-7264-787X", "cristin": 1025347 },
+  {
+    "id": "fst",
+    "orcid": "0000-0002-7264-787X",
+    "cristin": 1025347,
+    "openalex": "A5012963788"
+  },
   { "id": "gdh", "cristin": 1491036 },
   { "id": "ghr", "cristin": 55946 },
   { "id": "gms", "cristin": 1491037 },
@@ -91,7 +102,7 @@
   { "id": "lit", "cristin": 1491051 },
   { "id": "lka", "cristin": 53830 },
   { "id": "lne", "cristin": 1491049 },
-  { "id": "los", "cristin": 932990 },
+  { "id": "los", "cristin": 932990, "openalex": "A5000747237" },
   { "id": "lsi", "cristin": 1491050 },
   { "id": "lut", "orcid": null, "openalex": "A5003251147", "cristin": 1491052 },
   { "id": "mad", "cristin": 420537 },
@@ -170,6 +181,5 @@
   { "id": "vsa", "cristin": 1491070 },
   { "id": "xwa", "orcid": "0000-0002-4255-5106", "openalex": "A5008225300" },
   { "id": "yns", "cristin": 1491071 },
-  { "id": "ysh", "cristin": 565326 },
-  { "id": "aar", "cristin": 932944 }
+  { "id": "ysh", "cristin": 565326 }
 ]

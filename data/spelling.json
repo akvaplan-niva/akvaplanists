@@ -108,7 +108,7 @@
     "id": "cse",
     "given": "Chris",
     "family": "Emblow",
-    "spelling": { "gn": ["Chris S.", "CS","C"], "fn": [] }
+    "spelling": { "gn": ["Chris S.", "CS", "C"], "fn": [] }
   },
   {
     "id": "ctw",
@@ -137,7 +137,10 @@
     "id": "fma",
     "given": "Felipe",
     "family": "Matos",
-    "spelling": { "gn": ["FELIPE"], "fn": ["Matos Heredia Dos Santos","MATOS"] }
+    "spelling": {
+      "gn": ["FELIPE"],
+      "fn": ["Matos Heredia Dos Santos", "MATOS"]
+    }
   },
   {
     "id": "fst",
@@ -189,8 +192,10 @@
     "family": "Mannvik",
     "spelling": { "gn": ["Hans-Petter", "H-P."], "fn": [] }
   },
-  { "id":"iyu",
-    "given":"Ingvild","family":"Utengen",
+  {
+    "id": "iyu",
+    "given": "Ingvild",
+    "family": "Utengen",
     "spelling": { "gn": ["Ingvild Ytterhus"], "fn": ["Ytterhus Utengen"] }
   },
   {
