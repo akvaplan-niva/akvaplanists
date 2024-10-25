@@ -73,7 +73,8 @@
   {
     "id": "jha",
     "orcid": "https://orcid.org/0009-0004-7120-717X",
-    "cristin": 55633
+    "cristin": 55633,
+    "openalex": "A5110770518"
   },
   { "id": "jhp", "cristin": 726239 },
   { "id": "jlc", "orcid": null, "openalex": "A5017034272" },
