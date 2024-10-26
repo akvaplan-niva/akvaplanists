@@ -12,8 +12,8 @@
     "cristin": 55939
   },
   { "id": "agi", "cristin": 1491026 },
-  { "id": "ahz", "cristin": 1491028 },
-  { "id": "aki", "openalex": "A5029634972", "cristin": 50629 },
+  { "id": "ahz", "cristin": 1491028, "openalex": "A5068066466" },
+  { "id": "aki", "openalex": "A5029634972", "cristin": 50629, "orcid":"0000-0003-0077-8077" },
   { "id": "amn", "cristin": 1491027 },
   { "id": "anb", "orcid": null, "openalex": "A5043667853", "cristin": 385858 },
   {
@@ -28,7 +28,7 @@
   { "id": "atf", "orcid": null, "openalex": "A5016553788", "cristin": 1491029 },
   { "id": "avn", "cristin": 773911 },
   { "id": "avs", "cristin": 1491024 },
-  { "id": "azi", "cristin": 1240554 },
+  { "id": "azi", "cristin": 1240554, "openalex": "A5067227149" },
   { "id": "beb", "cristin": 57588 },
   { "id": "bhw", "cristin": 1491030 },
   {
@@ -52,7 +52,7 @@
   { "id": "elo", "cristin": 1491035 },
   { "id": "esy", "cristin": 1071550 },
   { "id": "esz", "cristin": 1491034 },
-  { "id": "eva", "orcid": null, "openalex": "A5027101557", "cristin": 22677 },
+  { "id": "eva", "orcid": "0000-0002-5328-3396", "openalex": "A5027101557", "cristin": 22677 },
   { "id": "frb", "orcid": null, "openalex": "A5061241408" },
   {
     "id": "fst",
@@ -61,7 +61,7 @@
     "openalex": "A5012963788"
   },
   { "id": "gdh", "cristin": 1491036 },
-  { "id": "ghr", "cristin": 55946 },
+  { "id": "ghr", "cristin": 55946, "openalex":"a5072979792", "orcid":"0009-0009-8132-2362" },
   { "id": "gms", "cristin": 1491037 },
   { "id": "gnc", "orcid": null, "openalex": "A5082125560", "cristin": 1491038 },
   { "id": "gwl", "cristin": 1491039 },
@@ -70,6 +70,8 @@
   { "id": "ibo", "cristin": 1491044 },
   { "id": "idh", "cristin": 1491043 },
   { "id": "ihw", "cristin": 58801 },
+  { "id":"iyu", "openalex": "A5093077789"},
+  { "id": "jen", "openalex": "A5075325546"}
   {
     "id": "jha",
     "orcid": "https://orcid.org/0009-0004-7120-717X",
@@ -85,7 +87,7 @@
     "openalex": "A5004934736",
     "cristin": 799510
   },
-  { "id": "kbo", "cristin": 53627 },
+  { "id": "kbo", "cristin": 53627, "openalex":"A5014995982" },
   { "id": "kdu", "cristin": 1636446 },
   { "id": "kej", "cristin": 1491047 },
   { "id": "khs", "cristin": 391510 },
@@ -167,13 +169,13 @@
   { "id": "sfp", "cristin": 57495 },
   { "id": "sgu", "orcid": null, "openalex": "A5021608102", "cristin": 1491064 },
   { "id": "she", "cristin": 467070 },
-  { "id": "skc", "orcid": null, "openalex": "A5013860772", "cristin": 26507 },
+  { "id": "skc", "orcid": null, "openalex": null, "cristin": 26507 },
   { "id": "spe", "cristin": 1491065 },
   { "id": "sta", "orcid": null, "openalex": "A5045949568", "cristin": 1538732 },
   { "id": "svl", "cristin": 447138 },
   { "id": "tbo", "orcid": null, "openalex": "A5051099438", "cristin": 57500 },
   { "id": "thh", "cristin": 14280 },
-  { "id": "tmj", "orcid": null, "openalex": "A5020580681", "cristin": 1491067 },
+  { "id": "tmj", "orcid": "0000-0001-8617-2839", "openalex": "A5020580681", "cristin": 1491067 },
   { "id": "tom", "cristin": 49678 },
   { "id": "tri", "cristin": 55544 },
   { "id": "vho", "cristin": 1491068 },
