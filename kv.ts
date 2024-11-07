@@ -92,12 +92,12 @@ export const setAkvaplanistTx = async (
       const atomic = kv.atomic();
 
       // DELETE regular record
-      // console.warn("DELETE", key);
+      console.warn("DELETE", key);
       atomic.delete(key);
 
       // INSERT expired record
       const minimal = toExpired(akvaplanist);
-      //console.warn("INSERT", expiredkey, minimal);
+      console.warn("INSERT", expiredkey, minimal);
       atomic
         .check({ key: expiredkey, versionstamp: null })
         .set(expiredkey, minimal);
@@ -148,9 +148,20 @@ export const listExpiredTask = async () => {
   }
 };
 
+const getTask = async (id) => {
+  const entry = await kv.get(["person", id]);
+  if (entry.versionstamp) {
+    ndjson(entry);
+  }
+  ndjson(await kv.get(["expired", id]));
+};
+
 if (import.meta.main) {
-  const [action] = Deno.args;
+  const [action, ...args] = Deno.args;
   switch (action) {
+    case "get":
+      getTask(args.at(0));
+      break;
     case "list":
     case "person":
       await listTask();
