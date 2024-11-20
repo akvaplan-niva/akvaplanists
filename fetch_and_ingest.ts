@@ -1,13 +1,7 @@
 import { getAkvaplanistFromAdCsvExport } from "./fetch.ts";
-import { setAkvaplanists } from "./kv.ts";
+import { shallowMergeAkvaplanists } from "./kv.ts";
+import { chunkArray } from "./cli_helpers.ts";
 import type { Akvaplanist } from "./types.ts";
-
-// https://www.30secondsofcode.org/js/s/split-array-into-chunks/
-const chunkArray = <T>(arr: T[], size: number) =>
-  Array.from(
-    { length: Math.ceil(arr.length / size) },
-    (_, i) => arr.slice(i * size, i * size + size),
-  );
 
 export const fetchAndIngestAkvaplanists = async () => {
   for await (
@@ -16,7 +10,7 @@ export const fetchAndIngestAkvaplanists = async () => {
       50,
     )
   ) {
-    await setAkvaplanists(chunk);
+    await shallowMergeAkvaplanists(chunk);
   }
 };
 if (import.meta.main) {

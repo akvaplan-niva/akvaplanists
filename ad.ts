@@ -34,7 +34,7 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
   const position = { en: ad.Title, no: ad.extensionAttribute4 };
 
   const responsibility = "LEDELS" === section
-    ? { en: ad.ExtensionAttribute5, no: ad.ExtensionAttribute3 }
+    ? { en: ad.ExtensionAttribute5.trim(), no: ad.ExtensionAttribute3.trim() }
     : undefined;
   const shallowpatch = patches.has(id) ? patches.get(id) : {};
 

@@ -1,8 +1,11 @@
+import _spelling from "./data/spelling.json" with { type: "json" };
+
 import { valibotSafeParse } from "./validate.ts";
 import { Akvaplanist, ExpiredAkvaplanist } from "./types.ts";
 import { ndjson } from "./cli_helpers.ts";
-import _spelling from "./data/spelling.json" with { type: "json" };
 import { externalIdentities } from "./patches.ts";
+import { equal } from "@std/assert";
+import { getFrom } from "./from.ts";
 
 const spelling = new Map(_spelling.map(({ id, spelling }) => [id, spelling]));
 export const kv = await Deno.openKv(Deno.env.get("DENO_KV_DATABASE"));
@@ -10,6 +13,35 @@ export const kv = await Deno.openKv(Deno.env.get("DENO_KV_DATABASE"));
 export const person0 = "person";
 
 export const expired0 = "expired";
+
+export const isDeepEqualExcept = (
+  a: object,
+  b: object,
+  except: string[],
+) => {
+  const [cloneA, cloneB] = [a, b].map((x) => structuredClone(x));
+
+  for (const key of except) {
+    if (Object.hasOwn(cloneA, key)) {
+      delete cloneA?.[key];
+    }
+    if (Object.hasOwn(cloneB, key)) {
+      delete cloneB?.[key];
+    }
+  }
+  return equal(cloneA, cloneB);
+};
+
+const pickExcept = (o: object, except: string[]) => {
+  const object: typeof o = {};
+  const ex = new Set(except);
+  for (const [k, v] of Object.entries(o)) {
+    if (!ex.has(k)) {
+      object[k] = v;
+    }
+  }
+  return object;
+};
 
 export async function* prefix(
   prefix: Deno.KvKey,
@@ -19,10 +51,10 @@ export async function* prefix(
     yield entry;
   }
 }
-export const getAkvaplanist = (id: string) =>
+export const getAkvaplanistEntry = (id: string) =>
   kv.get<Akvaplanist>([person0, id]);
 
-export const getExpiredAkvaplanist = (id: string) =>
+export const getExpiredAkvaplanistEntry = (id: string) =>
   kv.get<ExpiredAkvaplanist>([expired0, id]);
 
 export const listPrefix = <T>(
@@ -37,8 +69,17 @@ export const listExpiredAkvaplanists = (options?: Deno.KvListOptions) =>
   listPrefix<ExpiredAkvaplanist>([expired0], options);
 
 const toExpired = (akvaplanist: Akvaplanist) => {
-  const { id, family, given, spelling, from, expired, created, updated } =
-    akvaplanist;
+  const {
+    id,
+    family,
+    given,
+    spelling,
+    from,
+    expired,
+    created,
+    updated,
+    cristin,
+  } = akvaplanist;
   return {
     id,
     family,
@@ -49,6 +90,7 @@ const toExpired = (akvaplanist: Akvaplanist) => {
     expired,
     created,
     updated,
+    cristin,
   } as ExpiredAkvaplanist;
 };
 
@@ -64,6 +106,8 @@ export const setAkvaplanistTx = async (
       JSON.stringify({ error: { input: akvaplanist, messages } }),
     );
   } else {
+    akvaplanist.from = getFrom(akvaplanist.id);
+
     const { id, expired, family, given } = akvaplanist;
     if (spelling.has(id)) {
       const { gn, fn } = spelling.get(id) ?? {};
@@ -78,7 +122,6 @@ export const setAkvaplanistTx = async (
       ? externalIdentities.get(id)
       : null;
     if (external) {
-      console.warn({ id, external });
       const { cristin, orcid, openalex } = external;
       akvaplanist.cristin = cristin;
       akvaplanist.orcid = orcid;
@@ -92,20 +135,27 @@ export const setAkvaplanistTx = async (
       const atomic = kv.atomic();
 
       // DELETE regular record
-      console.warn("DELETE", key);
-      atomic.delete(key);
+      const exist = await kv.get(key);
+      if (exist?.versionstamp) {
+        console.warn("DELETE", key);
+        console.warn(await atomic.delete(key));
+      }
 
       // INSERT expired record
       const minimal = toExpired(akvaplanist);
-      console.warn("INSERT", expiredkey, minimal);
+      console.warn("UPDATE/INSERT", expiredkey, minimal);
       atomic
-        .check({ key: expiredkey, versionstamp: null })
+        //.check({ key: expiredkey, versionstamp: null })
         .set(expiredkey, minimal);
 
-      // COMMIT
-      await atomic.commit();
+      // // COMMIT
+      const res = await atomic.commit();
+      console.warn("COMMIT", key, expiredkey, res);
+      if (!res.ok) {
+        console.warn("Failed COMMIT on INSERT", { expiredkey });
+      }
     } else {
-      const { versionstamp, value } = await getExpiredAkvaplanist(id);
+      const { versionstamp, value } = await getExpiredAkvaplanistEntry(id);
       if (versionstamp) {
         console.warn("Also in expired", akvaplanist, value);
         if (value.family === family && value.given === given) {
@@ -126,6 +176,38 @@ export const setAkvaplanists = async (chunk: Akvaplanist[]) => {
   const tx = kv.atomic();
   for await (const akvaplanist of chunk) {
     await setAkvaplanistTx(akvaplanist, tx);
+  }
+  const { ok } = await tx.commit();
+  const msg = { commit: { ok, affected: chunk.length } };
+  if (ok) {
+    console.warn(msg);
+  } else {
+    console.error(msg);
+  }
+};
+
+export const shallowMergeAkvaplanists = async (chunk: Akvaplanist[]) => {
+  const tx = kv.atomic();
+  const except = [
+    //"from",
+    //"created",
+    "updated",
+    "spelling",
+    //"openalex",
+    //"cristin",
+    //"orcid",
+  ];
+  for await (const fresh of chunk) {
+    const existing = await getAkvaplanistEntry(fresh.id);
+    if (!existing.versionstamp) {
+      await setAkvaplanistTx(fresh, tx);
+    } else if (!isDeepEqualExcept(fresh, existing.value, except)) {
+      const akvaplanist = existing.value;
+      const freshExcept = pickExcept(fresh, except);
+
+      const merged = { ...akvaplanist, ...freshExcept };
+      await setAkvaplanistTx(merged, tx);
+    }
   }
   const { ok } = await tx.commit();
   const msg = { commit: { ok, affected: chunk.length } };

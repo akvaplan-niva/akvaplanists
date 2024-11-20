@@ -12,19 +12,22 @@ export const externalIdentities = new Map<
 
 const manualPatches: [string, Partial<Akvaplanist>][] = [
   ["aen", { management: true, section: "LEDELS" }],
-  ["aev", { from: new Date("1992-05-01T12:00:00Z") }],
-  ["aki", { given: "Albert K. D.", from: new Date("2001-01-01T12:00:00Z") }],
+  //["aev", { from: new Date("1992-05-01T12:00:00Z") }],
+  ["aki", {
+    given: "Albert K. D.",
+  } /* from: new Date("2001-01-01T12:00:00Z")*/],
   ["fma", { workplace: "Sortland" }],
   ["kgp", { section: "KJEMI" }],
   ["lli", { workplace: "Sortland" }],
   ["odj", { given: "Ólöf Dóra Bartels", family: "Jónsdóttir" }],
-  ["skc", {
-    from: new Date("1992-01-01T12:00:00Z"),
-  }],
-  ["ref", { section: "INNOV" }],
+  // ["skc", {
+  //   from: new Date("1992-01-01T12:00:00Z"),
+  // }],
   ["per", { given: "Paul E." }],
+  ["skd", { family: "Dinessen" }],
 ];
 
+// FIXME Lazy double shallow patching
 export const patches = new Map([
   ...externalIdentities,
   ...manualPatches,
