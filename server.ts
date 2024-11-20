@@ -5,8 +5,8 @@ import { getAkvaplanistFromAdCsvExport } from "./fetch.ts";
 import { sectionList } from "./constants.ts";
 
 import {
-  getAkvaplanist,
-  getExpiredAkvaplanist,
+  getAkvaplanistEntry,
+  getExpiredAkvaplanistEntry,
   listAkvaplanists,
   listExpiredAkvaplanists,
 } from "./kv.ts";
@@ -29,7 +29,7 @@ const listAkvaplanistsInKvHandler = (req: Request) =>
 
 const personInKvHandler = async (req: Request) => {
   const { id } = extractParams<{ id: string }>(ptrnKvPersonId, req);
-  const apn = await getAkvaplanist(id);
+  const apn = await getAkvaplanistEntry(id);
   if (!apn) {
     return error(404);
   }
@@ -38,7 +38,7 @@ const personInKvHandler = async (req: Request) => {
 
 const expiredInKvHandler = async (req: Request) => {
   const { id } = extractParams<{ id: string }>(ptrnKvExpiredId, req);
-  const apn = await getExpiredAkvaplanist(id);
+  const apn = await getExpiredAkvaplanistEntry(id);
   if (!apn) {
     return error(404);
   }

@@ -11,6 +11,7 @@ const replacePriors = async (id?: string) => {
       prior = { ...value, ...prior };
     }
     prior.updated = new Date();
+    prior.prior = true;
     await kv.set(key, prior);
   }
 };
@@ -20,6 +21,7 @@ const replacePrior = async (id: string) => {
   if (prior) {
     const key = ["expired", prior.id];
     prior.updated = new Date();
+    prior.prior = true;
     await kv.set(key, prior);
   }
 };

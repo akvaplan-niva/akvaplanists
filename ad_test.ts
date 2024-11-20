@@ -11,7 +11,7 @@ const xyz: AkvaplanAdPerson = {
   Title: "Position",
   extensionAttribute4: "Stilling",
   ExtensionAttribute3: "Ansvarsområde",
-  ExtensionAttribute5: "Responsibility",
+  ExtensionAttribute5: "Responsibility ",
   ExtensionAttribute2: "",
   Department: "LEDELS",
   city: "Tromsø",
