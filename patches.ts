@@ -25,6 +25,10 @@ const manualPatches: [string, Partial<Akvaplanist>][] = [
   // }],
   ["per", { given: "Paul E." }],
   ["skd", { family: "Dinessen" }],
+  ["mjh", {
+    from: new Date("2023-08-15T12:00:00Z"),
+    expired: new Date("2024-10-31T12:00:00Z"),
+  }],
 ];
 
 // FIXME Lazy double shallow patching
