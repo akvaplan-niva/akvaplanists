@@ -89,6 +89,12 @@
     "spelling": { "gn": ["E."], "fn": [] }
   },
   {
+    "given": "Ellie Jane",
+    "family": "Watts",
+    "id": "ejw",
+    "spelling": { "gn": ["Ellie J."] }
+  },
+  {
     "given": "Eli",
     "family": "Børve",
     "prior": true,
@@ -192,7 +198,8 @@
     "given": "Ingar H.",
     "family": "Wasbotten",
     "prior": true,
-    "id": "ihw"
+    "id": "ihw",
+    "spelling": { "gn": ["Ingar Halvorsen"], "fn": [] }
   },
   {
     "given": "Iris",
