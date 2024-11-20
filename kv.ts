@@ -138,14 +138,14 @@ export const setAkvaplanistTx = async (
       const exist = await kv.get(key);
       if (exist?.versionstamp) {
         console.warn("DELETE", key);
-        console.warn(await atomic.delete(key));
+        console.warn(await kv.delete(key));
       }
 
       // INSERT expired record
       const minimal = toExpired(akvaplanist);
       console.warn("UPDATE/INSERT", expiredkey, minimal);
       atomic
-        //.check({ key: expiredkey, versionstamp: null })
+        .check({ key: expiredkey, versionstamp: null })
         .set(expiredkey, minimal);
 
       // // COMMIT
