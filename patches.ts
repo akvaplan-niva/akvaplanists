@@ -12,19 +12,14 @@ export const externalIdentities = new Map<
 
 const manualPatches: [string, Partial<Akvaplanist>][] = [
   ["aen", { management: true, section: "LEDELS" }],
-  //["aev", { from: new Date("1992-05-01T12:00:00Z") }],
   ["aki", {
     given: "Albert K. D.",
-  } /* from: new Date("2001-01-01T12:00:00Z")*/],
+  }],
   ["fma", { workplace: "Sortland" }],
   ["kgp", { section: "KJEMI" }],
   ["lli", { workplace: "Sortland" }],
   ["odj", { given: "Ólöf Dóra Bartels", family: "Jónsdóttir" }],
-  // ["skc", {
-  //   from: new Date("1992-01-01T12:00:00Z"),
-  // }],
   ["per", { given: "Paul E." }],
-  ["skd", { family: "Dinessen" }],
   ["mjh", {
     from: new Date("2023-08-15T12:00:00Z"),
     expired: new Date("2024-10-31T12:00:00Z"),
