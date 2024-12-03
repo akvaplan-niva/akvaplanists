@@ -5,7 +5,6 @@ import {
   parseWeirdUsDate,
 } from "./crazy_dates.ts";
 import { externalIdentities, fromPatches, patches } from "./patches.ts";
-import { fromMap } from "./migrate/2024-11-14_set_from.ts";
 
 import type { Akvaplanist } from "./types.ts";
 import type { AkvaplanAdPerson } from "./ad_types.ts";
