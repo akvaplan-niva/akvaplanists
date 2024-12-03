@@ -4,7 +4,9 @@ import {
   parseNorwegianDate,
   parseWeirdUsDate,
 } from "./crazy_dates.ts";
-import { patches } from "./patches.ts";
+import { externalIdentities, fromPatches, patches } from "./patches.ts";
+import { fromMap } from "./migrate/2024-11-14_set_from.ts";
+
 import type { Akvaplanist } from "./types.ts";
 import type { AkvaplanAdPerson } from "./ad_types.ts";
 
@@ -36,7 +38,11 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
   const responsibility = "LEDELS" === section
     ? { en: ad.ExtensionAttribute5.trim(), no: ad.ExtensionAttribute3.trim() }
     : undefined;
-  const shallowpatch = patches.has(id) ? patches.get(id) : {};
+
+  const patch = patches.has(id) ? patches.get(id) : {};
+  patch.from = fromPatches.has(id) ? fromPatches.get(id) : undefined;
+
+  const ids = externalIdentities.has(id) ? externalIdentities.get(id) : {};
 
   const akvaplanist: Akvaplanist = {
     family,
@@ -53,7 +59,8 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
     expired,
     created,
     updated,
-    ...shallowpatch,
+    ...ids,
+    ...patch,
   };
   return akvaplanist;
 };
@@ -65,7 +72,7 @@ export async function* generateAkvaplanistsFromCrazyDatesAdStream(
   for await (const ad of rs) {
     const apn = akvaplanistFromAdPerson(ad);
     const { from } = apn;
-    if (from && from.getTime() >= now) {
+    if (from && new Date(from).getTime() >= now) {
       // no-op: do not expose if the person has not yet started (ie. `from` is in the future)
     } else {
       yield apn;

@@ -5,7 +5,7 @@ import { Akvaplanist, ExpiredAkvaplanist } from "./types.ts";
 import { ndjson } from "./cli_helpers.ts";
 import { externalIdentities } from "./patches.ts";
 import { equal } from "@std/assert";
-import { getFrom } from "./from.ts";
+//import { getFrom } from "./from.ts";
 
 const spelling = new Map(_spelling.map(({ id, spelling }) => [id, spelling]));
 export const kv = await Deno.openKv(Deno.env.get("DENO_KV_DATABASE"));
@@ -106,7 +106,7 @@ export const setAkvaplanistTx = async (
       JSON.stringify({ error: { input: akvaplanist, messages } }),
     );
   } else {
-    akvaplanist.from = getFrom(akvaplanist.id);
+    //akvaplanist.from = getFrom(akvaplanist.id);
 
     const { id, expired, family, given } = akvaplanist;
     if (spelling.has(id)) {
