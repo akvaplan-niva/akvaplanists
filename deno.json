@@ -1,14 +1,15 @@
 {
   "tasks": {
-    "dev": "deno run --watch --env --allow-env --allow-net=:8000,support.akvaplan.com,api.deno.com,us-east4.txnproxy.deno-gcp.net server.ts",
-    "fetch": "deno run --unstable-kv --env --allow-env --allow-net fetch_and_ingest.ts",
-    "update-priors": "",
-    "kv": "deno run --unstable-kv --env --allow-env --allow-net kv.ts"
+    "dev": "deno run --watch --env-file --allow-env --allow-net=:8000,support.akvaplan.com,api.deno.com,us-east4.txnproxy.deno-gcp.net server.ts",
+    "fetch": "deno run --env --allow-env --allow-net fetch_and_ingest.ts",
+    "ad": "deno run --env-file --allow-env --allow-net fetch.ts",
+    "kv": "deno run --env-file --allow-env --allow-net kv.ts"
   },
   "unstable": ["cron", "kv"],
   "imports": {
     "@std/assert": "jsr:@std/assert@^1.0.8",
     "@std/csv": "jsr:@std/csv@0.224.3",
+    "@std/http": "jsr:@std/http@^1.0.11",
     "@std/streams": "jsr:@std/streams@0.224.5",
     "@valibot/valibot": "jsr:@valibot/valibot@0.30.0"
   }

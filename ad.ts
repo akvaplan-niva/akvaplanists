@@ -5,7 +5,6 @@ import {
   parseWeirdUsDate,
 } from "./crazy_dates.ts";
 import { externalIdentities, fromPatches, patches } from "./patches.ts";
-
 import type { Akvaplanist } from "./types.ts";
 import type { AkvaplanAdPerson } from "./ad_types.ts";
 
@@ -28,10 +27,16 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
   const created = parseNorwegianDate(ad.whencreated);
   const updated = new Date(cache.headers.get("last-modified") as string);
 
+  const from = fromPatches.has(id)
+    ? fromPatches.get(id)
+    : "APNStartDate" in ad
+    ? parseWeirdUsDate(ad.APNStartDate)
+    : undefined;
+
   // Only expose `expired` for prior employees (ie. expired is in the past)
   const expired = getAdTimeOrUndefinedIfInFuture(ad.accountExpires);
   //const _expired = getAdTime(ad.accountExpires);
-  const from = parseWeirdUsDate(ad.APNStartDate);
+
   const position = { en: ad.Title, no: ad.extensionAttribute4 };
 
   const responsibility = "LEDELS" === section
@@ -39,7 +44,6 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
     : undefined;
 
   const patch = patches.has(id) ? patches.get(id) : {};
-  patch.from = fromPatches.has(id) ? fromPatches.get(id) : undefined;
 
   const ids = externalIdentities.has(id) ? externalIdentities.get(id) : {};
 
@@ -72,7 +76,10 @@ export async function* generateAkvaplanistsFromCrazyDatesAdStream(
     const apn = akvaplanistFromAdPerson(ad);
     const { from } = apn;
     if (from && new Date(from).getTime() >= now) {
-      // no-op: do not expose if the person has not yet started (ie. `from` is in the future)
+      // should have been a no-op, to not expose when a person has not yet started (ie. `from` is in the future)
+      // well, when new people come without "from", patching it then won't work until after the from date,
+      // and this person is then exposed via the created date
+      yield apn;
     } else {
       yield apn;
     }

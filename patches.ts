@@ -1,5 +1,5 @@
 import _external from "./data/external_ids.json" with { type: "json" };
-import _from from "./migrate/2024-11-14_set_from.json" with { type: "json" };
+import _from from "./data/from.json" with { type: "json" };
 import type { Akvaplanist } from "./types.ts";
 // "openalex" resolve at https://api.openalex.org/people/{openalex}
 // "orcid" resolve at https://orcid.org/{orcid}
@@ -19,17 +19,16 @@ const manualPatches: [string, Partial<Akvaplanist>][] = [
   ["aki", {
     given: "Albert K. D.",
   }],
-
+  ["der", { from: new Date("2024-12-01") }],
   ["fma", { workplace: "Sortland" }],
   ["lli", { workplace: "Sortland" }],
-  ["ote", { workplace: "Tromsø" }],
-  ["odj", { given: "Ólöf Dóra Bartels", family: "Jónsdóttir" }],
-  ["per", { given: "Paul E." }],
   ["mjh", {
     from: new Date("2023-08-15"),
-    expired: new Date("2024-10-31T12:00:00Z"),
+    expired: new Date("2024-10-31T16:00:00Z"),
   }],
-  ["der", { from: new Date("2024-12-01") }],
+  ["odj", { given: "Ólöf Dóra Bartels", family: "Jónsdóttir" }],
+  ["ote", { from: new Date("2024-03-11"), workplace: "Tromsø" }],
+  ["per", { given: "Paul E." }],
 ];
 
 export const patches = new Map(manualPatches);
