@@ -58,7 +58,7 @@ const handlers = new Map<URLPattern, RequestHandler>([
   [ptrn("/"), listEmployedAkvaplanistsHandler],
   [ptrn("/all"), listAkvaplanistsHandler],
   [ptrn("/fresh"), listFreshAkvaplanistsFromAdExportHandler],
-  [ptrn("/prior "), listPriorAkvaplanistsHandler],
+  [ptrn("/prior"), listPriorAkvaplanistsHandler],
   [ptrnPersonId, personHandler],
   [ptrn("/sections"), listSectionsHandler],
 ]);
