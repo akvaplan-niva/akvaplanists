@@ -79,7 +79,7 @@ export async function* generateAkvaplanistsFromCrazyDatesAdStream(
       // should have been a no-op, to not expose when a person has not yet started (ie. `from` is in the future)
       // well, when new people come without "from", patching it then won't work until after the from date,
       // and this person is then exposed via the created date
-      //yield apn;
+      yield apn;
     } else {
       yield apn;
     }

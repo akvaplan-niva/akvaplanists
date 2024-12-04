@@ -9,8 +9,9 @@ export interface Akvaplanist {
   management?: true | false | null;
   workplace: string;
   country: string;
-  from?: Date;
-  expired?: Date;
+  from?: Date | string;
+  expired?: Date | string;
+  prior?: boolean;
   created: Date;
   updated: Date;
   orcid?: string | null;

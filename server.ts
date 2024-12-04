@@ -4,12 +4,7 @@ import { getAkvaplanistFromAdCsvExport } from "./fetch.ts";
 
 import { sectionList } from "./constants.ts";
 
-import {
-  getAkvaplanistEntry,
-  getExpiredAkvaplanistEntry,
-  listAkvaplanists,
-  listExpiredAkvaplanists,
-} from "./kv.ts";
+import { getAkvaplanistEntry, listAkvaplanists } from "./kv.ts";
 
 import {
   error,
@@ -21,14 +16,29 @@ import {
 
 import type { RequestHandler } from "./types.ts";
 
-const ptrnKvPersonId = ptrn("/kv/person/:id");
-const ptrnKvExpiredId = ptrn("/kv/expired/:id");
+const ptrnPersonId = ptrn("/person/:id");
 
-const listAkvaplanistsInKvHandler = (req: Request) =>
+const listAkvaplanistsHandler = (req: Request) =>
   responseFromKvList(listAkvaplanists(), req);
 
-const personInKvHandler = async (req: Request) => {
-  const { id } = extractParams<{ id: string }>(ptrnKvPersonId, req);
+const listPriorAkvaplanistsHandler = async (req: Request) =>
+  response(
+    (await Array.fromAsync(listAkvaplanists())).filter(({ value: { prior } }) =>
+      prior === true
+    ),
+    req,
+  );
+
+const listEmployedAkvaplanistsHandler = async (req: Request) =>
+  response(
+    (await Array.fromAsync(listAkvaplanists())).filter(({ value: { prior } }) =>
+      prior !== true
+    ),
+    req,
+  );
+
+const personHandler = async (req: Request) => {
+  const { id } = extractParams<{ id: string }>(ptrnPersonId, req);
   const apn = await getAkvaplanistEntry(id);
   if (!apn) {
     return error(404);
@@ -36,19 +46,7 @@ const personInKvHandler = async (req: Request) => {
   return response(apn, req);
 };
 
-const expiredInKvHandler = async (req: Request) => {
-  const { id } = extractParams<{ id: string }>(ptrnKvExpiredId, req);
-  const apn = await getExpiredAkvaplanistEntry(id);
-  if (!apn) {
-    return error(404);
-  }
-  return response(apn, req);
-};
-
-const listExpiredInKvHandler = (req: Request) =>
-  responseFromKvList(listExpiredAkvaplanists(), req);
-
-const listAkvaplanistsInAdExportHandler = async (req: Request) =>
+const listFreshAkvaplanistsFromAdExportHandler = async (req: Request) =>
   response(await getAkvaplanistFromAdCsvExport(), req);
 
 const getSections = async () => await sectionList;
@@ -57,12 +55,12 @@ const listSectionsHandler = async (req: Request) =>
   response(await getSections(), req);
 
 const handlers = new Map<URLPattern, RequestHandler>([
-  [ptrn("/"), listAkvaplanistsInAdExportHandler],
-  [ptrnKvPersonId, personInKvHandler],
-  [ptrn("/kv/person"), listAkvaplanistsInKvHandler],
-  [ptrnKvExpiredId, expiredInKvHandler],
-  [ptrn("/kv/expired"), listExpiredInKvHandler],
-  [ptrn("/section"), listSectionsHandler],
+  [ptrn("/"), listEmployedAkvaplanistsHandler],
+  [ptrn("/all"), listAkvaplanistsHandler],
+  [ptrn("/fresh"), listFreshAkvaplanistsFromAdExportHandler],
+  [ptrn("/prior "), listPriorAkvaplanistsHandler],
+  [ptrnPersonId, personHandler],
+  [ptrn("/sections"), listSectionsHandler],
 ]);
 
 const handler = (req: Request) => {
