@@ -50,8 +50,7 @@ nd-group d.cristin | nd-filter 'd[1].length===1 && null!==d[0]' | nd-map d[1][0]
 
 ## Privacy
 
-The services are build with privacy focus, and only store and expose the minimal
+Thes services is built with privacy focus, and only store and expose the minimal
 personal information found on our public website:
 
 - https://akvaplan.no/en/people
-- https://akvaplan.no/en/akvaplanist/expired
