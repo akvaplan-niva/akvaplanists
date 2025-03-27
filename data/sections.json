@@ -1,0 +1,107 @@
+[
+  {
+    "id": "BIOLT",
+    "name": {
+      "en": "Biological Analyses and Taxonomy",
+      "no": "Biologiske analyser og taksonomi"
+    }
+  },
+  {
+    "id": "DIGIS",
+    "name": {
+      "en": "Digital Solutions",
+      "no": "Digitale løsninger"
+    }
+  },
+  {
+    "id": "FILOG",
+    "name": {
+      "en": "Ocean Technology",
+      "no": "Havteknologi"
+    }
+  },
+  {
+    "id": "FISK",
+    "name": {
+      "en": "Research and Innovation Facility Kraknes",
+      "no": "Forsknings- og Innovasjonsenter Kraknes"
+    }
+  },
+  {
+    "id": "INNOV",
+    "name": {
+      "en": "Aquaculture Innovation",
+      "no": "Akvakultur innovasjon"
+    }
+  },
+  {
+    "id": "INSPM",
+    "name": {
+      "en": "Aquaculture Inspections and Environmental Services",
+      "no": "Akvakultur inspeksjon og miljøtjenester"
+    }
+  },
+  {
+    "id": "KJEMI",
+    "name": {
+      "en": "Chemistry Lab",
+      "no": "Kjemilab"
+    }
+  },
+  {
+    "id": "LEDELS",
+    "name": {
+      "en": "Management",
+      "no": "Ledelse"
+    }
+  },
+  {
+    "id": "MILPÅ",
+    "name": {
+      "en": "Environmental Impacts",
+      "no": "Miljøpåvirkninger"
+    }
+  },
+  {
+    "id": "OSEAN",
+    "name": {
+      "en": "Oceanography",
+      "no": "Oseanografi"
+    }
+  },
+  {
+    "id": "PRODB",
+    "name": {
+      "en": "Aquaculture Production and Sustainability",
+      "no": "Akvakultur produksjon og bærekraft"
+    }
+  },
+  {
+    "id": "SENSE",
+    "name": {
+      "en": "Environmental Risks & Contingency Analyses",
+      "no": "Miljørisiko- og beredskapsanalyser"
+    }
+  },
+  {
+    "id": "STABS",
+    "name": {
+      "en": "Staff and Support",
+      "no": "Stab og støtte"
+    }
+  },
+  {
+    "id": "UTRED",
+    "name": {
+      "en": "Environmental Assessments and Monitoring",
+      "no": "Miljøutredning og overvåking"
+    }
+  },
+  {
+    "id": "ØKOSY",
+    "name": {
+      "en": "Environmental Impacts",
+      "no": "Økosystemforståelse"
+    }
+  }
+]
