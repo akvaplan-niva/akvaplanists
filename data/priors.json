@@ -47,11 +47,14 @@
     "id": "01hs99np0j5vyn85ve23h5q77t"
   },
   {
+    "id": "01hs99np0jsxwmgxdpkhvpbwps",
     "given": "Arnþór",
     "family": "Gústavsson",
+    "spelling": { "gn": ["Arnthor", "A."], "fn": ["Gustavsson"] },
     "prior": true,
-    "id": "01hs99np0jsxwmgxdpkhvpbwps",
-    "spelling": { "gn": ["A."], "fn": [] }
+    "days": 1142,
+    "from": "2019-05-01",
+    "expired": "2022-06-16"
   },
   {
     "given": "B.",
@@ -177,9 +180,21 @@
     "prior": true,
     "id": "01hs99np0hn51jcjk13fmzwgym",
     "spelling": {
-      "gn": ["Hector Antonio", "H.", "H"],
-      "fn": ["Andrade Rodriguez"]
-    }
+      "gn": [
+        "Hector Antonio A.",
+        "Hector Antonio",
+        "H.",
+        "H"
+      ],
+      "fn": [
+        "Andrade Rodriguez",
+        "Rodriguez"
+      ]
+    },
+    "days": 6628,
+    "from": "2004-06-23",
+    "expired": "2022-08-16",
+    "updated": "2024-11-07T11:12:59.820Z"
   },
   {
     "given": "Hilde Cecilie",
@@ -213,7 +228,8 @@
     "family": "Søreide",
     "prior": true,
     "id": "01hs99np0jft7rbfqark6d54z0",
-    "expired": "2009-12-31",
+    "from": "2002-01-01",
+    "expired": "2006-12-31",
     "spelling": {
       "gn": [
         "JANNE E.",
@@ -388,7 +404,7 @@
     "spelling": { "gn": ["Erik Martin", "M.", "M"], "fn": [] }
   },
   {
-    "given": "Martin T.",
+    "given": "Martin Torp",
     "family": "Dahl",
     "prior": true,
     "id": "01hs99np0hmm24q0c2h060sj4m"
@@ -472,7 +488,10 @@
     "family": "Geraudie",
     "prior": true,
     "id": "01hs99np0jtcmwsrsytck4p8cw",
-    "spelling": { "gn": ["P."], "fn": [] }
+    "spelling": { "gn": ["P."], "fn": [] },
+    "cristin": 1517593,
+    "from": "2011-08-01",
+    "expired": "2021-01-31"
   },
   {
     "given": "Patrick",

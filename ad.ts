@@ -4,7 +4,7 @@ import {
   parseNorwegianDate,
   parseWeirdUsDate,
 } from "./crazy_dates.ts";
-import { externalIdentities, fromPatches, patches } from "./patches.ts";
+import { datePatches, externalIdentities, patches } from "./patches.ts";
 import type { Akvaplanist } from "./types.ts";
 import type { AkvaplanAdPerson } from "./ad_types.ts";
 
@@ -27,15 +27,20 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
   const created = parseNorwegianDate(ad.whencreated);
   const updated = new Date(cache.headers.get("last-modified") as string);
 
-  const from = fromPatches.has(id)
-    ? fromPatches.get(id)
+  const dates = datePatches.has(id) ? datePatches.get(id) : {};
+
+  const from = dates && "from" in dates
+    ? new Date(dates.from)
     : "APNStartDate" in ad
     ? parseWeirdUsDate(ad.APNStartDate)
     : undefined;
 
+  const expired = dates && "expired" in dates
+    ? new Date(dates.expired)
+    : getAdTimeOrUndefinedIfInFuture(ad.accountExpires);
+
   // Only expose `expired` for prior employees (ie. expired is in the past)
-  const expired = getAdTimeOrUndefinedIfInFuture(ad.accountExpires);
-  //const _expired = getAdTime(ad.accountExpires);
+  // const _expired = getAdTime(ad.accountExpires);
 
   const position = { en: ad.Title, no: ad.extensionAttribute4 };
 

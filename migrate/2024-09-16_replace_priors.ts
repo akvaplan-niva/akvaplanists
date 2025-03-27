@@ -1,28 +1,19 @@
 #!/usr/bin/env -S deno run --env-file --allow-env --allow-net
 
-import { kv } from "../kv.ts";
+import { patchPrior } from "../kv.ts";
+import type { Akvaplanist } from "../types.ts";
 import priors from "../data/priors.json" with { type: "json" };
-// ulid
-const replacePriors = async (id?: string) => {
-  for await (let prior of priors) {
-    const key = ["expired", prior.id];
-    const { value } = await kv.get(key);
-    if (value) {
-      prior = { ...value, ...prior };
-    }
-    prior.updated = new Date();
-    prior.prior = true;
-    await kv.set(key, prior);
+
+const replacePriors = async () => {
+  for await (const prior of priors as Akvaplanist[]) {
+    await patchPrior(prior);
   }
 };
 
 const replacePrior = async (id: string) => {
-  const prior = priors.find((p) => p.id === id);
+  const prior = (priors as Akvaplanist[]).find((p) => p.id === id);
   if (prior) {
-    const key = ["expired", prior.id];
-    prior.updated = new Date();
-    prior.prior = true;
-    await kv.set(key, prior);
+    await patchPrior(prior);
   }
 };
 

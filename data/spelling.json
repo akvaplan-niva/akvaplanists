@@ -134,6 +134,12 @@
     "spelling": { "gn": ["Eva S.", "EVA", "E.", "E"], "fn": ["LEU"] }
   },
   {
+    "id": "fac",
+    "spelling": {
+      "gn": ["Frida Anneke"]
+    }
+  },
+  {
     "id": "fma",
     "given": "Felipe",
     "family": "Matos",
