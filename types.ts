@@ -12,8 +12,8 @@ export interface Akvaplanist {
   from?: Date | string;
   expired?: Date | string;
   prior?: boolean;
-  created: Date;
-  updated: Date;
+  created?: Date;
+  updated?: Date;
   orcid?: string | null;
   openalex?: string | null;
   cristin?: number | null;
@@ -28,7 +28,7 @@ interface IntlString {
   [lang: string]: string;
 }
 
-export type ExpiredAkvaplanist = Pick<
+export type PriorAkvaplanist = Pick<
   Akvaplanist,
   | "id"
   | "family"
@@ -37,6 +37,8 @@ export type ExpiredAkvaplanist = Pick<
   | "expired"
   | "created"
   | "updated"
+  | "spelling"
+  | "prior"
 >;
 
 export interface RequestHandler {

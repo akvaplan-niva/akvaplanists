@@ -1,30 +1,39 @@
 import _spelling from "./data/spelling.json" with { type: "json" };
 
 import { valibotSafeParse } from "./validate.ts";
-import { Akvaplanist, ExpiredAkvaplanist } from "./types.ts";
+import { Akvaplanist, PriorAkvaplanist } from "./types.ts";
 import { ndjson } from "./cli_helpers.ts";
 import { externalIdentities } from "./patches.ts";
+import { calcDays } from "./time.ts";
 
 const spelling = new Map(_spelling.map(({ id, spelling }) => [id, spelling]));
 export const kv = await Deno.openKv(Deno.env.get("DENO_KV_DATABASE"));
 
 export const person0 = "person";
 
-export async function* prefix(
-  prefix: Deno.KvKey,
-  options: Deno.KvListOptions,
-) {
-  for await (const entry of kv.list({ prefix }, options)) {
-    yield entry;
-  }
-}
-export const getAkvaplanistEntry = (id: string) =>
-  kv.get<Akvaplanist>([person0, id]);
+// export async function* prefix<T>(
+//   prefix: Deno.KvKey,
+//   options?: Deno.KvListOptions,
+// ) {
+//   for await (const entry of kv.list<T>({ prefix }, options)) {
+//     yield entry;
+//   }
+// }
 
 export const listPrefix = <T>(
   prefix: Deno.KvKey,
   options?: Deno.KvListOptions,
 ) => kv.list<T>({ prefix }, options);
+
+export const buildAkvaplanistIdVersionstampMap = async () =>
+  new Map(
+    (await Array.fromAsync(kv.list<Akvaplanist>({ prefix: [person0] }))).map((
+      { key, versionstamp },
+    ) => [key.at(1) as string, versionstamp]),
+  );
+
+export const getAkvaplanistEntry = (id: string) =>
+  kv.get<Akvaplanist>([person0, id]);
 
 export const listAkvaplanists = (options?: Deno.KvListOptions) =>
   listPrefix<Akvaplanist>([person0], options);
@@ -41,6 +50,12 @@ const toPrior = (akvaplanist: Akvaplanist) => {
     updated,
     cristin,
   } = akvaplanist;
+  const days = "days" in akvaplanist
+    ? akvaplanist.days
+    : (expired && from)
+    ? calcDays(expired, from)
+    : undefined;
+
   return {
     id,
     family,
@@ -52,12 +67,14 @@ const toPrior = (akvaplanist: Akvaplanist) => {
     created,
     updated,
     cristin,
-  } as ExpiredAkvaplanist;
+    days,
+  } as PriorAkvaplanist;
 };
 
 export const setAkvaplanistTx = (
   akvaplanist: Akvaplanist,
   tx: Deno.AtomicOperation,
+  versionstamps: Map<string, string> = new Map(),
 ) => {
   const { success, issues } = valibotSafeParse(akvaplanist);
 
@@ -88,27 +105,66 @@ export const setAkvaplanistTx = (
       akvaplanist.openalex = openalex;
     }
     const key = [person0, id];
-    if (expired && new Date() >= new Date(expired)) {
-      const prior = toPrior(akvaplanist);
-      tx.set(key, prior);
+    const versionstamp = versionstamps.get(id);
+    if (versionstamp) {
+      tx.check({ key, versionstamp });
     } else {
-      tx.set(key, akvaplanist);
+      tx.check({ key, versionstamp: null });
     }
+
+    const isExpired = expired && new Date() >= new Date(expired);
+    if (isExpired) {
+      console.warn({ expired: toPrior(akvaplanist) });
+    }
+    return isExpired
+      ? tx.set(key, toPrior(akvaplanist))
+      : tx.set(key, akvaplanist);
   }
 };
 
-export const setAkvaplanists = async (chunk: Akvaplanist[]) => {
+export const setAkvaplanists = async (
+  chunk: Akvaplanist[],
+  versionstamps: Map<string, string>,
+) => {
   const tx = kv.atomic();
   for await (const akvaplanist of chunk) {
-    await setAkvaplanistTx(akvaplanist, tx);
+    setAkvaplanistTx(akvaplanist, tx, versionstamps);
   }
   const { ok } = await tx.commit();
   const msg = { commit: { ok, affected: chunk.length } };
   if (ok) {
     console.warn(msg);
+    const fresh = chunk.filter(({ id }) => !versionstamps.has(id));
+    if (fresh.length > 0) {
+      const atomic = kv.atomic();
+      const dt = new Date();
+      const [year, month, day] = [
+        dt.getUTCFullYear(),
+        1 + dt.getUTCMonth(),
+        dt.getUTCDate(),
+      ];
+      console.warn({ fresh: fresh.map(({ id }) => id) });
+      for await (const f of fresh) {
+        const logkey = ["log", "person", "insert", year, month, day, f.id];
+        atomic.set(logkey, f);
+      }
+      const insertlog = await atomic.commit();
+      console.warn({ insertlog });
+    }
   } else {
     console.error(msg);
   }
+};
+
+export const patchPrior = async (prior: PriorAkvaplanist) => {
+  const key = ["person", prior.id];
+  prior.updated = new Date();
+  prior.prior = true;
+  const { value } = await kv.get<Akvaplanist>(key);
+  if (value) {
+    prior = { ...value, ...prior };
+  }
+  return await kv.set(key, prior);
 };
 
 export const listTask = async () => {

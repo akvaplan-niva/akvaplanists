@@ -2,9 +2,9 @@ import "./cron.ts";
 
 import { getAkvaplanistFromAdCsvExport } from "./fetch.ts";
 
-import { sectionList } from "./constants.ts";
+import sections from "./data/sections.json" with { type: "json" };
 
-import { getAkvaplanistEntry, listAkvaplanists } from "./kv.ts";
+import { getAkvaplanistEntry, listAkvaplanists, listPrefix } from "./kv.ts";
 
 import {
   error,
@@ -49,10 +49,11 @@ const personHandler = async (req: Request) => {
 const listFreshAkvaplanistsFromAdExportHandler = async (req: Request) =>
   response(await getAkvaplanistFromAdCsvExport(), req);
 
-const getSections = async () => await sectionList;
-
 const listSectionsHandler = async (req: Request) =>
-  response(await getSections(), req);
+  response(await sections, req);
+
+const listLogHandler = (req: Request) =>
+  responseFromKvList(listPrefix(["log"]), req);
 
 const handlers = new Map<URLPattern, RequestHandler>([
   [ptrn("/"), listEmployedAkvaplanistsHandler],
@@ -61,6 +62,7 @@ const handlers = new Map<URLPattern, RequestHandler>([
   [ptrn("/prior"), listPriorAkvaplanistsHandler],
   [ptrnPersonId, personHandler],
   [ptrn("/sections"), listSectionsHandler],
+  [ptrn("/log"), listLogHandler],
 ]);
 
 const handler = (req: Request) => {
