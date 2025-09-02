@@ -27,6 +27,7 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
   const created = parseNorwegianDate(ad.whencreated);
   const updated = new Date(cache.headers.get("last-modified") as string);
 
+  // a lot of identifiers have date-patches
   const dates = datePatches.has(id) ? datePatches.get(id) : {};
 
   const from = dates && "from" in dates
@@ -40,7 +41,7 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
     : getAdTimeOrUndefinedIfInFuture(ad.accountExpires);
 
   // Only expose `expired` for prior employees (ie. expired is in the past)
-  // const _expired = getAdTime(ad.accountExpires);
+  //const _expired = getAdTime(ad.accountExpires);
 
   const position = { en: ad.Title, no: ad.extensionAttribute4 };
 
@@ -76,17 +77,18 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
 export async function* generateAkvaplanistsFromCrazyDatesAdStream(
   rs: ReadableStream,
 ) {
-  const now = new Date().getTime();
+  //const now = new Date().getTime();
   for await (const ad of rs) {
     const apn = akvaplanistFromAdPerson(ad);
-    const { from } = apn;
-    if (from && new Date(from).getTime() >= now) {
-      // should have been a no-op, to not expose when a person has not yet started (ie. `from` is in the future)
-      // well, when new people come without "from", patching it then won't work until after the from date,
-      // and this person is then exposed via the created date
-      yield apn;
-    } else {
-      yield apn;
-    }
+    yield apn;
+    // const { from } = apn;
+    // if (from && new Date(from).getTime() >= now) {
+    //   // should have been a no-op, to not expose when a person has not yet started (ie. `from` is in the future)
+    //   // well, when new people come without "from", patching it then won't work until after the from date,
+    //   // and this person is then exposed via the created date
+    //   yield apn;
+    // } else {
+    //   yield apn;
+    // }
   }
 }

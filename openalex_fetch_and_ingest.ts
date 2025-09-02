@@ -7,11 +7,12 @@ export const fetchAndIngestOpenAlexPeople = async () => {
     id: string;
     openalex: string;
   }[];
+  console.warn("Fetching people from openalex");
   for await (const { openalex } of withOpenalexId) {
     const r = await fetchOpenalexPerson(openalex!);
     if (r.ok) {
       const key = ["openalex", "person", openalex.toLowerCase()];
-      console.warn(key);
+      //console.warn(key);
       kv.set(key, await r.json());
     }
   }
