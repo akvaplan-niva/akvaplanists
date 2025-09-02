@@ -4,7 +4,7 @@ import { getAkvaplanistFromAdCsvExport } from "./fetch.ts";
 
 import sections from "./data/sections.json" with { type: "json" };
 
-import { getAkvaplanistEntry, listAkvaplanists, listPrefix } from "./kv.ts";
+import { getAkvaplanistEntry, kv, listAkvaplanists, listPrefix } from "./kv.ts";
 
 import {
   error,
@@ -17,6 +17,7 @@ import {
 import type { RequestHandler } from "./types.ts";
 
 const ptrnPersonId = ptrn("/person/:id");
+const ptrnOpenAlexPersonId = ptrn("/openalex/person/:id");
 
 const listAkvaplanistsHandler = (req: Request) =>
   responseFromKvList(listAkvaplanists(), req);
@@ -46,6 +47,15 @@ const personHandler = async (req: Request) => {
   return response(apn, req);
 };
 
+const openAlexPersonHandler = async (req: Request) => {
+  const { id } = extractParams<{ id: string }>(ptrnOpenAlexPersonId, req);
+  const oap = await kv.get(["openalex", "person", id]);
+  if (!oap) {
+    return error(404);
+  }
+  return response(oap, req);
+};
+
 const listFreshAkvaplanistsFromAdExportHandler = async (req: Request) =>
   response(await getAkvaplanistFromAdCsvExport(), req);
 
@@ -63,6 +73,7 @@ const handlers = new Map<URLPattern, RequestHandler>([
   [ptrnPersonId, personHandler],
   [ptrn("/sections"), listSectionsHandler],
   [ptrn("/log"), listLogHandler],
+  [ptrnOpenAlexPersonId, openAlexPersonHandler],
 ]);
 
 const handler = (req: Request) => {
