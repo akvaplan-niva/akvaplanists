@@ -5,7 +5,7 @@ import type { Akvaplanist } from "./types.ts";
 
 import { CsvParseStream } from "@std/csv";
 import { toTransformStream } from "@std/streams";
-import { chunkArray, ndjson } from "./cli_helpers.ts";
+import { ndjson } from "./cli_helpers.ts";
 export const fetchAkvaplanists = async (
   { etag = "", method = "GET" }: { etag?: string; method?: "GET" | "HEAD" },
 ) =>

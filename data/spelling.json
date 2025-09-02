@@ -261,12 +261,14 @@
     "family": "Sagerup",
     "spelling": { "gn": ["K."], "fn": [] }
   },
+  
   {
     "id": "ksz",
     "given": "Kamila",
     "family": "Sztybor",
     "spelling": { "gn": ["K."], "fn": [] }
   },
+  {"id": "lbo", "spelling": { "gn":["L."]}},
   {
     "id": "lca",
     "given": "Lionel",
