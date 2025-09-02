@@ -114,7 +114,7 @@ export const setAkvaplanistTx = (
 
     const isExpired = expired && new Date() >= new Date(expired);
     if (isExpired) {
-      console.warn({ expired: toPrior(akvaplanist) });
+      console.warn({ expired: toPrior(akvaplanist), from: akvaplanist });
     }
     return isExpired
       ? tx.set(key, toPrior(akvaplanist))
