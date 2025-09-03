@@ -4,7 +4,7 @@
   { "id": "01hs99np0jtcmwsrsytck4p8cw", "cristin": 1517593 },
   { "id": "01hs99np0jx06g5cqrvt8ab8dm", "cristin": 1538729 },
   { "id": "aar", "cristin": 932944, "openalex": "A5038390149" },
-  { "id": "abe", "cristin": 1516303},
+  { "id": "abe", "cristin": 1516303 },
   { "id": "ach", "cristin": 1491025 },
   {
     "id": "aev",
@@ -50,11 +50,16 @@
     "openalex": "A5094327303",
     "cristin": 59283
   },
-  { "id": "clh", "orcid": "0000-0002-8570-9056", "openalex": "A5021003066", "cristin": 1491033 },
+  {
+    "id": "clh",
+    "orcid": "0000-0002-8570-9056",
+    "openalex": "A5021003066",
+    "cristin": 1491033
+  },
   { "id": "cse", "cristin": 1491032 },
   { "id": "cst", "orcid": null, "openalex": "A5065835904", "cristin": 1491031 },
   { "id": "ctw", "cristin": 692346 },
-  { "id": "der", "cristin":  1349205 },
+  { "id": "der", "cristin": 1349205 },
   { "id": "elb", "orcid": null, "openalex": "A5007001637", "cristin": 569717 },
   { "id": "elo", "cristin": 1491035 },
   { "id": "esy", "cristin": 1071550 },
@@ -65,7 +70,7 @@
     "openalex": "A5027101557",
     "cristin": 22677
   },
-  { "id": "fac", "cristin": 1529354},
+  { "id": "fac", "cristin": 1529354 },
   { "id": "frb", "orcid": null, "openalex": "A5061241408" },
   {
     "id": "fst",
@@ -114,6 +119,7 @@
   { "id": "krs", "cristin": 56564 },
   { "id": "ksa", "orcid": null, "openalex": "A5076035177", "cristin": 57661 },
   { "id": "ksz", "cristin": 338011 },
+  { "id": "lbo", "cristin": 1832655 },
   {
     "id": "lca",
     "orcid": "0000-0001-5485-8078",
@@ -138,7 +144,7 @@
   { "id": "mib", "cristin": 1491056 },
   { "id": "mkr", "cristin": 1491055 },
   { "id": "mlc", "orcid": "0000-0002-1530-6016", "openalex": "A5065410394" },
-  { "id": "mta", "cristin": 964557 },  
+  { "id": "mta", "cristin": 964557 },
   { "id": "mth", "cristin": 1491057 },
   {
     "id": "maa",
