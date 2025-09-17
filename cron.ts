@@ -1,9 +1,7 @@
-import { fetchAndIngestAkvaplanists } from "./fetch_and_ingest.ts";
-
+import { fetchAndIngestAkvaplanists } from "./fetch.ts";
 
 Deno.cron(
   "Refresh akvaplanists",
   "47 9 * * *",
   async () => await fetchAndIngestAkvaplanists(),
 );
-

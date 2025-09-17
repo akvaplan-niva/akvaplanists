@@ -18,6 +18,7 @@ import type { RequestHandler } from "./types.ts";
 
 const ptrnPersonId = ptrn("/person/:id");
 const ptrnOpenAlexPersonId = ptrn("/openalex/person/:id");
+const ptrnNvaPersonId = ptrn("/nva/person/:id");
 
 const listAkvaplanistsHandler = (req: Request) =>
   responseFromKvList(listAkvaplanists(), req);
@@ -56,6 +57,15 @@ const openAlexPersonHandler = async (req: Request) => {
   return response(oap, req);
 };
 
+const nvaPersonHandler = async (req: Request) => {
+  const { id } = extractParams<{ id: string }>(ptrnNvaPersonId, req);
+  const nvap = await kv.get(["nva_person", Number(id)]);
+  if (!nvap) {
+    return error(404);
+  }
+  return response(nvap, req);
+};
+
 const listFreshAkvaplanistsFromAdExportHandler = async (req: Request) =>
   response(await getAkvaplanistFromAdCsvExport(), req);
 
@@ -74,6 +84,7 @@ const handlers = new Map<URLPattern, RequestHandler>([
   [ptrn("/sections"), listSectionsHandler],
   [ptrn("/log"), listLogHandler],
   [ptrnOpenAlexPersonId, openAlexPersonHandler],
+  [ptrnNvaPersonId, nvaPersonHandler],
 ]);
 
 const handler = (req: Request) => {

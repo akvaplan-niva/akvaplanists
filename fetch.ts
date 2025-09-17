@@ -5,7 +5,8 @@ import type { Akvaplanist } from "./types.ts";
 
 import { CsvParseStream } from "@std/csv";
 import { toTransformStream } from "@std/streams";
-import { ndjson } from "./cli_helpers.ts";
+import { chunkArray, ndjson } from "./cli_helpers.ts";
+import { buildAkvaplanistIdVersionstampMap, setAkvaplanists } from "./kv.ts";
 export const fetchAkvaplanists = async (
   { etag = "", method = "GET" }: { etag?: string; method?: "GET" | "HEAD" },
 ) =>
@@ -57,6 +58,15 @@ export const fetchAd = async () => {
   }
 };
 
-if (import.meta.main) {
-  fetchAd();
-}
+export const fetchAndIngestAkvaplanists = async () => {
+  const employeeIdV = await buildAkvaplanistIdVersionstampMap();
+
+  for await (
+    const chunk of chunkArray<Akvaplanist>(
+      await getAkvaplanistFromAdCsvExport(),
+      50,
+    )
+  ) {
+    await setAkvaplanists(chunk, employeeIdV);
+  }
+};
