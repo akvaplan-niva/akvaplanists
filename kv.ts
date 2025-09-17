@@ -38,6 +38,9 @@ export const getAkvaplanistEntry = (id: string) =>
 export const listAkvaplanists = (options?: Deno.KvListOptions) =>
   listPrefix<Akvaplanist>([person0], options);
 
+export const getAllAkvaplanists = async () =>
+  (await Array.fromAsync(listAkvaplanists())).map(({ value }) => value);
+
 const toPrior = (akvaplanist: Akvaplanist) => {
   const {
     id,
@@ -100,9 +103,15 @@ export const setAkvaplanistTx = (
 
     if (external) {
       const { cristin, orcid, openalex } = external;
-      akvaplanist.cristin = cristin;
-      akvaplanist.orcid = orcid;
-      akvaplanist.openalex = openalex;
+      if (cristin) {
+        akvaplanist.cristin = cristin;
+      }
+      if (orcid) {
+        akvaplanist.orcid = orcid;
+      }
+      if (openalex) {
+        akvaplanist.openalex = openalex;
+      }
     }
     const key = [person0, id];
     const versionstamp = versionstamps.get(id);
@@ -174,8 +183,13 @@ export const listTask = async () => {
 };
 
 export const listExpiredTask = async () => {
-  for await (const akvaplanist of listAkvaplanists()) {
-    ndjson(akvaplanist);
+  for await (const { key, value } of listAkvaplanists()) {
+    if (
+      ("expired" in value && new Date(value.expired) > new Date()) ||
+      ("prior" in value && value.prior === true)
+    ) {
+      ndjson(value);
+    }
   }
 };
 

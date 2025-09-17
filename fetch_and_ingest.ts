@@ -1,23 +1,9 @@
-import { getAkvaplanistFromAdCsvExport } from "./fetch.ts";
-import { buildAkvaplanistIdVersionstampMap, setAkvaplanists } from "./kv.ts";
-import { chunkArray } from "./cli_helpers.ts";
-import type { Akvaplanist } from "./types.ts";
+import { fetchAndIngestAkvaplanists } from "./fetch.ts";
 import { fetchAndIngestOpenAlexPeople } from "./openalex_fetch_and_ingest.ts";
-
-export const fetchAndIngestAkvaplanists = async () => {
-  const employeeIdV = await buildAkvaplanistIdVersionstampMap();
-
-  for await (
-    const chunk of chunkArray<Akvaplanist>(
-      await getAkvaplanistFromAdCsvExport(),
-      50,
-    )
-  ) {
-    await setAkvaplanists(chunk, employeeIdV);
-  }
-};
+import { fetchAndIngestAkvaplanPersonsFromNva } from "./nva_fetch_and_ingest.ts";
 
 if (import.meta.main) {
   await fetchAndIngestAkvaplanists();
+  await fetchAndIngestAkvaplanPersonsFromNva();
   await fetchAndIngestOpenAlexPeople();
 }
