@@ -1,7 +1,5 @@
-import ext from "./data/external_ids.json" with { type: "json" };
-import { getAllAkvaplanists, kv, person0, setAkvaplanistTx } from "./kv.ts";
+import { getAllAkvaplanists, kv, person0 } from "./kv.ts";
 import { extractValue, fetchAkvaplanistsInNva } from "./nva.ts";
-import type { NvaPerson, TypeValue } from "./nva_types.ts";
 
 const akvaplanists = await getAllAkvaplanists();
 
@@ -12,9 +10,8 @@ const akvaplanistNameIdMap = new Map(akvaplanists.map((
 const akvaplanistIdMap = new Map(akvaplanists.map((a) => [a.id, a]));
 
 const akvaplanistCristinMap = new Map(
-  akvaplanists.filter(({ cristin }) => Number(cristin) > 0).map((
-    e,
-  ) => [e.cristin, e]),
+  akvaplanists.filter(({ cristin }) => Number(cristin) > 0)
+    ?.map((e) => [e.cristin as number, e]),
 );
 
 const ignoreCristinIds = [7278, 1538728];
@@ -30,66 +27,85 @@ export const fetchAndIngestAkvaplanPersonsFromNva = async () => {
     console.warn(meta);
     for await (const hit of hits) {
       const { id, names, identifiers } = hit;
-      const fn = extractValue("FirstName", names);
-      const ln = extractValue("LastName", names);
+      const given = extractValue("FirstName", names)!;
+      const family = extractValue("LastName", names)!;
       const cristin = Number(
         extractValue("CristinIdentifier", identifiers),
-      );
+      )!;
       const orcid = extractValue("ORCID", identifiers);
-      if (ignoreCristinIds.includes(cristin)) continue;
-
-      console.assert(
-        id === `https://api.nva.unit.no/cristin/person/${cristin}`,
-      );
-
-      const known = akvaplanistCristinMap.has(cristin);
-      const frozen = akvaplanistCristinMap.get(cristin);
-      if (known) {
-        console.assert(
-          cristin === frozen?.cristin,
-          `NVA person mismatch for ${frozen.id}: ${cristin}<>${frozen?.cristin}`,
-        );
+      if (ignoreCristinIds.includes(cristin)) {
+        continue;
       }
-      //const key = ["nva_person", cristin];
+      const key = ["nva_person", cristin];
       // console.debug(key);
-      // await kv.set(key, hit);
+      await kv.set(key, hit);
 
-      if (false === known) {
-        const cand = akvaplanistNameIdMap.get(`${fn} ${ln}`);
+      let akvaplanist;
+      if (akvaplanistCristinMap.has(cristin)) {
+        akvaplanist = akvaplanistCristinMap.get(cristin)!;
+      } else {
+        // No akvaplanist found with cristin, try to match by name
+        const cand = akvaplanistNameIdMap.get(`${given} ${family}`);
         if (cand && akvaplanistIdMap.has(cand)) {
-          const akvaplanist = akvaplanistIdMap.get(cand)!;
+          akvaplanist = akvaplanistIdMap.get(cand)!;
           akvaplanist.cristin = cristin;
+        }
+      }
 
-          if (orcid) {
-            console.assert(
-              orcid === frozen?.orcid,
-              `ORCID mismatch for ${frozen.id}: ${orcid}<>${frozen?.orcid}`,
-            );
-            if (!akvaplanist?.orcid) {
-              akvaplanist.orcid = orcid;
-            }
+      if (akvaplanist) {
+        const was = structuredClone(akvaplanist);
+        console.assert(
+          cristin === akvaplanist?.cristin,
+          `NVA person mismatch for ${akvaplanist.id}: ${cristin}<>${akvaplanist?.cristin}`,
+        );
+
+        // Add ORCID from NVA
+        if (orcid) {
+          console.assert(
+            orcid === akvaplanist?.orcid,
+            `ORCID mismatch for ${akvaplanist.id}: ${orcid}<>${akvaplanist?.orcid}`,
+          );
+          if (!akvaplanist?.orcid) {
+            akvaplanist.orcid = orcid;
           }
+        }
 
+        // Add spelling from NVA
+        const { spelling } = akvaplanist;
+
+        const { gn, fn } = spelling ?? { fn: [], gn: [] };
+        const givSet = new Set(gn);
+        const famSet = new Set(fn);
+
+        if (given !== akvaplanist.given) {
+          givSet.add(given);
+        }
+        if (family !== akvaplanist.family) {
+          famSet.add(family);
+        }
+        akvaplanist.spelling = {
+          ...spelling,
+          gn: [...givSet],
+          fn: [...famSet],
+        };
+        if (JSON.stringify(akvaplanist) !== JSON.stringify(was)) {
           const key = [person0, akvaplanist.id];
-
-          console.info(
+          console.warn(
             ++found,
             "NVA person match",
             key,
-            fn,
-            ln,
-            cristin,
+            akvaplanist,
           );
           await kv.set(key, akvaplanist);
-        } else {
-          console.error(
-            ++mis,
-            "NVA person not matched",
-            fn,
-            ln,
-            cristin,
-          );
         }
+      } else {
+        console.error(
+          ++mis,
+          "NVA person not matched",
+          given,
+          family,
+          cristin,
+        );
       }
     }
   }
