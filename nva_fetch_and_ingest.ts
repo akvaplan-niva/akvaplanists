@@ -1,22 +1,22 @@
 import { getAllAkvaplanists, kv, person0 } from "./kv.ts";
 import { extractValue, fetchAkvaplanistsInNva } from "./nva.ts";
 
-const akvaplanists = await getAllAkvaplanists();
-
-const akvaplanistNameIdMap = new Map(akvaplanists.map((
-  { family, given, id },
-) => [`${given} ${family}`, id]));
-
-const akvaplanistIdMap = new Map(akvaplanists.map((a) => [a.id, a]));
-
-const akvaplanistCristinMap = new Map(
-  akvaplanists.filter(({ cristin }) => Number(cristin) > 0)
-    ?.map((e) => [e.cristin as number, e]),
-);
-
-const ignoreCristinIds = [7278, 1538728];
-
 export const fetchAndIngestAkvaplanPersonsFromNva = async () => {
+  const akvaplanists = await getAllAkvaplanists();
+
+  const akvaplanistNameIdMap = new Map(akvaplanists.map((
+    { family, given, id },
+  ) => [`${given} ${family}`, id]));
+
+  const akvaplanistIdMap = new Map(akvaplanists.map((a) => [a.id, a]));
+
+  const akvaplanistCristinMap = new Map(
+    akvaplanists.filter(({ cristin }) => Number(cristin) > 0)
+      ?.map((e) => [e.cristin as number, e]),
+  );
+
+  const ignoreCristinIds = [7278, 1538728];
+
   let found = 0;
   let mis = 0;
 
@@ -37,7 +37,6 @@ export const fetchAndIngestAkvaplanPersonsFromNva = async () => {
         continue;
       }
       const key = ["nva_person", cristin];
-      // console.debug(key);
       await kv.set(key, hit);
 
       let akvaplanist;
