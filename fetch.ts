@@ -6,7 +6,11 @@ import type { Akvaplanist } from "./types.ts";
 import { CsvParseStream } from "@std/csv";
 import { toTransformStream } from "@std/streams";
 import { chunkArray, ndjson } from "./cli_helpers.ts";
-import { buildAkvaplanistIdVersionstampMap, setAkvaplanists } from "./kv.ts";
+import {
+  buildAkvaplanistIdVersionstampMap,
+  getAllAkvaplanists,
+  setAkvaplanists,
+} from "./kv.ts";
 export const fetchAkvaplanists = async (
   { etag = "", method = "GET" }: { etag?: string; method?: "GET" | "HEAD" },
 ) =>
@@ -61,12 +65,27 @@ export const fetchAd = async () => {
 export const fetchAndIngestAkvaplanists = async () => {
   const employeeIdV = await buildAkvaplanistIdVersionstampMap();
 
+  const currentIds = new Set(
+    (await getAllAkvaplanists()).filter(({ prior }) => prior !== true).map((
+      { id },
+    ) => id),
+  );
+  const received = new Set();
   for await (
     const chunk of chunkArray<Akvaplanist>(
       await getAkvaplanistFromAdCsvExport(),
       50,
     )
   ) {
+    for (const { id, ...a } of chunk) {
+      if ("rap" === id) {
+        console.warn("RAP", a);
+      }
+      received.add(id);
+    }
     await setAkvaplanists(chunk, employeeIdV);
   }
+  const missing = currentIds.difference(received);
+  const added = received.difference(currentIds);
+  console.warn({ before: currentIds.size, now: received.size, missing, added });
 };

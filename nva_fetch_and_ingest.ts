@@ -54,6 +54,9 @@ export const fetchAndIngestAkvaplanPersonsFromNva = async () => {
 
       if (akvaplanist) {
         const was = structuredClone(akvaplanist);
+        if ("rap" === was.id) {
+          console.warn(1, was);
+        }
         console.assert(
           cristin === akvaplanist?.cristin,
           `NVA person mismatch for ${akvaplanist.id}: ${cristin}<>${akvaplanist?.cristin}`,
@@ -88,16 +91,18 @@ export const fetchAndIngestAkvaplanPersonsFromNva = async () => {
           gn: [...givSet],
           fn: [...famSet],
         };
-        if (JSON.stringify(akvaplanist) !== JSON.stringify(was)) {
-          const key = [person0, akvaplanist.id];
-          console.warn(
-            ++found,
-            "NVA person match",
-            key,
-            akvaplanist,
-          );
-          await kv.set(key, akvaplanist);
+
+        const key = [person0, akvaplanist.id];
+        // console.warn(
+        //   ++found,
+        //   "NVA person match",
+        //   key,
+        //   akvaplanist,
+        // );
+        if ("rap" === akvaplanist.id) {
+          console.warn(2, akvaplanist);
         }
+        await kv.set(key, akvaplanist);
       } else {
         console.error(
           ++mis,
