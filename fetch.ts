@@ -8,6 +8,7 @@ import { toTransformStream } from "@std/streams";
 import { chunkArray, ndjson } from "./cli_helpers.ts";
 import {
   buildAkvaplanistIdVersionstampMap,
+  getAll,
   getAllAkvaplanists,
   setAkvaplanists,
 } from "./kv.ts";
@@ -78,9 +79,6 @@ export const fetchAndIngestAkvaplanists = async () => {
     )
   ) {
     for (const { id, ...a } of chunk) {
-      if ("rap" === id) {
-        console.warn("RAP", a);
-      }
       received.add(id);
     }
     await setAkvaplanists(chunk, employeeIdV);

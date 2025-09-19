@@ -4,9 +4,21 @@ import {
   parseNorwegianDate,
   parseWeirdUsDate,
 } from "./crazy_dates.ts";
-import { datePatches, externalIdentities, patches } from "./patches.ts";
+import {
+  datePatches,
+  externalIdentities,
+  mutateAkvaplanistWithNvaMetadataLikeSpellingAndOrcid,
+  patches,
+} from "./patches.ts";
 import type { Akvaplanist } from "./types.ts";
 import type { AkvaplanAdPerson } from "./ad_types.ts";
+import { kv } from "./kv.ts";
+import { akvaplanistPartialFromNvaPerson } from "./nva.ts";
+import { NvaPerson } from "./nva_types.ts";
+
+import _spelling from "./data/spelling.json" with { type: "json" };
+import { value } from "@valibot/valibot";
+const spelling = new Map(_spelling.map(({ id, spelling }) => [id, spelling]));
 
 export const countryFromWorkplace = (w: string) => {
   if (/Reykjav[íi]k/ui.test(w)) {
@@ -15,7 +27,9 @@ export const countryFromWorkplace = (w: string) => {
   return "NO";
 };
 
-export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
+export const akvaplanistFromAdPersonAndPatches = async (
+  ad: AkvaplanAdPerson,
+) => {
   const id = ad.sAMAccountName.trim().toLowerCase();
   const family = ad.Sn.trim();
   const given = ad.GivenName.trim();
@@ -36,12 +50,12 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
     ? parseWeirdUsDate(ad.APNStartDate)
     : undefined;
 
+  // Only expose `expired` for prior employees (ie. expired is in the past)
+  //const _expired = getAdTime(ad.accountExpires);
+
   const expired = dates && "expired" in dates
     ? new Date(dates.expired)
     : getAdTimeOrUndefinedIfInFuture(ad.accountExpires);
-
-  // Only expose `expired` for prior employees (ie. expired is in the past)
-  //const _expired = getAdTime(ad.accountExpires);
 
   const position = { en: ad.Title, no: ad.extensionAttribute4 };
 
@@ -51,7 +65,7 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
 
   const patch = patches.has(id) ? patches.get(id) : {};
 
-  const ids = externalIdentities.has(id) ? externalIdentities.get(id) : {};
+  const ids = externalIdentities.has(id) ? externalIdentities.get(id)! : {};
 
   const akvaplanist: Akvaplanist = {
     family,
@@ -71,15 +85,59 @@ export const akvaplanistFromAdPerson = (ad: AkvaplanAdPerson): Akvaplanist => {
     ...ids,
     ...patch,
   };
+  if (spelling.has(id)) {
+    const { gn, fn } = spelling.get(id) ?? {};
+    if (gn || fn) {
+      akvaplanist.spelling = {
+        gn: gn?.filter((g) => g !== given) ?? [],
+        fn: fn?.filter((f) => f !== family) ?? [],
+      };
+    }
+  }
+
+  const { cristin } = akvaplanist;
+
+  if (cristin! > 0) {
+    // Persist cristin values from patches
+    await kv.set(["person_rel_nva", id], cristin);
+  } else {
+    const maybeCristin = await kv.get(["person_rel_nva", id]);
+    if (maybeCristin.versionstamp) {
+      akvaplanist.cristin = maybeCristin.value as number;
+    } else {
+      console.warn("Not (found) in NVA", { id, given, family });
+    }
+  }
+
+  if (akvaplanist.cristin! > 0) {
+    // Add spelling from NVA
+    const { value } = await kv.get<NvaPerson>([
+      "nva_person",
+      akvaplanist.cristin!,
+    ]);
+    if (value) {
+      const akvaplanistPartFromNva = akvaplanistPartialFromNvaPerson(value!);
+      mutateAkvaplanistWithNvaMetadataLikeSpellingAndOrcid(
+        akvaplanist,
+        akvaplanistPartFromNva,
+      );
+    } else {
+      console.warn("Not connected to Akvaplan-niva in NVA", {
+        id,
+        given,
+        family,
+        cristin,
+      });
+    }
+  }
   return akvaplanist;
 };
-
 export async function* generateAkvaplanistsFromCrazyDatesAdStream(
   rs: ReadableStream,
 ) {
   //const now = new Date().getTime();
   for await (const ad of rs) {
-    const apn = akvaplanistFromAdPerson(ad);
+    const apn = await akvaplanistFromAdPersonAndPatches(ad);
     yield apn;
     // const { from } = apn;
     // if (from && new Date(from).getTime() >= now) {

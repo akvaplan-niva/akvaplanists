@@ -1,15 +1,19 @@
-import _spelling from "./data/spelling.json" with { type: "json" };
-
 import { valibotSafeParse } from "./validate.ts";
 import { Akvaplanist, PriorAkvaplanist } from "./types.ts";
 import { ndjson } from "./cli_helpers.ts";
 import { externalIdentities } from "./patches.ts";
 import { calcDays } from "./time.ts";
 
-const spelling = new Map(_spelling.map(({ id, spelling }) => [id, spelling]));
 export const kv = await Deno.openKv(Deno.env.get("DENO_KV_DATABASE"));
 
 export const person0 = "person";
+
+// "headers"
+// "log"
+// "nva_person"
+// "openalex"
+// "person"
+// person_rel_nva
 
 // export async function* prefix<T>(
 //   prefix: Deno.KvKey,
@@ -24,6 +28,10 @@ export const listPrefix = <T>(
   prefix: Deno.KvKey,
   options?: Deno.KvListOptions,
 ) => kv.list<T>({ prefix }, options);
+
+export const getAll = async <T>(
+  sel: Deno.KvListSelector,
+) => (await Array.fromAsync(kv.list<T>(sel)));
 
 export const buildAkvaplanistIdVersionstampMap = async () =>
   new Map(
@@ -88,15 +96,7 @@ export const setAkvaplanistTx = (
     );
   } else {
     const { id, expired, family, given } = akvaplanist;
-    if (spelling.has(id)) {
-      const { gn, fn } = spelling.get(id) ?? {};
-      if (gn || fn) {
-        akvaplanist.spelling = {
-          gn: gn?.filter((g) => g !== given) ?? [],
-          fn: fn?.filter((f) => f !== family) ?? [],
-        };
-      }
-    }
+
     const external = externalIdentities.has(id)
       ? externalIdentities.get(id)
       : null;
@@ -176,16 +176,22 @@ export const patchPrior = async (prior: PriorAkvaplanist) => {
   return await kv.set(key, prior);
 };
 
-export const listTask = async () => {
+export const listTask = async (select: Deno.KvListSelector) => {
+  for await (const akvaplanist of kv.list(select)) {
+    ndjson(akvaplanist);
+  }
+};
+
+export const listAkvaplanistsTask = async () => {
   for await (const akvaplanist of listAkvaplanists()) {
     ndjson(akvaplanist);
   }
 };
 
 export const listExpiredTask = async () => {
-  for await (const { key, value } of listAkvaplanists()) {
+  for await (const { value } of listAkvaplanists()) {
     if (
-      ("expired" in value && new Date(value.expired) > new Date()) ||
+      ("expired" in value && new Date(value.expired!) > new Date()) ||
       ("prior" in value && value.prior === true)
     ) {
       ndjson(value);
@@ -193,7 +199,7 @@ export const listExpiredTask = async () => {
   }
 };
 
-const getTask = async (id) => {
+const getTask = async (id: string) => {
   const entry = await kv.get(["person", id]);
   if (entry.versionstamp) {
     ndjson(entry);
@@ -205,11 +211,13 @@ if (import.meta.main) {
   const [action, ...args] = Deno.args;
   switch (action) {
     case "get":
-      getTask(args.at(0));
+      getTask(args.at(0)!);
       break;
     case "list":
-    case "person":
-      await listTask();
+      await listTask(JSON.parse(args.at(0)!));
+      break;
+    case "akvaplanists":
+      await listAkvaplanistsTask();
       break;
     case "expired":
       await listExpiredTask();

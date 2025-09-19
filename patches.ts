@@ -29,6 +29,45 @@ const manualPatches: [string, Partial<Akvaplanist>][] = [
   ["odj", { given: "Ólöf Dóra Bartels", family: "Jónsdóttir" }],
   ["ote", { from: new Date("2024-03-11"), workplace: "Tromsø" }],
   ["per", { given: "Paul E." }],
+  ["hal", { cristin: 742265 }],
 ];
 
 export const patches = new Map(manualPatches);
+
+export const mutateAkvaplanistWithNvaMetadataLikeSpellingAndOrcid = (
+  akvaplanist: Akvaplanist,
+  { given, family }: Partial<Akvaplanist>,
+) => {
+  const { spelling } = akvaplanist;
+
+  const { gn, fn } = spelling ?? {};
+  const givSet = new Set(gn ?? []);
+  const famSet = new Set(fn ?? []);
+
+  if (given && given !== akvaplanist.given) {
+    givSet.add(given);
+  }
+  if (family && family !== akvaplanist.family) {
+    famSet.add(family);
+  }
+  akvaplanist.spelling = givSet.size > 0 || famSet.size > 0
+    ? {
+      ...spelling,
+      gn: [...givSet],
+      fn: [...famSet],
+    }
+    : undefined;
+
+  //   // Add ORCID from NVA
+  //   if (orcid) {
+  //     console.assert(
+  //       orcid === akvaplanist?.orcid,
+  //       `ORCID mismatch for ${akvaplanist.id}: ${orcid}<>${akvaplanist?.orcid}`,
+  //     );
+  //     if (!akvaplanist?.orcid) {
+  //       akvaplanist.orcid = orcid;
+  //     }
+  //   }
+
+  return akvaplanist;
+};
