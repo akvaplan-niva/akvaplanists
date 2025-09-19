@@ -20,7 +20,7 @@ export interface Akvaplanist {
   spelling?: Spelling;
 }
 
-interface Spelling {
+export interface Spelling {
   fn: string[];
   gn: string[];
 }
