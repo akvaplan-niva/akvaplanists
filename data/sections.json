@@ -1,5 +1,12 @@
 [
   {
+    "id": "AKVA",
+    "name": {
+      "en": "Aquaculture",
+      "no": "Akvakultur faggruppe"
+    }
+  },
+  {
     "id": "BIOLT",
     "name": {
       "en": "Biological Analyses and Taxonomy",
