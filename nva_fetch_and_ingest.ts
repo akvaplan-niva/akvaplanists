@@ -36,7 +36,9 @@ export const fetchAndIngestAkvaplanPersonsFromNva = async () => {
           const relkey = ["person_rel_nva", id];
           await kv.set(relkey, cristin);
         } else {
-          console.error("NVA person not matched", akvaplanist);
+          console.error("NVA person not matched", {
+            akvaplanist,
+          });
         }
       }
     }

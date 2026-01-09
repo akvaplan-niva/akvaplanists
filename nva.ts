@@ -11,7 +11,7 @@ export const fetchAkvaplanistsInNva = async () => {
 };
 
 export const extractValue = (needle: string, arr: TypeValue[]) =>
-  arr.find(({ type }) => needle === type)?.value;
+  arr.find(({ type }) => needle === type)?.value.trim();
 
 export const akvaplanistPartialFromNvaPerson = (hit: NvaPerson) => {
   const { names, identifiers } = hit;

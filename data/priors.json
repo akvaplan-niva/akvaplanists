@@ -95,7 +95,8 @@
     "given": "Ellie Jane",
     "family": "Watts",
     "id": "ejw",
-    "spelling": { "gn": ["Ellie J."] }
+    "cristin": 1538728,
+    "spelling": { "gn": ["Ellie J.", "Ellie"] }
   },
   {
     "given": "Eli",
