@@ -4,7 +4,7 @@
   { "id": "01hs99np0jtcmwsrsytck4p8cw", "cristin": 1517593 },
   { "id": "01hs99np0jx06g5cqrvt8ab8dm", "cristin": 1538729 },
   { "id": "aar", "cristin": 932944, "openalex": "A5038390149" },
-  { "id": "abe", "cristin": 1516303 },
+  { "id": "abe", "cristin": 1516303, "orcid": "0000-0001-9356-8807" },
   { "id": "ach", "cristin": 1491025 },
   {
     "id": "aev",
@@ -63,6 +63,7 @@
   { "id": "eab", "cristin": 1799180 },
   { "id": "eem", "cristin": 866965 },
   { "id": "ehh", "cristin": 612438 },
+  { "id": "ejw", "cristin": 1538728 },
   { "id": "elb", "orcid": null, "openalex": "A5007001637", "cristin": 569717 },
   { "id": "elo", "cristin": 1491035 },
   { "id": "esy", "cristin": 1071550 },
