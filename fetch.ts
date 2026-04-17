@@ -87,3 +87,7 @@ export const fetchAndIngestAkvaplanists = async () => {
   const added = received.difference(currentIds);
   console.warn({ before: currentIds.size, now: received.size, missing, added });
 };
+
+if (import.meta.main) {
+  fetchAd();
+}

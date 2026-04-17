@@ -30,6 +30,9 @@ const manualPatches: [string, Partial<Akvaplanist>][] = [
   ["ote", { from: new Date("2024-03-11"), workplace: "Tromsø" }],
   ["per", { given: "Paul E." }],
   ["hal", { cristin: 742265 }],
+  ["hka", {
+    from: new Date("2026-05-01"),
+  }],
 ];
 
 export const patches = new Map(manualPatches);
