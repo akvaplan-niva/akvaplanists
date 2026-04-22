@@ -41,11 +41,11 @@ const listEmployedAkvaplanistsHandler = async (req: Request) =>
 
 const personHandler = async (req: Request) => {
   const { id } = extractParams<{ id: string }>(ptrnPersonId, req);
-  const apn = await getAkvaplanistEntry(id);
-  if (!apn) {
+  const { key, value, versionstamp } = await getAkvaplanistEntry(id);
+  if (!versionstamp) {
     return error(404);
   }
-  return response(apn, req);
+  return response({ key, value, versionstamp }, req);
 };
 
 const openAlexPersonHandler = async (req: Request) => {
