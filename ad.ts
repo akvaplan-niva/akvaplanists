@@ -17,7 +17,6 @@ import { akvaplanistPartialFromNvaPerson } from "./nva.ts";
 import { NvaPerson } from "./nva_types.ts";
 
 import _spelling from "./data/spelling.json" with { type: "json" };
-import { value } from "@valibot/valibot";
 const spelling = new Map(_spelling.map(({ id, spelling }) => [id, spelling]));
 
 export const countryFromWorkplace = (w: string) => {
@@ -51,7 +50,7 @@ export const akvaplanistFromAdPersonAndPatches = async (
     : undefined;
 
   // Only expose `expired` for prior employees (ie. expired is in the past)
-  //const _expired = getAdTime(ad.accountExpires);
+  // const _expired = getAdTime(ad.accountExpires);
 
   const expired = dates && "expired" in dates
     ? new Date(dates.expired)
