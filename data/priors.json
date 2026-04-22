@@ -1,639 +1,2844 @@
 [
   {
-    "given": "Anatoly A.",
-    "family": "Lukin",
-    "prior": true,
-    "id": "01hs99np0jb4k56x0ermkkbnps",
-    "spelling": { "gn": ["A. A.", "A."], "fn": [] }
-  },
-  {
-    "given": "Adriana E.",
-    "family": "Sardi",
-    "prior": true,
-    "id": "01hs99np0j99074tks20cqh3y0"
-  },
-  {
-    "given": "A.",
-    "family": "Moldes-Anaya",
-    "prior": true,
-    "id": "01hs99np0j856e1m23skr2f6z5"
-  },
-  {
-    "given": "Alexey K.",
-    "family": "Pavlov",
-    "prior": true,
-    "id": "01hs99np0jatc3d65jnq4k5jgd",
-    "spelling": { "gn": ["Alexey"], "fn": [] }
-  },
-  {
-    "given": "Ann Merete",
-    "family": "Hjelset",
-    "prior": true,
-    "id": "01hs99np0j75x48cy561r80tr6",
-    "spelling": { "gn": ["A. M."], "fn": [] }
-  },
-  {
-    "given": "Ana Sofia",
-    "family": "Aniceto",
-    "prior": true,
-    "id": "asa",
-    "expired": "2022-09-02",
-    "spelling": { "gn": ["Ana S.", "A. S.", "Sofia", "Ana"], "fn": [] }
-  },
-  {
-    "given": "Anna Helena",
-    "family": "Falk",
-    "prior": true,
-    "id": "01hs99np0j5vyn85ve23h5q77t"
-  },
-  {
-    "id": "01hs99np0jsxwmgxdpkhvpbwps",
-    "given": "Arnþór",
-    "family": "Gústavsson",
-    "spelling": { "gn": ["Arnthor", "A."], "fn": ["Gustavsson"] },
-    "prior": true,
-    "days": 1142,
-    "from": "2019-05-01",
-    "expired": "2022-06-16"
-  },
-  {
-    "given": "B.",
-    "family": "Anselme",
-    "prior": true,
-    "id": "01j7k9rfk57sza84m9mntjf5qd"
-  },
-  {
-    "given": "Barbara",
-    "family": "Vögele",
-    "prior": true,
-    "id": "01j7k9qzwpt7ffzpajk84mbr37",
-    "spelling": { "gn": ["B.", "B"], "fn": [] }
-  },
-  {
-    "given": "Benjamin",
-    "family": "Merkel",
-    "prior": true,
-    "expired": "2024-01-12",
-    "id": "bme",
-    "spelling": { "gn": ["B.", "B"], "fn": [] }
-  },
-  {
-    "given": "Børge",
-    "family": "Holte",
-    "prior": true,
-    "id": "01hs99np0jjm4bycynt43y2h0t",
-    "spelling": { "gn": ["B."], "fn": [] }
-  },
-  {
-    "given": "Erik",
-    "family": "Vikingstad",
-    "prior": true,
-    "id": "01hs99np0j20958369jhksr2ax",
-    "spelling": { "gn": ["E."], "fn": [] }
-  },
-  {
-    "given": "Ellie Jane",
-    "family": "Watts",
-    "id": "ejw",
-    "cristin": 1538728,
-    "spelling": { "gn": ["Ellie J.", "Ellie"] }
-  },
-  {
-    "given": "Eli",
-    "family": "Børve",
-    "prior": true,
-    "id": "elb"
-  },
-  {
-    "given": "Marit Nøst",
-    "family": "Hegseth",
-    "prior": true,
-    "id": "01hs99np0jhyqyyefrnqdb3rmc",
-    "spelling": {
-      "gn": ["Marit N."],
-      "fn": []
-    }
-  },
-  {
-    "given": "Emmelie K. L.",
-    "family": "Åström",
-    "prior": true,
-    "id": "01hs99np0hfvpvj4s8ry8at81p",
-    "spelling": {
-      "gn": [
-        "Emmelie K.L.",
-        "Emmelie",
-        "EKL"
-      ],
-      "fn": ["Strøm"]
-    }
-  },
-  {
-    "given": "Frank",
-    "family": "Beuchel",
-    "prior": true,
-    "id": "frb",
-    "spelling": { "gn": ["F."], "fn": [] }
-  },
-  {
-    "given": "Frank",
-    "family": "Gaardsted",
-    "expired": "2022-03-31",
-    "prior": true,
-    "id": "fga",
-    "spelling": { "gn": ["F.", "F"], "fn": [] }
-  },
-  {
-    "given": "Fredrik",
-    "family": "Broms",
-    "prior": true,
-    "id": "01hs99np0hrk52targawxgw671"
-  },
-  {
-    "given": "Gérald",
-    "family": "Darnis",
-    "prior": true,
-    "id": "01hs99np0h1f8z6qjvjr9d9wmh",
-    "spelling": { "gn": ["Gerald", "G."], "fn": [] }
-  },
-  {
-    "given": "G.S.",
-    "family": "Eriksen",
-    "prior": true,
-    "id": "01hs99np0h4r27kqtmw9twbwkt"
-  },
-  {
-    "given": "Gunnar",
-    "family": "Pedersen",
-    "prior": true,
-    "id": "01hs99np0jej7dkfmy1spxrj5e"
-  },
-  {
-    "given": "Johannes",
-    "family": "Wolkers",
-    "prior": true,
-    "id": "01hs99np0j1sk42swb7097k29f",
-    "spelling": { "gn": ["Hans", "J.", "J"], "fn": [] }
-  },
-  {
-    "given": "Hector",
-    "family": "Andrade",
-    "prior": true,
-    "id": "01hs99np0hn51jcjk13fmzwgym",
-    "spelling": {
-      "gn": [
-        "Hector Antonio A.",
-        "Hector Antonio",
-        "H.",
-        "H"
-      ],
-      "fn": [
-        "Andrade Rodriguez",
-        "Rodriguez"
-      ]
+    "key": ["person", "01hs99np0h1f8z6qjvjr9d9wmh"],
+    "value": {
+      "given": "Gérald",
+      "family": "Darnis",
+      "prior": true,
+      "id": "01hs99np0h1f8z6qjvjr9d9wmh",
+      "spelling": { "gn": ["Gerald", "G."], "fn": [] },
+      "updated": "2024-11-07T11:12:58.209Z"
     },
-    "days": 6628,
-    "from": "2004-06-23",
-    "expired": "2022-08-16",
-    "updated": "2024-11-07T11:12:59.820Z"
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Hilde Cecilie",
-    "family": "Trannum",
-    "prior": true,
-    "id": "01hs99np0jkmdrq5ew43q8ezbj",
-    "spelling": { "gn": ["Hilde C.", "Hilde", "H. C."], "fn": [] }
+    "key": ["person", "01hs99np0h4r27kqtmw9twbwkt"],
+    "value": {
+      "given": "G.S.",
+      "family": "Eriksen",
+      "prior": true,
+      "id": "01hs99np0h4r27kqtmw9twbwkt",
+      "updated": "2024-11-07T11:12:58.591Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Håvard",
-    "family": "Espenes",
-    "prior": true,
-    "id": "hes"
+    "key": ["person", "01hs99np0h7skc7q5my27ardn8"],
+    "value": {
+      "given": "Jenny",
+      "family": "Bytingsvik",
+      "prior": true,
+      "id": "01hs99np0h7skc7q5my27ardn8",
+      "spelling": { "gn": ["J."], "fn": [] },
+      "updated": "2024-11-07T11:13:02.850Z",
+      "cristin": 35706,
+      "from": "2013-01-01T00:00:00.000Z",
+      "expired": "2020-07-01",
+      "days": 2738
+    },
+    "versionstamp": "010000003662e2010000"
   },
   {
-    "given": "Ingar H.",
-    "family": "Wasbotten",
-    "prior": true,
-    "id": "ihw",
-    "spelling": { "gn": ["Ingar Halvorsen"], "fn": [] }
+    "key": ["person", "01hs99np0hc097nk8qb0qjvtsb"],
+    "value": {
+      "given": "Sam",
+      "family": "Eglund-Newby",
+      "prior": true,
+      "id": "01hs99np0hc097nk8qb0qjvtsb",
+      "updated": "2024-11-07T11:13:16.654Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Iris",
-    "family": "Jæger",
-    "prior": true,
-    "id": "01hs99np0jns773p33hzfmyme8",
-    "spelling": { "gn": ["I."], "fn": [] }
+    "key": ["person", "01hs99np0hdrp1ardye3ajbvb7"],
+    "value": {
+      "given": "Karin",
+      "family": "Bloch-Hansen",
+      "prior": true,
+      "id": "01hs99np0hdrp1ardye3ajbvb7",
+      "updated": "2024-11-07T11:13:06.578Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Janne E.",
-    "family": "Søreide",
-    "prior": true,
-    "id": "01hs99np0jft7rbfqark6d54z0",
-    "from": "2002-01-01",
-    "expired": "2006-12-31",
-    "spelling": {
-      "gn": [
-        "JANNE E.",
-        "Janne E",
-        "J. E.",
-        "Janne",
-        "J.E.",
-        "Elin",
-        "J.",
-        "JE"
-      ],
-      "fn": ["E. Søreide", "SØREIDE"]
-    }
+    "key": ["person", "01hs99np0he7pp7mf469qtavpg"],
+    "value": {
+      "given": "Jørgen",
+      "family": "Berge",
+      "prior": true,
+      "id": "01hs99np0he7pp7mf469qtavpg",
+      "spelling": { "gn": ["JÃ¸rgen", "JØRGEN", "J.", "J"], "fn": ["BERGE"] },
+      "updated": "2024-11-07T11:13:06.168Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Jasmine",
-    "family": "Nahrgang",
-    "prior": true,
-    "id": "01hs99np0j8xf29fh8nzpyd8hq",
-    "spelling": { "gn": ["J."], "fn": [] }
+    "key": ["person", "01hs99np0heqp9d2wqp46kwhw9"],
+    "value": {
+      "given": "Rosalie",
+      "family": "Evans",
+      "prior": true,
+      "id": "01hs99np0heqp9d2wqp46kwhw9",
+      "updated": "2024-11-07T11:13:15.972Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Jenny",
-    "family": "Bytingsvik",
-    "prior": true,
-    "id": "01hs99np0h7skc7q5my27ardn8",
-    "spelling": { "gn": ["J."], "fn": [] }
+    "key": ["person", "01hs99np0hfvpvj4s8ry8at81p"],
+    "value": {
+      "given": "Emmelie K. L.",
+      "family": "Åström",
+      "prior": true,
+      "id": "01hs99np0hfvpvj4s8ry8at81p",
+      "spelling": { "gn": ["Emmelie K.L.", "Emmelie", "EKL"], "fn": ["Strøm"] },
+      "updated": "2024-11-07T11:12:56.604Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Kristin",
-    "family": "Sæther",
-    "prior": true,
-    "id": "01hs99np0j58rdz1a47wbb7a0g"
+    "key": ["person", "01hs99np0hgdyy9cs5njfrj3vj"],
+    "value": {
+      "given": "William G.",
+      "family": "Ambrose Jr.",
+      "prior": true,
+      "id": "01hs99np0hgdyy9cs5njfrj3vj",
+      "spelling": {
+        "gn": [
+          "William G.",
+          "WILLIAM G.",
+          "William G",
+          "William",
+          "W.G.",
+          "WG",
+          "Jr"
+        ],
+        "fn": ["AMBROSE, JR.", "Ambrose WG", "Ambrose", "AMBROSE"]
+      },
+      "updated": "2024-11-07T11:13:20.458Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Kristina",
-    "family": "Olsson",
-    "prior": true,
-    "id": "01j7wvjmqk4z24zs690mej9bp7"
+    "key": ["person", "01hs99np0hmbybezqs5jy5w5m3"],
+    "value": {
+      "given": "Martin",
+      "family": "Biuw",
+      "prior": true,
+      "id": "01hs99np0hmbybezqs5jy5w5m3",
+      "spelling": { "gn": ["Erik Martin", "M.", "M"], "fn": [] },
+      "updated": "2024-11-07T11:13:10.687Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Timothy J.",
-    "family": "Smith",
-    "prior": true,
-    "id": "01hs99np0j3pktgg6s2fvrz8d0",
-    "spelling": { "gn": ["T.J."], "fn": [] }
+    "key": ["person", "01hs99np0hmm24q0c2h060sj4m"],
+    "value": {
+      "given": "Martin Torp",
+      "family": "Dahl",
+      "prior": true,
+      "id": "01hs99np0hmm24q0c2h060sj4m",
+      "updated": "2024-12-06T09:58:14.463Z",
+      "from": "2018-08-01",
+      "expired": "2020-11-06",
+      "days": 828
+    },
+    "versionstamp": "01000000228bfe800000"
   },
   {
-    "given": "Jofrid",
-    "family": "Skarðhamar",
-    "prior": true,
-    "id": "01hs99np0jk55b72eye9x9g6ye",
-    "spelling": { "gn": ["JOFRID", "J"], "fn": ["SkarĐhamar", "SKARÐHAMAR"] }
+    "key": ["person", "01hs99np0hn51jcjk13fmzwgym"],
+    "value": {
+      "given": "Hector",
+      "family": "Andrade",
+      "prior": true,
+      "id": "01hs99np0hn51jcjk13fmzwgym",
+      "spelling": {
+        "gn": ["Hector Antonio A.", "Hector Antonio", "H.", "H"],
+        "fn": ["Andrade Rodriguez", "Rodriguez"]
+      },
+      "updated": "2024-12-06T10:37:59.396Z",
+      "days": 6628,
+      "from": "2004-06-23",
+      "expired": "2022-08-16"
+    },
+    "versionstamp": "0100000022cc14c00000"
   },
   {
-    "given": "Johanna S.",
-    "family": "Kottmann",
-    "prior": true,
-    "id": "01hs99np0jeyftz3cwvzss13hh",
-    "spelling": { "gn": ["Johanna"], "fn": [] }
+    "key": ["person", "01hs99np0hrk52targawxgw671"],
+    "value": {
+      "given": "Fredrik",
+      "family": "Broms",
+      "prior": true,
+      "id": "01hs99np0hrk52targawxgw671",
+      "updated": "2024-11-07T11:12:57.874Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Jani O.",
-    "family": "Honkanen",
-    "prior": true,
-    "from": "2008-01-01",
-    "expired": "2015-09-30",
-    "id": "01hs99np0jf5d7px7dsdw850d3",
-    "spelling": { "gn": ["J.O."], "fn": [] }
+    "key": ["person", "01hs99np0hs0zgcktvmh8sd99g"],
+    "value": {
+      "given": "Katherine M.",
+      "family": "Dunlop",
+      "prior": true,
+      "id": "01hs99np0hs0zgcktvmh8sd99g",
+      "spelling": {
+        "gn": ["Kathrine M.", "Katherine", "Kathy M.", "K.", "K"],
+        "fn": []
+      },
+      "updated": "2024-11-07T11:13:06.988Z",
+      "from": "2016-10-01",
+      "expired": "2019-04-04",
+      "days": 915
+    },
+    "versionstamp": "01000000219bab100000"
   },
   {
-    "given": "Jo Lynn",
-    "family": "Carroll",
-    "prior": true,
-    "id": "jlc",
-    "expired": "2022-06-10",
-    "spelling": {
-      "gn": ["JoLynn", "Jolynn", "J.L", "J.", "J"],
-      "fn": ["Butts"]
-    }
+    "key": ["person", "01hs99np0j0fh82kf1aa6b3546"],
+    "value": {
+      "given": "Thomas H.",
+      "family": "Pearson",
+      "prior": true,
+      "id": "01hs99np0j0fh82kf1aa6b3546",
+      "spelling": { "gn": ["T. H.", "T.H.", "TH"], "fn": [] },
+      "updated": "2024-11-07T11:13:19.110Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Jørgen",
-    "family": "Berge",
-    "prior": true,
-    "id": "01hs99np0he7pp7mf469qtavpg",
-    "spelling": { "gn": ["JÃ¸rgen", "JØRGEN", "J.", "J"], "fn": ["BERGE"] }
+    "key": ["person", "01hs99np0j1sk42swb7097k29f"],
+    "value": {
+      "given": "Johannes",
+      "family": "Wolkers",
+      "prior": true,
+      "id": "01hs99np0j1sk42swb7097k29f",
+      "spelling": { "gn": ["Hans", "J.", "J"], "fn": [] },
+      "updated": "2024-11-07T11:12:59.410Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Karin",
-    "family": "Bloch-Hansen",
-    "prior": true,
-    "id": "01hs99np0hdrp1ardye3ajbvb7"
+    "key": ["person", "01hs99np0j20958369jhksr2ax"],
+    "value": {
+      "given": "Erik",
+      "family": "Vikingstad",
+      "prior": true,
+      "id": "01hs99np0j20958369jhksr2ax",
+      "spelling": { "gn": ["E."], "fn": [] },
+      "updated": "2024-11-07T11:12:55.007Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Katherine M.",
-    "family": "Dunlop",
-    "prior": true,
-    "id": "01hs99np0hs0zgcktvmh8sd99g",
-    "spelling": {
-      "gn": ["Kathrine M.", "Katherine", "Kathy M.", "K.", "K"],
-      "fn": []
-    }
+    "key": ["person", "01hs99np0j2gf703bnhap2e1yk"],
+    "value": {
+      "given": "Nina Mari",
+      "family": "Jørgensen",
+      "prior": true,
+      "id": "01hs99np0j2gf703bnhap2e1yk",
+      "spelling": { "gn": ["Nina M.", "NM"], "fn": [] },
+      "updated": "2024-11-07T11:13:13.398Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "K.",
-    "family": "Hatlen",
-    "prior": true,
-    "id": "01hs99np0jykhwn8jtnfcswdjg"
+    "key": ["person", "01hs99np0j3pktgg6s2fvrz8d0"],
+    "value": {
+      "given": "Timothy J.",
+      "family": "Smith",
+      "prior": true,
+      "id": "01hs99np0j3pktgg6s2fvrz8d0",
+      "spelling": { "gn": ["T.J."], "fn": [] },
+      "updated": "2024-11-07T11:13:04.120Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Knut",
-    "family": "Forberg",
-    "prior": true,
-    "id": "01hs99np0j4a75q06bhgcajq4e"
+    "key": ["person", "01hs99np0j4a75q06bhgcajq4e"],
+    "value": {
+      "given": "Knut",
+      "family": "Forberg",
+      "prior": true,
+      "id": "01hs99np0j4a75q06bhgcajq4e",
+      "updated": "2024-11-07T11:13:07.770Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Leif M.",
-    "family": "Sunde",
-    "prior": true,
-    "id": "01hs99np0jwkxx12epndw26n7t",
-    "spelling": { "gn": ["L. M."], "fn": [] }
+    "key": ["person", "01hs99np0j58rdz1a47wbb7a0g"],
+    "value": {
+      "given": "Kristin",
+      "family": "Sæther",
+      "prior": true,
+      "id": "01hs99np0j58rdz1a47wbb7a0g",
+      "updated": "2024-11-07T11:13:03.301Z",
+      "from": "2022-04-01",
+      "expired": "2022-04-30",
+      "days": 29
+    },
+    "versionstamp": "01000000219bab100000"
   },
   {
-    "given": "Lis Lindal",
-    "family": "Jørgensen",
-    "prior": true,
-    "id": "01hs99np0jk8txk2nksym7b1mg",
-    "spelling": {
-      "gn": [
-        "Lis L.",
-        "LL"
-      ],
-      "fn": ["JÃ¸rgensen"]
-    }
+    "key": ["person", "01hs99np0j5vyn85ve23h5q77t"],
+    "value": {
+      "given": "Anna Helena",
+      "family": "Falk",
+      "prior": true,
+      "id": "01hs99np0j5vyn85ve23h5q77t",
+      "updated": "2024-11-07T11:12:52.511Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Lindsay",
-    "family": "Wilson",
-    "prior": true,
-    "id": "01hs99np0jqp4na53trrn1jw6y",
-    "spelling": { "gn": ["L.J.", "L."], "fn": [] }
+    "key": ["person", "01hs99np0j6cqt496wgp0dah3v"],
+    "value": {
+      "given": "Victor",
+      "family": "Øiestad",
+      "prior": true,
+      "id": "01hs99np0j6cqt496wgp0dah3v",
+      "spelling": { "gn": ["V.", "V"], "fn": ["Oiestad", "ØIestad"] },
+      "updated": "2024-11-07T11:13:20.122Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Luca",
-    "family": "Tassara",
-    "prior": true,
-    "id": "lut",
-    "spelling": { "gn": ["L."], "fn": [] }
+    "key": ["person", "01hs99np0j6vvgxptv4tarhk3q"],
+    "value": {
+      "given": "Tatjana N.",
+      "family": "Savinova",
+      "prior": true,
+      "id": "01hs99np0j6vvgxptv4tarhk3q",
+      "spelling": {
+        "gn": [
+          "Tatiana N.",
+          "Tatiana I.",
+          "Tatiana N",
+          "Tatiana",
+          "T. N.",
+          "T.N.",
+          "T.",
+          "T"
+        ],
+        "fn": []
+      },
+      "updated": "2024-11-07T11:13:19.447Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Louise Kiel",
-    "family": "Jensen",
-    "prior": true,
-    "id": "01hs99np0j7sq4mceawz8gvvdj"
+    "key": ["person", "01hs99np0j75x48cy561r80tr6"],
+    "value": {
+      "given": "Ann Merete",
+      "family": "Hjelset",
+      "prior": true,
+      "id": "01hs99np0j75x48cy561r80tr6",
+      "spelling": { "gn": ["A. M."], "fn": [] },
+      "updated": "2024-11-07T11:12:51.730Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Magnus",
-    "family": "Aune",
-    "prior": true,
-    "id": "maa",
-    "spelling": {
-      "gn": ["Magnus Aune", "MAGNUS AUNE", "Magnus A.", "Magnus A", "MA"],
-      "fn": ["WIEDMANN", "Wiedmann"]
-    }
+    "key": ["person", "01hs99np0j7knysqrbmpj8thcs"],
+    "value": {
+      "given": "Nathalie",
+      "family": "Morata",
+      "prior": true,
+      "id": "01hs99np0j7knysqrbmpj8thcs",
+      "spelling": { "gn": ["N.", "N"], "fn": [] },
+      "updated": "2024-11-07T11:13:13.849Z",
+      "from": "2015-05-01",
+      "expired": "2018-04-30",
+      "days": 1095
+    },
+    "versionstamp": "01000000219bab100000"
   },
   {
-    "given": "Martin",
-    "family": "Biuw",
-    "prior": true,
-    "id": "01hs99np0hmbybezqs5jy5w5m3",
-    "spelling": { "gn": ["Erik Martin", "M.", "M"], "fn": [] }
+    "key": ["person", "01hs99np0j7sq4mceawz8gvvdj"],
+    "value": {
+      "given": "Louise Kiel",
+      "family": "Jensen",
+      "prior": true,
+      "id": "01hs99np0j7sq4mceawz8gvvdj",
+      "updated": "2024-11-07T11:13:09.855Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Martin Torp",
-    "family": "Dahl",
-    "prior": true,
-    "id": "01hs99np0hmm24q0c2h060sj4m"
+    "key": ["person", "01hs99np0j856e1m23skr2f6z5"],
+    "value": {
+      "given": "A.",
+      "family": "Moldes-Anaya",
+      "prior": true,
+      "id": "01hs99np0j856e1m23skr2f6z5",
+      "updated": "2024-11-07T11:12:50.872Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Mette",
-    "family": "Remen",
-    "prior": true,
-    "expired": "2022-07-31",
-    "id": "01hs99np0jfgs69krzq16hymc4",
-    "spelling": { "gn": ["M"], "fn": [] }
+    "key": ["person", "01hs99np0j8rp6pyncw90r6cvg"],
+    "value": {
+      "given": "Michael J.",
+      "family": "Greenacre",
+      "prior": true,
+      "id": "01hs99np0j8rp6pyncw90r6cvg",
+      "spelling": {
+        "gn": ["Michael", "MICHAEL", "M.", "M"],
+        "fn": ["GREENACRE"]
+      },
+      "updated": "2024-11-07T11:13:12.312Z",
+      "from": "2014-01-01",
+      "expired": "2020-08-31",
+      "days": 2434
+    },
+    "versionstamp": "01000000219bab100000"
   },
   {
-    "given": "Michael L.",
-    "family": "Carroll",
-    "prior": true,
-    "id": "mlc",
-    "expired": "2022-05-06",
-    "spelling": {
-      "gn": ["MICHAEL L.", "Michael L", "Michael", "M.L", "M.", "ML", "M"],
-      "fn": ["CARROLL"]
-    }
+    "key": ["person", "01hs99np0j8xf29fh8nzpyd8hq"],
+    "value": {
+      "given": "Jasmine",
+      "family": "Nahrgang",
+      "prior": true,
+      "id": "01hs99np0j8xf29fh8nzpyd8hq",
+      "spelling": { "gn": ["J."], "fn": [] },
+      "updated": "2024-11-07T11:13:02.482Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Michael J.",
-    "family": "Greenacre",
-    "prior": true,
-    "id": "01hs99np0j8rp6pyncw90r6cvg",
-    "spelling": { "gn": ["Michael", "MICHAEL", "M.", "M"], "fn": ["GREENACRE"] }
+    "key": ["person", "01hs99np0j99074tks20cqh3y0"],
+    "value": {
+      "given": "Adriana E.",
+      "family": "Sardi",
+      "prior": true,
+      "id": "01hs99np0j99074tks20cqh3y0",
+      "updated": "2024-11-07T11:12:50.502Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "M L",
-    "family": "Madsen",
-    "prior": true,
-    "id": "01hs99np0jqp5y3038hk40z5pa"
+    "key": ["person", "01hs99np0jatc3d65jnq4k5jgd"],
+    "value": {
+      "given": "Alexey K.",
+      "family": "Pavlov",
+      "prior": true,
+      "id": "01hs99np0jatc3d65jnq4k5jgd",
+      "spelling": { "gn": ["Alexey"], "fn": [] },
+      "updated": "2024-11-07T11:12:51.320Z",
+      "from": "2018-04-15",
+      "expired": "2022-05-31",
+      "days": 1507
+    },
+    "versionstamp": "01000000219bab100000"
   },
   {
-    "given": "Muriel Barbara",
-    "family": "Dunn",
-    "prior": true,
-    "id": "mbd",
-    "spelling": { "gn": ["Muriel"], "fn": [] }
+    "key": ["person", "01hs99np0jb4k56x0ermkkbnps"],
+    "value": {
+      "given": "Anatoly A.",
+      "family": "Lukin",
+      "prior": true,
+      "id": "01hs99np0jb4k56x0ermkkbnps",
+      "spelling": { "gn": ["A. A.", "A."], "fn": [] },
+      "updated": "2024-11-07T11:12:50.027Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Nina Mari",
-    "family": "Jørgensen",
-    "prior": true,
-    "id": "01hs99np0j2gf703bnhap2e1yk",
-    "spelling": { "gn": ["Nina M.", "NM"], "fn": [] }
+    "key": ["person", "01hs99np0jbp4dq8yc26h4mrzv"],
+    "value": {
+      "given": "Ole Jørgen",
+      "family": "Lønne",
+      "prior": true,
+      "id": "01hs99np0jbp4dq8yc26h4mrzv",
+      "spelling": {
+        "gn": ["Ole-Jørgen", "OLE JØRGEN", "Ole J.", "O. J.", "O.J.", "Ole"],
+        "fn": ["LØNNE"]
+      },
+      "updated": "2024-11-07T11:13:14.627Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Nathalie",
-    "family": "Morata",
-    "prior": true,
-    "id": "01hs99np0j7knysqrbmpj8thcs",
-    "spelling": { "gn": ["N.", "N"], "fn": [] }
+    "key": ["person", "01hs99np0jd5039vbmkkbrpg86"],
+    "value": {
+      "given": "Tore",
+      "family": "Hattermann",
+      "prior": true,
+      "from": "2013-01-15",
+      "expired": "2018-12-31",
+      "id": "01hs99np0jd5039vbmkkbrpg86",
+      "spelling": { "gn": ["T."], "fn": [] },
+      "updated": "2024-11-07T11:13:19.787Z",
+      "days": 2176
+    },
+    "versionstamp": "01000000219bab100000"
   },
   {
-    "given": "Ole Anders",
-    "family": "Nøst",
-    "prior": true,
-    "expired": "2022-03-31",
-    "id": "oan",
-    "spelling": {
-      "gn": ["Ole A.", "O. A.", "O.-A.", "O.A.", "Ole", "OA"],
-      "fn": ["Nost"]
-    }
+    "key": ["person", "01hs99np0jej7dkfmy1spxrj5e"],
+    "value": {
+      "given": "Gunnar",
+      "family": "Pedersen",
+      "prior": true,
+      "id": "01hs99np0jej7dkfmy1spxrj5e",
+      "updated": "2024-11-07T11:12:59.000Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Ole Jørgen",
-    "family": "Lønne",
-    "prior": true,
-    "id": "01hs99np0jbp4dq8yc26h4mrzv",
-    "spelling": {
-      "gn": ["Ole-Jørgen", "OLE JØRGEN", "Ole J.", "O. J.", "O.J.", "Ole"],
-      "fn": ["LØNNE"]
-    }
+    "key": ["person", "01hs99np0jeyftz3cwvzss13hh"],
+    "value": {
+      "given": "Johanna S.",
+      "family": "Kottmann",
+      "prior": true,
+      "id": "01hs99np0jeyftz3cwvzss13hh",
+      "spelling": { "gn": ["Johanna"], "fn": [] },
+      "updated": "2024-11-07T11:13:04.940Z",
+      "cristin": 1241826,
+      "from": "2022-10-01",
+      "expired": "2023-03-31",
+      "days": 181
+    },
+    "versionstamp": "010000003662e2a90000"
   },
   {
-    "given": "Perrine",
-    "family": "Geraudie",
-    "prior": true,
-    "id": "01hs99np0jtcmwsrsytck4p8cw",
-    "spelling": { "gn": ["P."], "fn": [] },
-    "cristin": 1517593,
-    "from": "2011-08-01",
-    "expired": "2021-01-31"
+    "key": ["person", "01hs99np0jf5d7px7dsdw850d3"],
+    "value": {
+      "given": "Jani O.",
+      "family": "Honkanen",
+      "prior": true,
+      "from": "2008-01-01",
+      "expired": "2015-09-30",
+      "id": "01hs99np0jf5d7px7dsdw850d3",
+      "spelling": { "gn": ["J.O."], "fn": [] },
+      "updated": "2024-11-07T11:13:05.350Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Patrick",
-    "family": "White",
-    "prior": true,
-    "id": "01hs99np0jybdf6xda3qwh4s61",
-    "spelling": { "gn": ["P."], "fn": [] }
+    "key": ["person", "01hs99np0jfgs69krzq16hymc4"],
+    "value": {
+      "given": "Mette",
+      "family": "Remen",
+      "prior": true,
+      "expired": "2022-07-31",
+      "id": "01hs99np0jfgs69krzq16hymc4",
+      "spelling": { "gn": ["M"], "fn": [] },
+      "updated": "2024-11-07T11:13:11.493Z",
+      "from": "2015-11-01",
+      "days": 2464
+    },
+    "versionstamp": "01000000219bab100000"
   },
   {
-    "given": "Reinhold",
-    "family": "Fieler",
-    "prior": true,
-    "id": "ref",
-    "spelling": { "gn": ["R."], "fn": [] }
+    "key": ["person", "01hs99np0jft7rbfqark6d54z0"],
+    "value": {
+      "given": "Janne E.",
+      "family": "Søreide",
+      "prior": true,
+      "id": "01hs99np0jft7rbfqark6d54z0",
+      "expired": "2006-12-31",
+      "spelling": {
+        "gn": [
+          "JANNE E.",
+          "Janne E",
+          "J. E.",
+          "Janne",
+          "J.E.",
+          "Elin",
+          "J.",
+          "JE"
+        ],
+        "fn": ["E. Søreide", "SØREIDE"]
+      },
+      "updated": "2024-12-06T11:00:39.946Z",
+      "from": "2002-01-01"
+    },
+    "versionstamp": "0100000022ec1fe00000"
   },
   {
-    "given": "Rosalie",
-    "family": "Evans",
-    "prior": true,
-    "id": "01hs99np0heqp9d2wqp46kwhw9"
+    "key": ["person", "01hs99np0jhyqyyefrnqdb3rmc"],
+    "value": {
+      "given": "Marit Nøst",
+      "family": "Hegseth",
+      "prior": true,
+      "id": "01hs99np0jhyqyyefrnqdb3rmc",
+      "spelling": { "gn": ["Marit N."], "fn": [] },
+      "updated": "2024-11-07T11:12:56.236Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Rosalyn",
-    "family": "Fredriksen",
-    "prior": true,
-    "id": "rfr"
+    "key": ["person", "01hs99np0jjm4bycynt43y2h0t"],
+    "value": {
+      "given": "Børge",
+      "family": "Holte",
+      "prior": true,
+      "id": "01hs99np0jjm4bycynt43y2h0t",
+      "spelling": { "gn": ["B."], "fn": [] },
+      "updated": "2024-11-07T11:12:54.598Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Sam",
-    "family": "Eglund-Newby",
-    "prior": true,
-    "id": "01hs99np0hc097nk8qb0qjvtsb"
+    "key": ["person", "01hs99np0jk55b72eye9x9g6ye"],
+    "value": {
+      "given": "Jofrid",
+      "family": "Skarðhamar",
+      "prior": true,
+      "id": "01hs99np0jk55b72eye9x9g6ye",
+      "spelling": { "gn": ["JOFRID", "J"], "fn": ["SkarĐhamar", "SKARÐHAMAR"] },
+      "updated": "2024-11-07T11:13:04.530Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Sanna",
-    "family": "Matsson",
-    "prior": true,
-    "id": "01hs99np0jv055ec6vh4t3s9zr"
+    "key": ["person", "01hs99np0jk8txk2nksym7b1mg"],
+    "value": {
+      "given": "Lis Lindal",
+      "family": "Jørgensen",
+      "prior": true,
+      "id": "01hs99np0jk8txk2nksym7b1mg",
+      "spelling": { "gn": ["Lis L.", "LL"], "fn": ["JÃ¸rgensen"] },
+      "updated": "2024-11-07T11:13:08.626Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Starrlight",
-    "family": "Augustine",
-    "prior": true,
-    "id": "sta",
-    "spelling": { "gn": ["S."], "fn": [] }
+    "key": ["person", "01hs99np0jk9b2xq7zx2ch0j7r"],
+    "value": {
+      "given": "T.",
+      "family": "Scanlon",
+      "prior": true,
+      "id": "01hs99np0jk9b2xq7zx2ch0j7r",
+      "updated": "2024-11-07T11:13:18.105Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Stig",
-    "family": "Falk-Petersen",
-    "prior": true,
-    "id": "sfp",
-    "spelling": {
-      "gn": ["Stig", "Stig Falk", "S.", "S"],
-      "fn": ["Falk‐Petersen", "Falk Petersen", "Falk-petersen", "Petersen"]
-    }
+    "key": ["person", "01hs99np0jkmdrq5ew43q8ezbj"],
+    "value": {
+      "given": "Hilde Cecilie",
+      "family": "Trannum",
+      "prior": true,
+      "id": "01hs99np0jkmdrq5ew43q8ezbj",
+      "spelling": { "gn": ["Hilde C.", "Hilde", "H. C."], "fn": [] },
+      "updated": "2024-11-07T11:13:00.434Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "T.",
-    "family": "Scanlon",
-    "prior": true,
-    "id": "01hs99np0jk9b2xq7zx2ch0j7r"
+    "key": ["person", "01hs99np0jns773p33hzfmyme8"],
+    "value": {
+      "given": "Iris",
+      "family": "Jæger",
+      "prior": true,
+      "id": "01hs99np0jns773p33hzfmyme8",
+      "spelling": { "gn": ["I."], "fn": [] },
+      "updated": "2024-11-07T11:13:01.662Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Thomas",
-    "family": "Hansen",
-    "prior": true,
-    "id": "thh",
-    "spelling": { "gn": ["THOMAS", "T."], "fn": ["HANSEN"] }
+    "key": ["person", "01hs99np0jqp4na53trrn1jw6y"],
+    "value": {
+      "given": "Lindsay",
+      "family": "Wilson",
+      "prior": true,
+      "id": "01hs99np0jqp4na53trrn1jw6y",
+      "spelling": { "gn": ["L.J.", "L."], "fn": [] },
+      "updated": "2024-11-07T11:13:09.036Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Thor Arne",
-    "family": "Hangstad",
-    "prior": true,
-    "id": "01hs99np0jx06g5cqrvt8ab8dm",
-    "spelling": { "gn": ["Thor-Arne", "Thor A.", "Thor A"], "fn": [] }
+    "key": ["person", "01hs99np0jqp5y3038hk40z5pa"],
+    "value": {
+      "given": "M L",
+      "family": "Madsen",
+      "prior": true,
+      "id": "01hs99np0jqp5y3038hk40z5pa",
+      "updated": "2024-11-07T11:13:12.725Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "Thomas H.",
-    "family": "Pearson",
-    "prior": true,
-    "id": "01hs99np0j0fh82kf1aa6b3546",
-    "spelling": { "gn": ["T. H.", "T.H.", "TH"], "fn": [] }
+    "key": ["person", "01hs99np0jsxwmgxdpkhvpbwps"],
+    "value": {
+      "given": "Arnþór",
+      "family": "Gústavsson",
+      "prior": true,
+      "id": "01hs99np0jsxwmgxdpkhvpbwps",
+      "spelling": { "gn": ["Arnthor", "A."], "fn": ["Gustavsson"] },
+      "updated": "2024-12-06T08:46:05.740Z",
+      "days": 1142,
+      "from": "2019-05-01",
+      "expired": "2022-06-16"
+    },
+    "versionstamp": "01000000222bdd200000"
   },
   {
-    "given": "Tatjana N.",
-    "family": "Savinova",
-    "prior": true,
-    "id": "01hs99np0j6vvgxptv4tarhk3q",
-    "spelling": {
-      "gn": [
-        "Tatiana N.",
-        "Tatiana I.",
-        "Tatiana N",
-        "Tatiana",
-        "T. N.",
-        "T.N.",
-        "T.",
-        "T"
-      ],
-      "fn": []
-    }
+    "key": ["person", "01hs99np0jtcmwsrsytck4p8cw"],
+    "value": {
+      "given": "Perrine",
+      "family": "Geraudie",
+      "prior": true,
+      "id": "01hs99np0jtcmwsrsytck4p8cw",
+      "spelling": { "gn": ["P."], "fn": [] },
+      "cristin": 1517593,
+      "from": "2011-08-01",
+      "expired": "2021-01-31",
+      "updated": "2024-12-06T09:44:05.170Z",
+      "days": 3471
+    },
+    "versionstamp": "010000003662e2550000"
   },
   {
-    "given": "Tore",
-    "family": "Hattermann",
-    "prior": true,
-    "from": "2015-01-01",
-    "expired": "2019-12-31",
-    "id": "01hs99np0jd5039vbmkkbrpg86",
-    "spelling": { "gn": ["T."], "fn": [] }
+    "key": ["person", "01hs99np0jv055ec6vh4t3s9zr"],
+    "value": {
+      "given": "Sanna",
+      "family": "Matsson",
+      "prior": true,
+      "id": "01hs99np0jv055ec6vh4t3s9zr",
+      "updated": "2024-11-07T11:13:16.995Z",
+      "from": "2014-07-01",
+      "expired": "2021-12-31",
+      "days": 2740
+    },
+    "versionstamp": "01000000219bab100000"
   },
   {
-    "given": "Victor",
-    "family": "Øiestad",
-    "prior": true,
-    "id": "01hs99np0j6cqt496wgp0dah3v",
-    "spelling": { "gn": ["V.", "V"], "fn": ["Oiestad", "ØIestad"] }
+    "key": ["person", "01hs99np0jwkxx12epndw26n7t"],
+    "value": {
+      "given": "Leif M.",
+      "family": "Sunde",
+      "prior": true,
+      "id": "01hs99np0jwkxx12epndw26n7t",
+      "spelling": { "gn": ["L. M."], "fn": [] },
+      "updated": "2024-11-07T11:13:08.163Z"
+    },
+    "versionstamp": "01000000203b30b00000"
   },
   {
-    "given": "William G.",
-    "family": "Ambrose Jr.",
-    "prior": true,
-    "id": "01hs99np0hgdyy9cs5njfrj3vj",
-    "spelling": {
-      "gn": [
-        "William G.",
-        "WILLIAM G.",
-        "William G",
-        "William",
-        "W.G.",
-        "WG",
-        "Jr"
-      ],
-      "fn": ["AMBROSE, JR.", "Ambrose WG", "Ambrose", "AMBROSE"]
-    }
+    "key": ["person", "01hs99np0jx06g5cqrvt8ab8dm"],
+    "value": {
+      "given": "Thor Arne",
+      "family": "Hangstad",
+      "prior": true,
+      "id": "01hs99np0jx06g5cqrvt8ab8dm",
+      "spelling": { "gn": ["Thor-Arne", "Thor A.", "Thor A"], "fn": [] },
+      "updated": "2024-11-07T11:13:18.775Z",
+      "cristin": 1538729,
+      "from": "2010-02-01",
+      "expired": "2021-07-31",
+      "days": 4198
+    },
+    "versionstamp": "010000003662e26a0000"
   },
   {
-    "given": "Øystein",
-    "family": "Varpe",
-    "prior": true,
-    "id": "01hs99np0jz79f6e1677wx8ntv",
-    "spelling": { "gn": ["Ø.", "O.", "Ø"], "fn": [] }
+    "key": ["person", "01hs99np0jybdf6xda3qwh4s61"],
+    "value": {
+      "given": "Patrick",
+      "family": "White",
+      "prior": true,
+      "id": "01hs99np0jybdf6xda3qwh4s61",
+      "spelling": { "gn": ["P."], "fn": [] },
+      "updated": "2024-11-07T11:13:15.306Z",
+      "from": "2017-01-01",
+      "expired": "2019-10-31",
+      "days": 1033
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "01hs99np0jykhwn8jtnfcswdjg"],
+    "value": {
+      "given": "K.",
+      "family": "Hatlen",
+      "prior": true,
+      "id": "01hs99np0jykhwn8jtnfcswdjg",
+      "updated": "2024-11-07T11:13:07.358Z"
+    },
+    "versionstamp": "01000000203b30b00000"
+  },
+  {
+    "key": ["person", "01hs99np0jz79f6e1677wx8ntv"],
+    "value": {
+      "given": "Øystein",
+      "family": "Varpe",
+      "prior": true,
+      "id": "01hs99np0jz79f6e1677wx8ntv",
+      "spelling": { "gn": ["Ø.", "O.", "Ø"], "fn": [] },
+      "updated": "2024-11-07T11:13:20.794Z",
+      "from": "2012-08-01",
+      "expired": "2019-01-31",
+      "days": 2374
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "01j7k9qzwpt7ffzpajk84mbr37"],
+    "value": {
+      "given": "Barbara",
+      "family": "Vögele",
+      "prior": true,
+      "id": "01j7k9qzwpt7ffzpajk84mbr37",
+      "spelling": { "gn": ["B.", "B"], "fn": [] },
+      "updated": "2024-11-07T11:12:53.778Z",
+      "from": "1999-03-01",
+      "expired": "2019-10-31",
+      "days": 7549
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "01j7k9rfk57sza84m9mntjf5qd"],
+    "value": {
+      "given": "B.",
+      "family": "Anselme",
+      "prior": true,
+      "id": "01j7k9rfk57sza84m9mntjf5qd",
+      "updated": "2024-11-07T11:12:53.330Z"
+    },
+    "versionstamp": "01000000203b30b00000"
+  },
+  {
+    "key": ["person", "01j7wvjmqk4z24zs690mej9bp7"],
+    "value": {
+      "given": "Kristina",
+      "family": "Olsson",
+      "prior": true,
+      "id": "01j7wvjmqk4z24zs690mej9bp7",
+      "updated": "2024-11-07T11:13:03.710Z"
+    },
+    "versionstamp": "01000000203b30b00000"
+  },
+  {
+    "key": ["person", "01jebv93htnmkq7m47yrxjpgwf"],
+    "value": {
+      "id": "01jebv93htnmkq7m47yrxjpgwf",
+      "family": "Agustsson",
+      "given": "Thorleifur",
+      "prior": true,
+      "days": 38,
+      "from": "2020-06-23",
+      "expired": "2020-07-31",
+      "updated": "2024-12-06T09:35:27.843Z"
+    },
+    "versionstamp": "01000000225bedd00000"
+  },
+  {
+    "key": ["person", "01jebv93hv118zx2w42wgwe6yg"],
+    "value": {
+      "id": "01jebv93hv118zx2w42wgwe6yg",
+      "family": "Djuve",
+      "given": "Hans Kristian",
+      "prior": true,
+      "days": 3348,
+      "from": "2014-07-01",
+      "expired": "2023-08-31",
+      "updated": "2024-12-06T09:35:31.997Z",
+      "cristin": 1491040
+    },
+    "versionstamp": "010000003662e21f0000"
+  },
+  {
+    "key": ["person", "01jebv93hv29wc786e135k3p1n"],
+    "value": {
+      "id": "01jebv93hv29wc786e135k3p1n",
+      "family": "Bender",
+      "given": "Morgan Lizabeth",
+      "prior": true,
+      "days": 76,
+      "from": "2019-04-01",
+      "expired": "2019-06-16",
+      "updated": "2024-12-06T09:35:29.852Z"
+    },
+    "versionstamp": "01000000225bedd50000"
+  },
+  {
+    "key": ["person", "01jebv93hv353dq4kbwdewnr4w"],
+    "value": {
+      "id": "01jebv93hv353dq4kbwdewnr4w",
+      "family": "Bahr",
+      "given": "Gjermund",
+      "prior": true,
+      "days": 3105,
+      "from": "2014-07-01",
+      "expired": "2022-12-31",
+      "updated": "2024-12-06T09:35:29.305Z"
+    },
+    "versionstamp": "01000000225bedd30000"
+  },
+  {
+    "key": ["person", "01jebv93hv5t84t5j98qhffx1a"],
+    "value": {
+      "id": "01jebv93hv5t84t5j98qhffx1a",
+      "family": "Dahl-Hansen",
+      "given": "Elise Martine",
+      "prior": true,
+      "days": 29,
+      "from": "2022-09-01",
+      "expired": "2022-09-30",
+      "updated": "2024-12-06T09:35:31.195Z"
+    },
+    "versionstamp": "01000000225bedda0000"
+  },
+  {
+    "key": ["person", "01jebv93hv6ac7hrdc8gx1n3kk"],
+    "value": {
+      "id": "01jebv93hv6ac7hrdc8gx1n3kk",
+      "family": "Dillon",
+      "given": "Ryan James",
+      "prior": true,
+      "days": 1075,
+      "from": "2015-02-01",
+      "expired": "2018-01-11",
+      "updated": "2024-12-06T09:35:31.729Z"
+    },
+    "versionstamp": "01000000225beddc0000"
+  },
+  {
+    "key": ["person", "01jebv93hv9sqhc8az6nm3ar1z"],
+    "value": {
+      "id": "01jebv93hv9sqhc8az6nm3ar1z",
+      "family": "Dussauze",
+      "given": "Matthieu",
+      "prior": true,
+      "days": 668,
+      "from": "2018-01-01",
+      "expired": "2019-10-31",
+      "updated": "2024-12-06T09:35:32.267Z"
+    },
+    "versionstamp": "01000000225bedde0000"
+  },
+  {
+    "key": ["person", "01jebv93hvb7627afk5b3xmxx9"],
+    "value": {
+      "id": "01jebv93hvb7627afk5b3xmxx9",
+      "family": "Beaulieu",
+      "given": "Marieke",
+      "prior": true,
+      "days": 253,
+      "from": "2022-06-20",
+      "expired": "2023-02-28",
+      "updated": "2024-12-06T09:35:29.583Z"
+    },
+    "versionstamp": "01000000225bedd40000"
+  },
+  {
+    "key": ["person", "01jebv93hvebv7bd3rave9ak95"],
+    "value": {
+      "id": "01jebv93hvebv7bd3rave9ak95",
+      "family": "Aragoneses",
+      "given": "Irene Lorite",
+      "prior": true,
+      "days": 338,
+      "from": "2017-02-27",
+      "expired": "2018-01-31",
+      "updated": "2024-12-06T09:35:29.036Z"
+    },
+    "versionstamp": "01000000225bedd20000"
+  },
+  {
+    "key": ["person", "01jebv93hvfxt6ztn3a2kgnbbe"],
+    "value": {
+      "id": "01jebv93hvfxt6ztn3a2kgnbbe",
+      "family": "Christensen",
+      "given": "Oskar",
+      "prior": true,
+      "days": 67,
+      "from": "2021-05-25",
+      "expired": "2021-07-31",
+      "updated": "2024-12-06T09:35:30.928Z"
+    },
+    "versionstamp": "01000000225bedd90000"
+  },
+  {
+    "key": ["person", "01jebv93hvk30fy33d0twhs33b"],
+    "value": {
+      "id": "01jebv93hvk30fy33d0twhs33b",
+      "family": "Dahl-Hansen",
+      "given": "Magnus P.",
+      "prior": true,
+      "days": 29,
+      "from": "2021-09-01",
+      "expired": "2021-09-30",
+      "updated": "2024-12-06T09:35:31.463Z"
+    },
+    "versionstamp": "01000000225beddb0000"
+  },
+  {
+    "key": ["person", "01jebv93hvk6wtm0vsnk4mwkqm"],
+    "value": {
+      "id": "01jebv93hvk6wtm0vsnk4mwkqm",
+      "family": "Brandshaug",
+      "given": "Ola Kvaal",
+      "prior": true,
+      "days": 972,
+      "from": "2020-10-01",
+      "expired": "2023-05-31",
+      "updated": "2024-12-06T09:35:30.393Z"
+    },
+    "versionstamp": "01000000225bedd70000"
+  },
+  {
+    "key": ["person", "01jebv93hvqznqbz4f848ky0dk"],
+    "value": {
+      "id": "01jebv93hvqznqbz4f848ky0dk",
+      "family": "Bunkholt",
+      "given": "Vilde",
+      "prior": true,
+      "days": 183,
+      "from": "2019-08-01",
+      "expired": "2020-01-31",
+      "updated": "2024-12-06T09:35:30.661Z"
+    },
+    "versionstamp": "01000000225bedd80000"
+  },
+  {
+    "key": ["person", "01jebv93hvxy7a6g4tmf3tdkg6"],
+    "value": {
+      "id": "01jebv93hvxy7a6g4tmf3tdkg6",
+      "family": "Algera",
+      "given": "Ann-Isabel",
+      "prior": true,
+      "days": 121,
+      "from": "2018-04-01",
+      "expired": "2018-07-31",
+      "updated": "2024-12-06T09:35:28.767Z"
+    },
+    "versionstamp": "01000000225bedd10000"
+  },
+  {
+    "key": ["person", "01jebv93hvya7w9y8dvzkzt8y4"],
+    "value": {
+      "id": "01jebv93hvya7w9y8dvzkzt8y4",
+      "family": "Bjørn",
+      "given": "Larsen",
+      "prior": true,
+      "days": 29,
+      "from": "2024-09-01",
+      "expired": "2024-09-30",
+      "updated": "2024-12-06T09:35:30.123Z"
+    },
+    "versionstamp": "01000000225bedd60000"
+  },
+  {
+    "key": ["person", "01jebv93hw0wxn7ysfwfadr6v1"],
+    "value": {
+      "id": "01jebv93hw0wxn7ysfwfadr6v1",
+      "family": "Granlund",
+      "given": "Cassandra Linn Hilmarsen",
+      "prior": true,
+      "days": 183,
+      "from": "2018-03-01",
+      "expired": "2018-08-31",
+      "updated": "2024-12-06T09:35:35.252Z"
+    },
+    "versionstamp": "01000000225bede90000"
+  },
+  {
+    "key": ["person", "01jebv93hw1104sbt4gtrka1gq"],
+    "value": {
+      "id": "01jebv93hw1104sbt4gtrka1gq",
+      "family": "Fredrikson",
+      "given": "Anu Marjut",
+      "prior": true,
+      "days": 272,
+      "from": "2020-10-01",
+      "expired": "2021-06-30",
+      "updated": "2024-12-06T09:35:34.178Z"
+    },
+    "versionstamp": "01000000225bede50000"
+  },
+  {
+    "key": ["person", "01jebv93hw1vdbnr0qftkprbpp"],
+    "value": {
+      "id": "01jebv93hw1vdbnr0qftkprbpp",
+      "family": "Juliussen",
+      "given": "Reidulf",
+      "prior": true,
+      "days": 10702,
+      "from": "1991-01-01",
+      "expired": "2020-04-20",
+      "updated": "2024-12-06T09:35:40.103Z"
+    },
+    "versionstamp": "01000000225bedfb0000"
+  },
+  {
+    "key": ["person", "01jebv93hw21vce0vs49dqrxjt"],
+    "value": {
+      "id": "01jebv93hw21vce0vs49dqrxjt",
+      "family": "Gaski",
+      "given": "Marita",
+      "prior": true,
+      "days": 1043,
+      "from": "2015-06-01",
+      "expired": "2018-04-09",
+      "updated": "2024-12-06T09:35:34.716Z"
+    },
+    "versionstamp": "01000000225bede70000"
+  },
+  {
+    "key": ["person", "01jebv93hw6af2j4kmgxqr6xyj"],
+    "value": {
+      "id": "01jebv93hw6af2j4kmgxqr6xyj",
+      "family": "Johansen",
+      "given": "Terje Bjørn",
+      "prior": true,
+      "days": 27,
+      "from": "2021-02-01",
+      "expired": "2021-02-28",
+      "updated": "2024-12-06T09:35:39.290Z"
+    },
+    "versionstamp": "01000000225bedf80000"
+  },
+  {
+    "key": ["person", "01jebv93hw6nng08mywc05xp0d"],
+    "value": {
+      "id": "01jebv93hw6nng08mywc05xp0d",
+      "family": "Hammenstig",
+      "given": "David",
+      "prior": true,
+      "days": 2707,
+      "from": "2014-12-01",
+      "expired": "2022-04-30",
+      "updated": "2024-12-06T09:35:35.796Z"
+    },
+    "versionstamp": "01000000225bedeb0000"
+  },
+  {
+    "key": ["person", "01jebv93hw6nqaf9ez1kg9bnxk"],
+    "value": {
+      "id": "01jebv93hw6nqaf9ez1kg9bnxk",
+      "family": "Gjestvang",
+      "given": "August",
+      "prior": true,
+      "days": 31,
+      "from": "2024-05-21",
+      "expired": "2024-06-21",
+      "updated": "2024-12-06T09:35:34.982Z"
+    },
+    "versionstamp": "01000000225bede80000"
+  },
+  {
+    "key": ["person", "01jebv93hw8d9p1af370808885"],
+    "value": {
+      "id": "01jebv93hw8d9p1af370808885",
+      "family": "Johnsen",
+      "given": "Janne Blomli",
+      "prior": true,
+      "days": 821,
+      "from": "2019-04-01",
+      "expired": "2021-06-30",
+      "updated": "2024-12-06T09:35:39.566Z"
+    },
+    "versionstamp": "01000000225bedf90000"
+  },
+  {
+    "key": ["person", "01jebv93hwban4m5be6ftgm3jd"],
+    "value": {
+      "id": "01jebv93hwban4m5be6ftgm3jd",
+      "family": "Gamst Johansen",
+      "given": "Marcus",
+      "prior": true,
+      "days": 81,
+      "from": "2021-10-11",
+      "expired": "2021-12-31",
+      "updated": "2024-12-06T09:35:34.446Z"
+    },
+    "versionstamp": "01000000225bede60000"
+  },
+  {
+    "key": ["person", "01jebv93hwfj08xg1t1gg7fmjt"],
+    "value": {
+      "id": "01jebv93hwfj08xg1t1gg7fmjt",
+      "family": "Evenset",
+      "given": "Kristine Emilia",
+      "prior": true,
+      "days": 32,
+      "from": "2021-06-14",
+      "expired": "2021-07-16",
+      "updated": "2024-12-06T09:35:33.096Z"
+    },
+    "versionstamp": "01000000225bede10000"
+  },
+  {
+    "key": ["person", "01jebv93hwg8v9rt312wyecqpb"],
+    "value": {
+      "id": "01jebv93hwg8v9rt312wyecqpb",
+      "family": "Hansen",
+      "given": "Karin Bloch",
+      "prior": true,
+      "days": 1691,
+      "from": "2016-02-01",
+      "expired": "2020-09-18",
+      "updated": "2024-12-06T09:35:36.063Z"
+    },
+    "versionstamp": "01000000225bedec0000"
+  },
+  {
+    "key": ["person", "01jebv93hwhkv5znpwat34882n"],
+    "value": {
+      "id": "01jebv93hwhkv5znpwat34882n",
+      "family": "Johansen",
+      "given": "Maritha",
+      "prior": true,
+      "days": 67,
+      "from": "2022-06-13",
+      "expired": "2022-08-19",
+      "updated": "2024-12-06T09:35:39.022Z"
+    },
+    "versionstamp": "01000000225bedf70000"
+  },
+  {
+    "key": ["person", "01jebv93hwjer5eqas1y3m9gzf"],
+    "value": {
+      "id": "01jebv93hwjer5eqas1y3m9gzf",
+      "family": "Fagerli",
+      "given": "Margrethe",
+      "prior": true,
+      "days": 60,
+      "from": "2019-05-01",
+      "expired": "2019-06-30",
+      "updated": "2024-12-06T09:35:33.363Z"
+    },
+    "versionstamp": "01000000225bede20000"
+  },
+  {
+    "key": ["person", "01jebv93hwkv6axz2hvn77r5vz"],
+    "value": {
+      "id": "01jebv93hwkv6axz2hvn77r5vz",
+      "family": "Hernandez",
+      "given": "Nestor Santana",
+      "prior": true,
+      "days": 19,
+      "from": "2019-04-01",
+      "expired": "2019-04-20",
+      "updated": "2024-12-06T09:35:37.138Z"
+    },
+    "versionstamp": "01000000225bedf00000"
+  },
+  {
+    "key": ["person", "01jebv93hwqh5ger3remr7r8e3"],
+    "value": {
+      "id": "01jebv93hwqh5ger3remr7r8e3",
+      "family": "Jørgensen",
+      "given": "Pernille",
+      "prior": true,
+      "days": 114,
+      "from": "2022-08-31",
+      "expired": "2022-12-23",
+      "updated": "2024-12-06T09:35:40.654Z"
+    },
+    "versionstamp": "01000000225bedfd0000"
+  },
+  {
+    "key": ["person", "01jebv93hwr9skx7jncwwpw8d5"],
+    "value": {
+      "id": "01jebv93hwr9skx7jncwwpw8d5",
+      "family": "Guneriussen",
+      "given": "Asle Inge",
+      "prior": true,
+      "days": 13241,
+      "from": "1986-06-30",
+      "expired": "2022-09-30",
+      "updated": "2024-12-06T09:35:35.523Z"
+    },
+    "versionstamp": "01000000225bedea0000"
+  },
+  {
+    "key": ["person", "01jebv93hwsyh42yhn6g4ej4vk"],
+    "value": {
+      "id": "01jebv93hwsyh42yhn6g4ej4vk",
+      "family": "Jafari",
+      "given": "Mahnaz",
+      "prior": true,
+      "days": 170,
+      "from": "2021-11-11",
+      "expired": "2022-04-30",
+      "updated": "2024-12-06T09:35:38.483Z"
+    },
+    "versionstamp": "01000000225bedf50000"
+  },
+  {
+    "key": ["person", "01jebv93hwtcx8pgjd33bhdwpt"],
+    "value": {
+      "id": "01jebv93hwtcx8pgjd33bhdwpt",
+      "family": "Daae",
+      "given": "Kjersti Birkeland",
+      "prior": true,
+      "days": 92,
+      "from": "2018-06-18",
+      "expired": "2018-09-18",
+      "updated": "2024-12-06T09:35:32.535Z"
+    },
+    "versionstamp": "01000000225beddf0000"
+  },
+  {
+    "key": ["person", "01jebv93hwtngnc6ks9r4jf0hm"],
+    "value": {
+      "id": "01jebv93hwtngnc6ks9r4jf0hm",
+      "family": "Hinrichs",
+      "given": "Fenja Sophie Lucie",
+      "prior": true,
+      "days": 100,
+      "from": "2018-03-22",
+      "expired": "2018-06-30",
+      "updated": "2024-12-06T09:35:37.407Z"
+    },
+    "versionstamp": "01000000225bedf10000"
+  },
+  {
+    "key": ["person", "01jebv93hwvgmphbd00mvextef"],
+    "value": {
+      "id": "01jebv93hwvgmphbd00mvextef",
+      "family": "Hägg",
+      "given": "Fanny",
+      "prior": true,
+      "days": 120,
+      "from": "2022-12-01",
+      "expired": "2023-03-31",
+      "updated": "2024-12-06T09:35:38.214Z"
+    },
+    "versionstamp": "01000000225bedf40000"
+  },
+  {
+    "key": ["person", "01jebv93hwvv86zrtkafkk7cq7"],
+    "value": {
+      "id": "01jebv93hwvv86zrtkafkk7cq7",
+      "family": "Fredriksen",
+      "given": "Julie",
+      "prior": true,
+      "days": 40,
+      "from": "2022-05-30",
+      "expired": "2022-07-09",
+      "updated": "2024-12-06T09:35:33.911Z"
+    },
+    "versionstamp": "01000000225bede40000"
+  },
+  {
+    "key": ["person", "01jebv93hwwas1zcc7jb4134qx"],
+    "value": {
+      "id": "01jebv93hwwas1zcc7jb4134qx",
+      "family": "Fieler",
+      "given": "Jørgen",
+      "prior": true,
+      "days": 204,
+      "from": "2021-06-10",
+      "expired": "2021-12-31",
+      "updated": "2024-12-06T09:35:33.636Z"
+    },
+    "versionstamp": "01000000225bede30000"
+  },
+  {
+    "key": ["person", "01jebv93hwwe2p387mc814vm1p"],
+    "value": {
+      "id": "01jebv93hwwe2p387mc814vm1p",
+      "family": "Holand",
+      "given": "Eirik Darell",
+      "prior": true,
+      "days": 1399,
+      "from": "2018-05-01",
+      "expired": "2022-02-28",
+      "updated": "2024-12-06T09:35:37.677Z"
+    },
+    "versionstamp": "01000000225bedf20000"
+  },
+  {
+    "key": ["person", "01jebv93hwwn0pc5njagc6sejr"],
+    "value": {
+      "id": "01jebv93hwwn0pc5njagc6sejr",
+      "family": "Johansen",
+      "given": "Gøril",
+      "prior": true,
+      "days": 1316,
+      "from": "2015-10-12",
+      "expired": "2019-05-20",
+      "updated": "2024-12-06T09:35:38.755Z"
+    },
+    "versionstamp": "01000000225bedf60000"
+  },
+  {
+    "key": ["person", "01jebv93hwy15gdqg07wv813xc"],
+    "value": {
+      "id": "01jebv93hwy15gdqg07wv813xc",
+      "family": "Hawa Diallo",
+      "given": "Adama",
+      "prior": true,
+      "days": 172,
+      "from": "2022-07-04",
+      "expired": "2022-12-23",
+      "updated": "2024-12-06T09:35:36.602Z"
+    },
+    "versionstamp": "01000000225bedee0000"
+  },
+  {
+    "key": ["person", "01jebv93hwydz0ph9b0jgppkhc"],
+    "value": {
+      "id": "01jebv93hwydz0ph9b0jgppkhc",
+      "family": "Holand",
+      "given": "Kari Mette Darell",
+      "prior": true,
+      "days": 1521,
+      "from": "2016-08-01",
+      "expired": "2020-09-30",
+      "updated": "2024-12-06T09:35:37.946Z"
+    },
+    "versionstamp": "01000000225bedf30000"
+  },
+  {
+    "key": ["person", "01jebv93hx0tad9t44gr1d1cdv"],
+    "value": {
+      "id": "01jebv93hx0tad9t44gr1d1cdv",
+      "family": "Marc Jurgen",
+      "given": "Silberberger",
+      "prior": true,
+      "days": 150,
+      "from": "2017-11-01",
+      "expired": "2018-03-31",
+      "updated": "2024-12-06T09:35:43.094Z"
+    },
+    "versionstamp": "01000000225bee060000"
+  },
+  {
+    "key": ["person", "01jebv93hx13ewy8xen1ntb769"],
+    "value": {
+      "id": "01jebv93hx13ewy8xen1ntb769",
+      "family": "Karoliussen",
+      "given": "Simmen",
+      "prior": true,
+      "days": 75,
+      "from": "2023-06-01",
+      "expired": "2023-08-15",
+      "updated": "2024-12-06T09:35:41.741Z"
+    },
+    "versionstamp": "01000000225bee010000"
+  },
+  {
+    "key": ["person", "01jebv93hx203w6n1tej3c3skg"],
+    "value": {
+      "id": "01jebv93hx203w6n1tej3c3skg",
+      "family": "Pedersen",
+      "given": "Lovise Skogeng",
+      "prior": true,
+      "days": 121,
+      "from": "2019-04-01",
+      "expired": "2019-07-31",
+      "updated": "2024-12-06T09:35:44.733Z"
+    },
+    "versionstamp": "01000000225bee0c0000"
+  },
+  {
+    "key": ["person", "01jebv93hx46gc60k4a1fzqg8d"],
+    "value": {
+      "id": "01jebv93hx46gc60k4a1fzqg8d",
+      "family": "Øvretveit",
+      "given": "Ole Rasmus",
+      "prior": true,
+      "days": 2891,
+      "from": "2012-10-01",
+      "expired": "2020-08-31",
+      "updated": "2024-12-06T09:35:51.534Z"
+    },
+    "versionstamp": "01000000225bee250000"
+  },
+  {
+    "key": ["person", "01jebv93hx46zfgpk98kchde2v"],
+    "value": {
+      "id": "01jebv93hx46zfgpk98kchde2v",
+      "family": "Powers",
+      "given": "Daniel J.F.",
+      "prior": true,
+      "days": 151,
+      "from": "2019-07-22",
+      "expired": "2019-12-20",
+      "updated": "2024-12-06T09:35:45.037Z"
+    },
+    "versionstamp": "01000000225bee0d0000"
+  },
+  {
+    "key": ["person", "01jebv93hx4ctzfcpgs2mvd7mf"],
+    "value": {
+      "id": "01jebv93hx4ctzfcpgs2mvd7mf",
+      "family": "Sikorskiy",
+      "given": "Nikolay",
+      "prior": true,
+      "days": 424,
+      "from": "2017-07-03",
+      "expired": "2018-08-31",
+      "updated": "2024-12-06T09:35:47.477Z"
+    },
+    "versionstamp": "01000000225bee160000"
+  },
+  {
+    "key": ["person", "01jebv93hx4mh5m99jm9b0kag7"],
+    "value": {
+      "id": "01jebv93hx4mh5m99jm9b0kag7",
+      "family": "Salbuvik",
+      "given": "Kevin",
+      "prior": true,
+      "days": 1677,
+      "from": "2014-06-16",
+      "expired": "2019-01-18",
+      "updated": "2024-12-06T09:35:46.397Z"
+    },
+    "versionstamp": "01000000225bee120000"
+  },
+  {
+    "key": ["person", "01jebv93hx5c6zt70af6fxvkf0"],
+    "value": {
+      "id": "01jebv93hx5c6zt70af6fxvkf0",
+      "family": "Skålsvik",
+      "given": "Tormod Henry",
+      "prior": true,
+      "days": 1475,
+      "from": "2018-02-01",
+      "expired": "2022-02-15",
+      "updated": "2024-12-06T09:35:48.559Z"
+    },
+    "versionstamp": "01000000225bee1a0000"
+  },
+  {
+    "key": ["person", "01jebv93hx6q9wz4b0pnz2r66n"],
+    "value": {
+      "id": "01jebv93hx6q9wz4b0pnz2r66n",
+      "family": "Seiring",
+      "given": "Jan",
+      "prior": true,
+      "days": 12053,
+      "from": "1988-01-01",
+      "expired": "2020-12-31",
+      "updated": "2024-12-06T09:35:46.666Z"
+    },
+    "versionstamp": "01000000225bee130000"
+  },
+  {
+    "key": ["person", "01jebv93hx6vjtgvgt88cvp4nv"],
+    "value": {
+      "id": "01jebv93hx6vjtgvgt88cvp4nv",
+      "family": "Sjøvoll",
+      "given": "Anja",
+      "prior": true,
+      "days": 474,
+      "from": "2018-08-13",
+      "expired": "2019-11-30",
+      "updated": "2024-12-06T09:35:48.022Z"
+    },
+    "versionstamp": "01000000225bee180000"
+  },
+  {
+    "key": ["person", "01jebv93hx7gtzrjvwt7rz56mf"],
+    "value": {
+      "id": "01jebv93hx7gtzrjvwt7rz56mf",
+      "family": "Shugaeva",
+      "given": "Elena",
+      "prior": true,
+      "days": 25,
+      "from": "2019-07-22",
+      "expired": "2019-08-16",
+      "updated": "2024-12-06T09:35:47.208Z"
+    },
+    "versionstamp": "01000000225bee150000"
+  },
+  {
+    "key": ["person", "01jebv93hx83y6ejj4y6809yt3"],
+    "value": {
+      "id": "01jebv93hx83y6ejj4y6809yt3",
+      "family": "Steffensen",
+      "given": "Corinna.",
+      "prior": true,
+      "days": 155,
+      "from": "2018-02-26",
+      "expired": "2018-07-31",
+      "updated": "2024-12-06T09:35:49.105Z"
+    },
+    "versionstamp": "01000000225bee1c0000"
+  },
+  {
+    "key": ["person", "01jebv93hx9fz551w3z1gq5h43"],
+    "value": {
+      "id": "01jebv93hx9fz551w3z1gq5h43",
+      "family": "Linke",
+      "given": "Patrick",
+      "prior": true,
+      "days": 182,
+      "from": "2018-10-15",
+      "expired": "2019-04-15",
+      "updated": "2024-12-06T09:35:42.823Z"
+    },
+    "versionstamp": "01000000225bee050000"
+  },
+  {
+    "key": ["person", "01jebv93hxaksk9f064673pwzr"],
+    "value": {
+      "id": "01jebv93hxaksk9f064673pwzr",
+      "family": "Miettinen",
+      "given": "Anna Emilia",
+      "prior": true,
+      "days": 12,
+      "from": "2024-01-03",
+      "expired": "2024-01-15",
+      "updated": "2024-12-06T09:35:43.362Z"
+    },
+    "versionstamp": "01000000225bee070000"
+  },
+  {
+    "key": ["person", "01jebv93hxbw7678r9rttb205n"],
+    "value": {
+      "id": "01jebv93hxbw7678r9rttb205n",
+      "family": "Skimlid",
+      "given": "Knut",
+      "prior": true,
+      "days": 29,
+      "from": "2021-09-01",
+      "expired": "2021-09-30",
+      "updated": "2024-12-06T09:35:48.291Z"
+    },
+    "versionstamp": "01000000225bee190000"
+  },
+  {
+    "key": ["person", "01jebv93hxccyq6dzeeb50wprs"],
+    "value": {
+      "id": "01jebv93hxccyq6dzeeb50wprs",
+      "family": "Smollny",
+      "given": "Matilda Selina",
+      "prior": true,
+      "days": 137,
+      "from": "2022-01-15",
+      "expired": "2022-06-01",
+      "updated": "2024-12-06T09:35:48.833Z"
+    },
+    "versionstamp": "01000000225bee1b0000"
+  },
+  {
+    "key": ["person", "01jebv93hxfdmvrkzfk01qw195"],
+    "value": {
+      "id": "01jebv93hxfdmvrkzfk01qw195",
+      "family": "Storhaug",
+      "given": "Ekaterina",
+      "prior": true,
+      "days": 2229,
+      "from": "2013-08-01",
+      "expired": "2019-09-08",
+      "updated": "2024-12-06T09:35:49.375Z"
+    },
+    "versionstamp": "01000000225bee1d0000"
+  },
+  {
+    "key": ["person", "01jebv93hxg2s2kzygec7vz9xg"],
+    "value": {
+      "id": "01jebv93hxg2s2kzygec7vz9xg",
+      "family": "Nikolaisen",
+      "given": "Jonny",
+      "prior": true,
+      "days": 3688,
+      "from": "2013-11-25",
+      "expired": "2023-12-31",
+      "updated": "2024-12-06T09:35:43.903Z",
+      "cristin": 1491046
+    },
+    "versionstamp": "010000003662e2e80000"
+  },
+  {
+    "key": ["person", "01jebv93hxhjteg891sr65ht8z"],
+    "value": {
+      "id": "01jebv93hxhjteg891sr65ht8z",
+      "family": "Kallbekken",
+      "given": "Hege",
+      "prior": true,
+      "days": 155,
+      "from": "2017-09-26",
+      "expired": "2018-02-28",
+      "updated": "2024-12-06T09:35:41.470Z"
+    },
+    "versionstamp": "01000000225bee000000"
+  },
+  {
+    "key": ["person", "01jebv93hxhnjew0e43hqgtc86"],
+    "value": {
+      "id": "01jebv93hxhnjew0e43hqgtc86",
+      "family": "Strand",
+      "given": "Cathrine Høgmo",
+      "prior": true,
+      "days": 0,
+      "from": "2019-03-01",
+      "expired": "2019-03-01",
+      "updated": "2024-12-06T09:35:49.643Z"
+    },
+    "versionstamp": "01000000225bee1e0000"
+  },
+  {
+    "key": ["person", "01jebv93hxj2zr7mqrgmnxpbbc"],
+    "value": {
+      "id": "01jebv93hxj2zr7mqrgmnxpbbc",
+      "family": "Laporte-Devylder",
+      "given": "Lucie",
+      "prior": true,
+      "days": 514,
+      "from": "2022-02-01",
+      "expired": "2023-06-30",
+      "updated": "2024-12-06T09:35:42.282Z",
+      "cristin": 1491053
+    },
+    "versionstamp": "010000003662e2b50000"
+  },
+  {
+    "key": ["person", "01jebv93hxj6g3anvy3bpbfw2j"],
+    "value": {
+      "id": "01jebv93hxj6g3anvy3bpbfw2j",
+      "family": "Vögele",
+      "given": "Timo",
+      "prior": true,
+      "days": 91,
+      "from": "2020-07-01",
+      "expired": "2020-09-30",
+      "updated": "2024-12-06T09:35:50.998Z"
+    },
+    "versionstamp": "01000000225bee230000"
+  },
+  {
+    "key": ["person", "01jebv93hxjcnn119d6ce89mgm"],
+    "value": {
+      "id": "01jebv93hxjcnn119d6ce89mgm",
+      "family": "Tveter",
+      "given": "Ida Giæver",
+      "prior": true,
+      "days": 668,
+      "from": "2018-01-01",
+      "expired": "2019-10-31",
+      "updated": "2024-12-06T09:35:50.187Z"
+    },
+    "versionstamp": "01000000225bee200000"
+  },
+  {
+    "key": ["person", "01jebv93hxjym4cgcgrr5vra6b"],
+    "value": {
+      "id": "01jebv93hxjym4cgcgrr5vra6b",
+      "family": "Jørstad",
+      "given": "Torunn",
+      "prior": true,
+      "days": 1453,
+      "from": "2015-03-23",
+      "expired": "2019-03-15",
+      "updated": "2024-12-06T09:35:40.923Z"
+    },
+    "versionstamp": "01000000225bedfe0000"
+  },
+  {
+    "key": ["person", "01jebv93hxkqj5thep7wam7d4c"],
+    "value": {
+      "id": "01jebv93hxkqj5thep7wam7d4c",
+      "family": "Vikhrova",
+      "given": "Anna Andreevan",
+      "prior": true,
+      "days": 922,
+      "from": "2020-10-20",
+      "expired": "2023-04-30",
+      "updated": "2024-12-06T09:35:50.728Z"
+    },
+    "versionstamp": "01000000225bee220000"
+  },
+  {
+    "key": ["person", "01jebv93hxkvqwb0gqg0hcja9m"],
+    "value": {
+      "id": "01jebv93hxkvqwb0gqg0hcja9m",
+      "family": "Jøstensen",
+      "given": "Øyvind",
+      "prior": true,
+      "days": 99,
+      "from": "2017-09-25",
+      "expired": "2018-01-02",
+      "updated": "2024-12-06T09:35:41.199Z"
+    },
+    "versionstamp": "01000000225bedff0000"
+  },
+  {
+    "key": ["person", "01jebv93hxmctva8b37vpsjf0j"],
+    "value": {
+      "id": "01jebv93hxmctva8b37vpsjf0j",
+      "family": "Svendsen",
+      "given": "Rune",
+      "prior": true,
+      "days": 2902,
+      "from": "2013-11-18",
+      "expired": "2021-10-29",
+      "updated": "2024-12-06T09:35:49.917Z"
+    },
+    "versionstamp": "01000000225bee1f0000"
+  },
+  {
+    "key": ["person", "01jebv93hxmyxfdc5jee8qdnz8"],
+    "value": {
+      "id": "01jebv93hxmyxfdc5jee8qdnz8",
+      "family": "Mourgues",
+      "given": "Claire",
+      "prior": true,
+      "days": 173,
+      "from": "2018-07-02",
+      "expired": "2018-12-22",
+      "updated": "2024-12-06T09:35:43.632Z"
+    },
+    "versionstamp": "01000000225bee080000"
+  },
+  {
+    "key": ["person", "01jebv93hxpamm5ynh0b4vdzgp"],
+    "value": {
+      "id": "01jebv93hxpamm5ynh0b4vdzgp",
+      "family": "Reiersen",
+      "given": "Lars-Otto",
+      "prior": true,
+      "days": 1095,
+      "from": "2017-11-01",
+      "expired": "2020-10-31",
+      "updated": "2024-12-06T09:35:45.575Z"
+    },
+    "versionstamp": "01000000225bee0f0000"
+  },
+  {
+    "key": ["person", "01jebv93hxsrrgm0t0z4ynggaw"],
+    "value": {
+      "id": "01jebv93hxsrrgm0t0z4ynggaw",
+      "family": "Nøst Hegseth",
+      "given": "Else",
+      "prior": true,
+      "days": 30,
+      "from": "2021-05-01",
+      "expired": "2021-05-31",
+      "updated": "2024-12-06T09:35:44.440Z"
+    },
+    "versionstamp": "01000000225bee0b0000"
+  },
+  {
+    "key": ["person", "01jebv93hxsx7z6sm8sbd564wj"],
+    "value": {
+      "id": "01jebv93hxsx7z6sm8sbd564wj",
+      "family": "Willassen",
+      "given": "Erling Heimstad",
+      "prior": true,
+      "days": 345,
+      "from": "2018-05-07",
+      "expired": "2019-04-17",
+      "updated": "2024-12-06T09:35:51.267Z"
+    },
+    "versionstamp": "01000000225bee240000"
+  },
+  {
+    "key": ["person", "01jebv93hxtvh4jngnbs9qmns1"],
+    "value": {
+      "id": "01jebv93hxtvh4jngnbs9qmns1",
+      "family": "Nilsen",
+      "given": "Jens Olaf Øverli",
+      "prior": true,
+      "days": 1594,
+      "from": "2014-11-18",
+      "expired": "2019-03-31",
+      "updated": "2024-12-06T09:35:44.171Z"
+    },
+    "versionstamp": "01000000225bee0a0000"
+  },
+  {
+    "key": ["person", "01jebv93hxtz0jcfr1sm6q20zd"],
+    "value": {
+      "id": "01jebv93hxtz0jcfr1sm6q20zd",
+      "family": "Øyvind",
+      "given": "Nordsletten",
+      "prior": true,
+      "days": 1,
+      "from": "2018-03-15",
+      "expired": "2018-03-16",
+      "updated": "2024-12-06T09:35:51.808Z"
+    },
+    "versionstamp": "01000000225bee260000"
+  },
+  {
+    "key": ["person", "01jebv93hxvb62m9bmfyrjfkvy"],
+    "value": {
+      "id": "01jebv93hxvb62m9bmfyrjfkvy",
+      "family": "Aaknes",
+      "given": "Vilde Synne",
+      "prior": true,
+      "days": 38,
+      "from": "2022-06-13",
+      "expired": "2022-07-21",
+      "updated": "2024-12-06T09:35:52.088Z"
+    },
+    "versionstamp": "01000000225bee270000"
+  },
+  {
+    "key": ["person", "01jebv93hxvkf4sf3rzbqz81gk"],
+    "value": {
+      "id": "01jebv93hxvkf4sf3rzbqz81gk",
+      "family": "Sjetne",
+      "given": "Lars Birkeland",
+      "prior": true,
+      "days": 758,
+      "from": "2019-02-01",
+      "expired": "2021-02-28",
+      "updated": "2024-12-06T09:35:47.747Z"
+    },
+    "versionstamp": "01000000225bee170000"
+  },
+  {
+    "key": ["person", "01jebv93hxvqejzfm8zsx4tktf"],
+    "value": {
+      "id": "01jebv93hxvqejzfm8zsx4tktf",
+      "family": "Varteressian",
+      "given": "Maria",
+      "prior": true,
+      "days": 958,
+      "from": "2016-09-05",
+      "expired": "2019-04-21",
+      "updated": "2024-12-06T09:35:50.459Z"
+    },
+    "versionstamp": "01000000225bee210000"
+  },
+  {
+    "key": ["person", "01jebv93hxytde827hztk5421d"],
+    "value": {
+      "id": "01jebv93hxytde827hztk5421d",
+      "family": "Laxdal",
+      "given": "Bernhard",
+      "prior": true,
+      "days": 911,
+      "from": "2019-09-01",
+      "expired": "2022-02-28",
+      "updated": "2024-12-06T09:35:42.554Z"
+    },
+    "versionstamp": "01000000225bee040000"
+  },
+  {
+    "key": ["person", "01jebv93hxz82tfjqyb8qzsrzc"],
+    "value": {
+      "id": "01jebv93hxz82tfjqyb8qzsrzc",
+      "family": "Rautio",
+      "given": "Rune",
+      "prior": true,
+      "days": 3384,
+      "from": "2011-09-26",
+      "expired": "2020-12-31",
+      "updated": "2024-12-06T09:35:45.305Z"
+    },
+    "versionstamp": "01000000225bee0e0000"
+  },
+  {
+    "key": ["person", "01jebv93hxz9sa4fxghtv98pyk"],
+    "value": {
+      "id": "01jebv93hxz9sa4fxghtv98pyk",
+      "family": "Seljeseth",
+      "given": "Julia",
+      "prior": true,
+      "days": 180,
+      "from": "2021-01-01",
+      "expired": "2021-06-30",
+      "updated": "2024-12-06T09:35:46.934Z"
+    },
+    "versionstamp": "01000000225bee140000"
+  },
+  {
+    "key": ["person", "asa"],
+    "value": {
+      "given": "Ana Sofia",
+      "family": "Aniceto",
+      "prior": true,
+      "id": "asa",
+      "expired": "2022-09-04",
+      "spelling": { "gn": ["Ana S.", "A. S.", "Sofia", "Ana"], "fn": [] },
+      "updated": "2024-11-07T11:12:52.140Z",
+      "cristin": 625562,
+      "from": "2022-04-01",
+      "days": 156
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "avn"],
+    "value": {
+      "id": "avn",
+      "family": "Nytrø",
+      "given": "Ane Vigdisdatter",
+      "from": "2020-11-23T00:00:00.000Z",
+      "spelling": { "gn": ["Ane V."], "fn": [] },
+      "prior": true,
+      "expired": "2024-12-31T23:00:00.000Z",
+      "created": "2020-11-13T13:44:36.000Z",
+      "updated": "2025-01-09T11:00:08.000Z",
+      "cristin": 773911,
+      "days": 1499.9583333333333
+    },
+    "versionstamp": "010000003662e2eb0000"
+  },
+  {
+    "key": ["person", "beb"],
+    "value": {
+      "id": "beb",
+      "family": "Bye",
+      "given": "Bjørn Erik",
+      "from": "2019-08-01T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-03-14T23:00:00.000Z",
+      "created": "2025-05-13T10:50:08.000Z",
+      "updated": "2025-05-14T06:00:08.000Z",
+      "cristin": 57588,
+      "days": 2052.9583333333335
+    },
+    "versionstamp": "010000003662e1fe0000"
+  },
+  {
+    "key": ["person", "bme"],
+    "value": {
+      "given": "Benjamin",
+      "family": "Merkel",
+      "prior": true,
+      "expired": "2024-01-14",
+      "id": "bme",
+      "spelling": { "gn": ["B.", "B"], "fn": [] },
+      "updated": "2024-11-07T11:12:54.188Z",
+      "cristin": 791169,
+      "from": "2020-03-16",
+      "days": 1399
+    },
+    "versionstamp": "010000003662e2d90000"
+  },
+  {
+    "key": ["person", "cab"],
+    "value": {
+      "id": "cab",
+      "family": "Ballantine",
+      "given": "Carl",
+      "from": "2014-08-28T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-01-31T23:00:00.000Z",
+      "created": "2014-09-05T09:31:36.000Z",
+      "updated": "2025-02-04T11:00:09.000Z",
+      "cristin": 1269586,
+      "days": 3809.9583333333335
+    },
+    "versionstamp": "010000003662e1e00000"
+  },
+  {
+    "key": ["person", "ejw"],
+    "value": {
+      "given": "Ellie Jane",
+      "family": "Watts",
+      "id": "ejw",
+      "updated": "2024-11-07T11:12:55.417Z",
+      "prior": true,
+      "spelling": { "gn": ["Ellie J."] },
+      "from": "2018-07-06",
+      "expired": "2021-07-30",
+      "days": 1120
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "ekr"],
+    "value": {
+      "id": "ekr",
+      "family": "Rønningen",
+      "given": "Elise Kathinka",
+      "from": "2023-08-01T00:00:00.000Z",
+      "prior": true,
+      "expired": "2026-03-31T22:00:00.000Z",
+      "created": "2023-06-26T11:49:51.000Z",
+      "updated": "2026-04-21T15:00:03.000Z",
+      "cristin": 1197592,
+      "days": 973.9166666666666
+    },
+    "versionstamp": "010000004758c5a00000"
+  },
+  {
+    "key": ["person", "elb"],
+    "value": {
+      "given": "Eli",
+      "family": "Børve",
+      "prior": true,
+      "id": "elb",
+      "updated": "2024-11-07T11:12:55.826Z",
+      "cristin": 569717,
+      "from": "2020-06-01",
+      "expired": "2023-02-28",
+      "days": 1002
+    },
+    "versionstamp": "010000003662e2040000"
+  },
+  {
+    "key": ["person", "ene"],
+    "value": {
+      "id": "ene",
+      "family": "Nerhagen",
+      "given": "Eline",
+      "from": "2023-10-23",
+      "prior": true,
+      "expired": "2024-09-01",
+      "created": "2023-11-29T08:18:03.000Z",
+      "updated": "2024-11-07T16:00:05.000Z",
+      "days": 314
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "esy"],
+    "value": {
+      "id": "esy",
+      "family": "Synvis",
+      "given": "Eva",
+      "from": "2021-06-07T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-07-31T22:00:00.000Z",
+      "created": "2021-05-20T09:28:09.000Z",
+      "updated": "2025-08-19T06:00:08.000Z",
+      "cristin": 1071550,
+      "days": 1515.9166666666667
+    },
+    "versionstamp": "010000003662e3480000"
+  },
+  {
+    "key": ["person", "esz"],
+    "value": {
+      "id": "esz",
+      "family": "Sztybor",
+      "given": "Emilia",
+      "from": "2018-07-01",
+      "prior": true,
+      "expired": "2024-09-01",
+      "created": "2018-07-05T09:30:06.000Z",
+      "updated": "2024-11-07T16:00:05.000Z",
+      "cristin": 1491034,
+      "days": 2254
+    },
+    "versionstamp": "010000003662e34b0000"
+  },
+  {
+    "key": ["person", "fga"],
+    "value": {
+      "given": "Frank",
+      "family": "Gaardsted",
+      "expired": "2022-03-31",
+      "prior": true,
+      "id": "fga",
+      "spelling": { "gn": ["F.", "F"], "fn": [] },
+      "updated": "2024-11-07T11:12:57.464Z",
+      "from": "2011-01-03",
+      "days": 4105
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "frb"],
+    "value": {
+      "given": "Frank",
+      "family": "Beuchel",
+      "prior": true,
+      "id": "frb",
+      "spelling": { "gn": ["F."], "fn": [] },
+      "updated": "2024-11-07T11:12:57.055Z",
+      "from": "2009-04-01",
+      "expired": "2022-04-30",
+      "days": 4777
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "gwl"],
+    "value": {
+      "id": "gwl",
+      "family": "Lorås",
+      "given": "Gyda Wuttudal",
+      "from": "2018-02-01",
+      "prior": true,
+      "expired": "2024-04-28",
+      "created": "2017-12-11T11:41:37.000Z",
+      "updated": "2024-11-07T16:00:05.000Z",
+      "cristin": 1491039,
+      "days": 2278
+    },
+    "versionstamp": "010000003662e2cd0000"
+  },
+  {
+    "key": ["person", "hab"],
+    "value": {
+      "id": "hab",
+      "family": "Berg",
+      "given": "Håkon Andreas",
+      "from": "2024-05-06T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-03-02T23:00:00.000Z",
+      "created": "2024-06-10T09:45:05.000Z",
+      "updated": "2025-03-05T16:00:23.000Z",
+      "days": 300.9583333333333
+    },
+    "versionstamp": "0100000024ecd1e00000"
+  },
+  {
+    "key": ["person", "hwh"],
+    "value": {
+      "id": "hwh",
+      "family": "Hjertaas",
+      "given": "Håkon",
+      "from": "2024-06-03T00:00:00.000Z",
+      "prior": true,
+      "expired": "2024-08-23T00:00:00.000Z",
+      "created": "2024-06-10T12:25:37.000Z",
+      "updated": "2025-03-05T16:00:23.000Z",
+      "days": 81
+    },
+    "versionstamp": "0100000024ecd1e10000"
+  },
+  {
+    "key": ["person", "icd"],
+    "value": {
+      "id": "icd",
+      "family": "Dalan",
+      "given": "Ida-Charlene",
+      "from": "2023-09-01T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-02-28T23:00:00.000Z",
+      "created": "2023-08-03T09:22:37.000Z",
+      "updated": "2025-03-05T16:00:23.000Z",
+      "cristin": 1799189,
+      "days": 546.9583333333334
+    },
+    "versionstamp": "010000003662e21c0000"
+  },
+  {
+    "key": ["person", "ihw"],
+    "value": {
+      "id": "ihw",
+      "family": "Wasbotten",
+      "given": "Ingar",
+      "from": "2015-01-01",
+      "spelling": { "gn": ["Ingar Halvorsen"], "fn": [] },
+      "prior": true,
+      "expired": "2024-04-10",
+      "created": "2005-11-14T08:39:59.000Z",
+      "updated": "2024-11-07T16:00:05.000Z",
+      "cristin": 58801,
+      "days": 3387
+    },
+    "versionstamp": "010000003662e3750000"
+  },
+  {
+    "key": ["person", "jee"],
+    "value": {
+      "id": "jee",
+      "family": "Elvebø",
+      "given": "Juel Erik",
+      "from": "2024-10-03T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-02-21T23:00:00.000Z",
+      "created": "2025-06-17T09:22:34.000Z",
+      "updated": "2025-06-17T07:37:43.000Z",
+      "days": 141.95833333333334
+    },
+    "versionstamp": "010000002abed7300000"
+  },
+  {
+    "key": ["person", "jlc"],
+    "value": {
+      "given": "Jo Lynn",
+      "family": "Carroll",
+      "prior": true,
+      "id": "jlc",
+      "expired": "2022-06-30",
+      "spelling": {
+        "gn": ["JoLynn", "Jolynn", "J.L", "J.", "J"],
+        "fn": ["Butts"]
+      },
+      "updated": "2024-11-07T11:13:05.759Z",
+      "from": "1997-09-01",
+      "days": 9068
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "kbo"],
+    "value": {
+      "id": "kbo",
+      "family": "Pedersen",
+      "given": "Kristine Bondo",
+      "from": "2015-05-11T00:00:00.000Z",
+      "spelling": {
+        "gn": ["Kristine B.", "Kristine", "Rolf B."],
+        "fn": ["Bondo Pedersen", "B. Pedersen"]
+      },
+      "prior": true,
+      "expired": "2026-04-01T22:00:00.000Z",
+      "created": "2015-04-29T13:50:41.000Z",
+      "updated": "2026-04-21T15:00:03.000Z",
+      "cristin": 53627,
+      "days": 3978.9166666666665
+    },
+    "versionstamp": "010000004758c5a00000"
+  },
+  {
+    "key": ["person", "kdu"],
+    "value": {
+      "id": "kdu",
+      "family": "Dunning",
+      "given": "Katie",
+      "from": "2023-02-01T00:00:00.000Z",
+      "spelling": { "gn": ["Katherine"], "fn": [] },
+      "prior": true,
+      "expired": "2025-09-30T22:00:00.000Z",
+      "created": "2023-01-18T14:26:32.000Z",
+      "updated": "2025-10-13T06:00:04.000Z",
+      "cristin": 1636446,
+      "days": 972.9166666666666
+    },
+    "versionstamp": "0100000039d414240000"
+  },
+  {
+    "key": ["person", "kgp"],
+    "value": {
+      "id": "kgp",
+      "family": "Pedersen",
+      "given": "Katrine Goncalves",
+      "from": "2024-09-26T00:00:00.000Z",
+      "prior": true,
+      "expired": "2024-12-20T23:00:00.000Z",
+      "created": "2024-10-01T13:43:30.000Z",
+      "updated": "2025-02-04T11:00:09.000Z",
+      "days": 85.95833333333333
+    },
+    "versionstamp": "01000000249cb6110000"
+  },
+  {
+    "key": ["person", "kkr"],
+    "value": {
+      "id": "kkr",
+      "family": "Krylova",
+      "given": "Kristina",
+      "from": "2024-01-01",
+      "prior": true,
+      "expired": "2024-10-31",
+      "created": "2023-12-18T13:47:44.000Z",
+      "updated": "2024-11-07T16:00:05.000Z",
+      "days": 304
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "knj"],
+    "value": {
+      "id": "knj",
+      "family": "Jæger",
+      "given": "Kristian Nyvold",
+      "from": "2024-06-17T00:00:00.000Z",
+      "prior": true,
+      "expired": "2024-08-19T00:00:00.000Z",
+      "created": "2024-06-10T12:22:40.000Z",
+      "updated": "2025-02-04T11:00:09.000Z",
+      "days": 63
+    },
+    "versionstamp": "01000000249cb6110000"
+  },
+  {
+    "key": ["person", "ksa"],
+    "value": {
+      "id": "ksa",
+      "family": "Sagerup",
+      "given": "Kjetil",
+      "from": "2012-08-06T00:00:00.000Z",
+      "spelling": { "gn": ["K."], "fn": [] },
+      "prior": true,
+      "expired": "2024-12-31T23:00:00.000Z",
+      "created": "2012-08-04T19:34:10.000Z",
+      "updated": "2025-01-09T11:00:08.000Z",
+      "cristin": 57661,
+      "days": 4530.958333333333
+    },
+    "versionstamp": "010000003662e31b0000"
+  },
+  {
+    "key": ["person", "lli"],
+    "value": {
+      "id": "lli",
+      "family": "Lippestad",
+      "given": "Ludvik",
+      "from": "2022-11-21T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-03-31T22:00:00.000Z",
+      "created": "2022-10-27T15:17:18.000Z",
+      "updated": "2025-05-14T06:00:08.000Z",
+      "cristin": 1799390,
+      "days": 861.9166666666666
+    },
+    "versionstamp": "010000003662e2c70000"
+  },
+  {
+    "key": ["person", "lpi"],
+    "value": {
+      "id": "lpi",
+      "family": "Pirard",
+      "given": "Laura",
+      "from": "2024-02-26T00:00:00.000Z",
+      "prior": true,
+      "expired": "2026-03-02T23:00:00.000Z",
+      "created": "2024-02-21T11:16:41.000Z",
+      "updated": "2026-03-24T07:00:04.000Z",
+      "cristin": 1799394,
+      "days": 735.9583333333334
+    },
+    "versionstamp": "0100000044c7e1910000"
+  },
+  {
+    "key": ["person", "lut"],
+    "value": {
+      "given": "Luca",
+      "family": "Tassara",
+      "prior": true,
+      "id": "lut",
+      "spelling": { "gn": ["L."], "fn": [] },
+      "updated": "2024-11-07T11:13:09.445Z",
+      "cristin": 1491052,
+      "from": "2014-03-24",
+      "expired": "2022-12-31",
+      "days": 3204
+    },
+    "versionstamp": "010000003662e3540000"
+  },
+  {
+    "key": ["person", "maa"],
+    "value": {
+      "given": "Magnus",
+      "family": "Aune",
+      "prior": true,
+      "id": "maa",
+      "spelling": {
+        "gn": ["Magnus Aune", "MAGNUS AUNE", "Magnus A.", "Magnus A", "MA"],
+        "fn": ["WIEDMANN", "Wiedmann"]
+      },
+      "updated": "2024-11-07T11:13:10.264Z",
+      "cristin": 53488,
+      "from": "2014-10-01",
+      "expired": "2023-08-13",
+      "days": 3238
+    },
+    "versionstamp": "010000003662e1dd0000"
+  },
+  {
+    "key": ["person", "mbd"],
+    "value": {
+      "given": "Muriel Barbara",
+      "family": "Dunn",
+      "prior": true,
+      "id": "mbd",
+      "spelling": { "gn": ["Muriel"], "fn": [] },
+      "updated": "2024-11-07T11:13:13.061Z",
+      "from": "2020-01-01",
+      "expired": "2023-10-17",
+      "days": 1385
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "mjh"],
+    "value": {
+      "id": "mjh",
+      "family": "Hansen",
+      "given": "Mina",
+      "from": "2023-08-15T00:00:00.000Z",
+      "prior": true,
+      "expired": "2024-10-31T16:00:00.000Z",
+      "created": "2023-08-07T11:36:06.000Z",
+      "updated": "2025-02-04T07:00:19.000Z",
+      "days": 443.6666666666667
+    },
+    "versionstamp": "01000000248cb0a30000"
+  },
+  {
+    "key": ["person", "mlc"],
+    "value": {
+      "given": "Michael L.",
+      "family": "Carroll",
+      "prior": true,
+      "id": "mlc",
+      "expired": "2022-06-30",
+      "spelling": {
+        "gn": ["MICHAEL L.", "Michael L", "Michael", "M.L", "M.", "ML", "M"],
+        "fn": ["CARROLL"]
+      },
+      "updated": "2024-11-07T11:13:11.903Z",
+      "from": "1997-06-03",
+      "days": 9158
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "mva"],
+    "value": {
+      "id": "mva",
+      "family": "Alonso",
+      "given": "Marina Vàzquez",
+      "from": "2018-09-03T00:00:00.000Z",
+      "spelling": { "gn": ["M", "M."], "fn": ["Vázquez Alonso"] },
+      "prior": true,
+      "expired": "2025-10-01T22:00:00.000Z",
+      "created": "2018-07-16T10:22:00.000Z",
+      "updated": "2025-10-13T06:00:04.000Z",
+      "cristin": 1275517,
+      "days": 2585.9166666666665
+    },
+    "versionstamp": "0100000039d414240000"
+  },
+  {
+    "key": ["person", "oan"],
+    "value": {
+      "given": "Ole Anders",
+      "family": "Nøst",
+      "prior": true,
+      "expired": "2022-03-31",
+      "id": "oan",
+      "spelling": {
+        "gn": ["Ole A.", "O. A.", "O.-A.", "O.A.", "Ole", "OA"],
+        "fn": ["Nost"]
+      },
+      "updated": "2024-11-07T11:13:14.259Z",
+      "from": "2012-01-01",
+      "days": 3742
+    },
+    "versionstamp": "01000000219bab100000"
+  },
+  {
+    "key": ["person", "oji"],
+    "value": {
+      "id": "oji",
+      "family": "Isaksen",
+      "given": "Oddmund",
+      "from": "1995-01-01T00:00:00.000Z",
+      "prior": true,
+      "expired": "2026-01-31T23:00:00.000Z",
+      "created": "2002-02-09T16:49:21.000Z",
+      "updated": "2026-03-24T07:00:04.000Z",
+      "days": 11353.958333333334
+    },
+    "versionstamp": "0100000044c7e1910000"
+  },
+  {
+    "key": ["person", "ote"],
+    "value": {
+      "id": "ote",
+      "family": "Esselöv",
+      "given": "Owe Tobias Kimo",
+      "from": "2024-03-11T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-03-02T23:00:00.000Z",
+      "created": "2024-03-14T13:55:09.000Z",
+      "updated": "2025-03-05T16:00:23.000Z",
+      "days": 356.9583333333333
+    },
+    "versionstamp": "0100000024ecd1e00000"
+  },
+  {
+    "key": ["person", "ppe"],
+    "value": {
+      "id": "ppe",
+      "family": "Pettersen",
+      "given": "Pia",
+      "from": "2024-01-22T00:00:00.000Z",
+      "prior": true,
+      "expired": "2024-07-31T00:00:00.000Z",
+      "created": "2024-01-22T09:11:18.000Z",
+      "updated": "2025-02-04T11:00:09.000Z",
+      "days": 191
+    },
+    "versionstamp": "01000000249cb6110000"
+  },
+  {
+    "key": ["person", "rap"],
+    "value": {
+      "id": "rap",
+      "family": "Pettersen",
+      "given": "Ragnhild",
+      "from": "2014-05-01T00:00:00.000Z",
+      "spelling": { "gn": ["R."], "fn": [] },
+      "prior": true,
+      "expired": "2025-08-31T22:00:00.000Z",
+      "created": "2014-04-29T10:17:33.000Z",
+      "updated": "2025-10-13T06:00:04.000Z",
+      "cristin": 34757,
+      "days": 4140.916666666667
+    },
+    "versionstamp": "0100000039d414250000"
+  },
+  {
+    "key": ["person", "ref"],
+    "value": {
+      "given": "Reinhold",
+      "family": "Fieler",
+      "prior": true,
+      "id": "ref",
+      "spelling": { "gn": ["R."], "fn": [] },
+      "expired": "2023-12-31",
+      "created": "2002-02-09T16:49:21.000Z",
+      "updated": "2024-11-07T11:13:15.638Z",
+      "cristin": 1491061,
+      "from": "2005-01-01",
+      "days": 6938
+    },
+    "versionstamp": "010000003662e2460000"
+  },
+  {
+    "key": ["person", "rfr"],
+    "value": {
+      "given": "Rosalyn",
+      "family": "Fredriksen",
+      "prior": true,
+      "id": "rfr",
+      "updated": "2024-11-07T11:13:16.306Z",
+      "cristin": 892948,
+      "from": "2018-09-03",
+      "expired": "2023-09-29",
+      "days": 1852
+    },
+    "versionstamp": "010000003662e2520000"
+  },
+  {
+    "key": ["person", "rve"],
+    "value": {
+      "id": "rve",
+      "family": "Velvin",
+      "given": "Roger",
+      "from": "1993-08-01T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-05-01T22:00:00.000Z",
+      "created": "2002-02-09T16:49:21.000Z",
+      "updated": "2025-06-17T07:37:43.000Z",
+      "cristin": 1491062,
+      "days": 11596.916666666666
+    },
+    "versionstamp": "010000003662e3660000"
+  },
+  {
+    "key": ["person", "sda"],
+    "value": {
+      "id": "sda",
+      "family": "Dahle",
+      "given": "Salve",
+      "from": "1988-01-01T00:00:00.000Z",
+      "spelling": { "gn": ["S.", "S"], "fn": [] },
+      "prior": true,
+      "expired": "2025-05-01T22:00:00.000Z",
+      "created": "2002-02-09T16:49:21.000Z",
+      "updated": "2025-05-05T06:00:04.000Z",
+      "cristin": 638234,
+      "days": 13635.916666666666
+    },
+    "versionstamp": "010000003662e2130000"
+  },
+  {
+    "key": ["person", "sdo"],
+    "value": {
+      "id": "sdo",
+      "family": "Dønland",
+      "given": "Sara",
+      "from": "2024-06-01T00:00:00.000Z",
+      "prior": true,
+      "expired": "2024-08-23T00:00:00.000Z",
+      "created": "2023-06-08T08:11:55.000Z",
+      "updated": "2025-01-09T11:00:08.000Z",
+      "days": 83
+    },
+    "versionstamp": "01000000245c9fd00000"
+  },
+  {
+    "key": ["person", "sfp"],
+    "value": {
+      "given": "Stig",
+      "family": "Falk-Petersen",
+      "prior": true,
+      "id": "sfp",
+      "spelling": {
+        "gn": ["Stig", "Stig Falk", "S.", "S"],
+        "fn": ["Falk‐Petersen", "Falk Petersen", "Falk-petersen", "Petersen"]
+      },
+      "updated": "2024-11-07T11:13:17.768Z",
+      "cristin": 57495,
+      "from": "2013-05-01",
+      "expired": "2023-04-28",
+      "days": 3649
+    },
+    "versionstamp": "010000003662e2430000"
+  },
+  {
+    "key": ["person", "skd"],
+    "value": {
+      "id": "skd",
+      "family": "Dinessen",
+      "given": "Synnøve Killie",
+      "from": "2024-02-01T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-01-31T23:00:00.000Z",
+      "created": "2025-06-17T09:22:44.000Z",
+      "updated": "2025-06-17T07:37:43.000Z",
+      "days": 365.9583333333333
+    },
+    "versionstamp": "010000002abed7300000"
+  },
+  {
+    "key": ["person", "spe"],
+    "value": {
+      "id": "spe",
+      "family": "Pedersen",
+      "given": "Sondre",
+      "from": "2022-04-20T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-02-28T23:00:00.000Z",
+      "created": "2022-04-21T08:27:58.000Z",
+      "updated": "2025-03-04T07:00:07.000Z",
+      "cristin": 1491065,
+      "days": 1045.9583333333333
+    },
+    "versionstamp": "010000003662e2f70000"
+  },
+  {
+    "key": ["person", "sta"],
+    "value": {
+      "given": "Starrlight",
+      "family": "Augustine",
+      "prior": true,
+      "id": "sta",
+      "spelling": { "gn": ["S."], "fn": [] },
+      "updated": "2024-11-07T11:13:17.433Z",
+      "cristin": 1538732,
+      "from": "2015-02-01",
+      "expired": "2022-05-31",
+      "days": 2676
+    },
+    "versionstamp": "010000003662e1da0000"
+  },
+  {
+    "key": ["person", "the"],
+    "value": {
+      "id": "the",
+      "family": "Heggem",
+      "given": "Thomas",
+      "prior": true,
+      "days": 1901,
+      "from": "2016-10-17",
+      "expired": "2021-12-31",
+      "updated": "2024-12-06T09:35:36.870Z"
+    },
+    "versionstamp": "01000000225bedef0000"
+  },
+  {
+    "key": ["person", "thh"],
+    "value": {
+      "given": "Thomas",
+      "family": "Hansen",
+      "prior": true,
+      "id": "thh",
+      "spelling": { "gn": ["THOMAS", "T."], "fn": ["HANSEN"] },
+      "updated": "2024-11-07T11:13:18.438Z",
+      "cristin": 14280,
+      "from": "2014-01-06",
+      "expired": "2023-02-28",
+      "days": 3340
+    },
+    "versionstamp": "010000003662e2700000"
+  },
+  {
+    "key": ["person", "tko"],
+    "value": {
+      "id": "tko",
+      "family": "Øvrebø",
+      "given": "Tarald",
+      "from": "2020-12-01T00:00:00.000Z",
+      "spelling": { "gn": ["Tarald Kleppa"], "fn": [] },
+      "prior": true,
+      "expired": "2024-12-31T23:00:00.000Z",
+      "created": "2020-11-13T13:50:06.000Z",
+      "updated": "2025-01-09T11:00:08.000Z",
+      "days": 1491.9583333333333
+    },
+    "versionstamp": "01000000245c9fd20000"
+  },
+  {
+    "key": ["person", "tov"],
+    "value": {
+      "id": "tov",
+      "family": "Giæver",
+      "given": "Torkil Vollstad",
+      "prior": true,
+      "expired": "2025-03-02T23:00:00.000Z",
+      "created": "2024-10-14T10:39:00.000Z",
+      "updated": "2025-03-05T16:00:23.000Z"
+    },
+    "versionstamp": "0100000024ecd1e00000"
+  },
+  {
+    "key": ["person", "vho"],
+    "value": {
+      "id": "vho",
+      "family": "Holen",
+      "given": "Vegard",
+      "from": "2021-04-26T00:00:00.000Z",
+      "prior": true,
+      "expired": "2026-01-23T23:00:00.000Z",
+      "created": "2021-04-09T11:02:27.000Z",
+      "updated": "2026-02-14T11:00:04.000Z",
+      "cristin": 1491068,
+      "days": 1733.9583333333333
+    },
+    "versionstamp": "01000000427713c20000"
+  },
+  {
+    "key": ["person", "vre"],
+    "value": {
+      "id": "vre",
+      "family": "Remen",
+      "given": "Vera",
+      "from": "2000-06-26",
+      "prior": true,
+      "expired": "2024-03-15",
+      "created": "2006-01-31T15:23:13.000Z",
+      "updated": "2024-11-07T16:00:05.000Z",
+      "cristin": 1491069,
+      "days": 8663
+    },
+    "versionstamp": "010000003662e30f0000"
+  },
+  {
+    "key": ["person", "vsa"],
+    "value": {
+      "id": "vsa",
+      "family": "Savinov",
+      "given": "Vladimir",
+      "from": "1998-09-01T00:00:00.000Z",
+      "spelling": {
+        "gn": [
+          "Vladimir M.",
+          "Vladimir M",
+          "V. M.",
+          "M. V.",
+          "V.M.",
+          "V.M",
+          "V.",
+          "V"
+        ],
+        "fn": []
+      },
+      "prior": true,
+      "expired": "2025-06-25T22:00:00.000Z",
+      "created": "2002-02-09T16:49:22.000Z",
+      "updated": "2025-07-02T06:00:06.000Z",
+      "cristin": 1491070,
+      "days": 9794.916666666666
+    },
+    "versionstamp": "010000003662e31e0000"
+  },
+  {
+    "key": ["person", "ysh"],
+    "value": {
+      "id": "ysh",
+      "family": "Shen",
+      "given": "Yugao",
+      "from": "2021-08-16T00:00:00.000Z",
+      "prior": true,
+      "expired": "2025-01-14T23:00:00.000Z",
+      "created": "2025-06-17T09:22:57.000Z",
+      "updated": "2025-06-17T07:37:43.000Z",
+      "cristin": 565326,
+      "days": 1247.9583333333333
+    },
+    "versionstamp": "010000003662e3210000"
   }
 ]
