@@ -4,7 +4,7 @@ import { ndjson } from "./cli_helpers.ts";
 import { externalIdentities } from "./patches.ts";
 import { calcDays } from "./time.ts";
 
-export const kv = await Deno.openKv(Deno.env.get("DENO_KV_DATABASE"));
+export const kv = await Deno.openKv();
 
 export const person0 = "person";
 

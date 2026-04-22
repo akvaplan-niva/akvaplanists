@@ -12,8 +12,8 @@ export interface Akvaplanist {
   from?: Date | string;
   expired?: Date | string;
   prior?: boolean;
-  created?: Date;
-  updated?: Date;
+  created?: Date | string;
+  updated?: Date | string;
   orcid?: string | null;
   openalex?: string | null;
   cristin?: number | null;
@@ -21,8 +21,8 @@ export interface Akvaplanist {
 }
 
 export interface Spelling {
-  fn: string[];
-  gn: string[];
+  fn?: string[];
+  gn?: string[];
 }
 interface IntlString {
   [lang: string]: string;

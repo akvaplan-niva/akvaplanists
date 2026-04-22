@@ -22,9 +22,10 @@ export const fetchAndIngestAkvaplanPersonsFromNva = async () => {
     for await (const hit of hits) {
       const akvaplanist = akvaplanistPartialFromNvaPerson(hit);
       const { cristin, given, family } = akvaplanist;
-      const key = ["nva_person", cristin!];
-      await kv.set(key, hit);
-
+      if (cristin && cristin > 0) {
+        const key = ["nva_person", cristin];
+        await kv.set(key, hit);
+      }
       if (!akvaplanistCristinMap.has(cristin!)) {
         // No akvaplanist found with cristin, try to match by name
         const id = akvaplanistNameIdMap.get(`${given} ${family}`);
