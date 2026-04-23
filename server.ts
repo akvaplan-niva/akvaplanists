@@ -85,6 +85,7 @@ const handlers = new Map<URLPattern, RequestHandler>([
   [ptrn("/log"), listLogHandler],
   [ptrnOpenAlexPersonId, openAlexPersonHandler],
   [ptrnNvaPersonId, nvaPersonHandler],
+  [ptrn("/dump"), (req) => responseFromKvList(kv.list({ prefix: [] }), req)],
 ]);
 
 const handler = (req: Request) => {
