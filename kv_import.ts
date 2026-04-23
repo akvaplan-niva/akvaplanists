@@ -2,7 +2,7 @@ import { importEntries } from "@deno/kv-utils";
 
 const importIntoKv = async (url: string) => {
   const r = await fetch(url);
-  console.warn("importIntoKv", r);
+
   if (r.ok && r.body) {
     using kv = await Deno.openKv();
 
