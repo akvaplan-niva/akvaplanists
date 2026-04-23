@@ -4,7 +4,7 @@ const importIntoKv = async (url: string) => {
   const r = await fetch(url);
 
   if (r.ok && r.body) {
-    using kv = await Deno.openKv();
+    const kv = await Deno.openKv();
 
     const options = {
       overwrite: false,
