@@ -104,7 +104,7 @@ export const akvaplanistFromAdPersonAndPatches = async (
     if (maybeCristin.versionstamp) {
       akvaplanist.cristin = maybeCristin.value as number;
     } else {
-      console.warn("Not (found) in NVA", { id, given, family });
+      console.warn('Not found in KV ["person_rel_nva"]', { id, given, family });
     }
   }
 
