@@ -8,7 +8,6 @@ const importIntoKv = async (url: string) => {
 
     const options = {
       overwrite: false,
-      prefix: [],
       onError: (e: unknown) => console.error(e),
       onProgress: (count: number, skipped: number, errors: number) => {
         console.warn({ count, skipped, errors });
