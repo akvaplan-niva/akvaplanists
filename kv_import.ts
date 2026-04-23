@@ -8,14 +8,14 @@ const importIntoKv = async (url: string) => {
 
     const options = {
       overwrite: false,
-      onError: (e: unknown) => console.error(e),
-      onProgress: (count: number, skipped: number, errors: number) => {
-        console.warn({ count, skipped, errors });
-      },
+      // onError: (e: unknown) => console.error(e),
+      // onProgress: (count: number, skipped: number, errors: number) => {
+      //   console.warn({ count, skipped, errors });
+      // },
     };
 
     const result = await importEntries(kv, r.body, options);
-    console.warn(result);
+    //console.warn(result);
     console.assert(result.errors === 0);
   }
 };
