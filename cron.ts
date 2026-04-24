@@ -9,7 +9,7 @@ Deno.cron(
 
 Deno.cron(
   "Import akvaplanists",
-  "36 13 * * *",
+  "36 11 * * *",
   async () => {
     if (Deno.env.has("KV_IMPORT_URL")) {
       await importIntoKv(Deno.env.get("KV_IMPORT_URL")!);
