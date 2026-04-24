@@ -96,7 +96,14 @@ const handler = (req: Request) => {
   return error(400);
 };
 let kvkeys = 0;
-for await (const { key, value } of kv.list({ prefix: [] })) {
-  console.warn(++kvkeys, key);
+for await (const { key } of kv.list({ prefix: [] })) {
+  ++kvkeys;
 }
+const maybeLastKvImport = await kv.get<bigint>(["kv_import"]);
+console.warn(maybeLastKvImport);
+if (maybeLastKvImport) {
+  const inst = new Temporal.Instant(maybeLastKvImport.value);
+  console.warn(inst);
+}
+console.warn({ kvkeys });
 Deno.serve(handler);
