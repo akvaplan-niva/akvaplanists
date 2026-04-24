@@ -95,4 +95,9 @@ const handler = (req: Request) => {
   }
   return error(400);
 };
+//Debug
+let kvkeys = 0;
+for await (const { key, value } of kv.list({ prefix: [] })) {
+  console.warn(++kvkeys, key, value);
+}
 Deno.serve(handler);
