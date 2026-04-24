@@ -1,6 +1,6 @@
 const kv = await Deno.openKv();
 
-const importIntoKv = async (url: string) => {
+export const importIntoKv = async (url: string) => {
   const last = await kv.get<bigint>(["kv_import"]);
   const status = {
     insert: 0,
