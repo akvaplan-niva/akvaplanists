@@ -14,7 +14,4 @@ Params:
 
 ## Data flow
 
-The services are exposing Deno Deploy KV entries as NDJSON.
-
-Current employees are refreshed from an AD export by a cron job or manually via
-`deno task fetch`.
+Employees are refreshed via [cron](./cron.ts) or manually via `deno task fetch`.
