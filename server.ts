@@ -99,11 +99,21 @@ let kvkeys = 0;
 for await (const { key } of kv.list({ prefix: [] })) {
   ++kvkeys;
 }
-const maybeLastKvImport = await kv.get<bigint>(["kv_import"]);
-console.warn(maybeLastKvImport);
-if (maybeLastKvImport.versionstamp) {
-  const inst = new Temporal.Instant(maybeLastKvImport.value);
-  console.warn(inst);
-}
 console.warn({ kvkeys });
+
+const maybeServerStart = await kv.get<bigint>(["server_start"]);
+const maybeLastKvImport = await kv.get<bigint>(["kv_import"]);
+console.warn({ maybeServerStart, maybeLastKvImport });
+if (maybeLastKvImport.versionstamp) {
+  console.warn("Last KV import", new Temporal.Instant(maybeLastKvImport.value));
+}
+if (maybeServerStart.versionstamp) {
+  console.warn(
+    "Last server start",
+    new Temporal.Instant(maybeServerStart.value),
+  );
+}
+
+const now = Temporal.Now.instant();
+await kv.set(["server_start"], now.epochNanoseconds);
 Deno.serve(handler);
