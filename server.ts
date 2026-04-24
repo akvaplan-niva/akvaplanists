@@ -101,7 +101,7 @@ for await (const { key } of kv.list({ prefix: [] })) {
 }
 const maybeLastKvImport = await kv.get<bigint>(["kv_import"]);
 console.warn(maybeLastKvImport);
-if (maybeLastKvImport) {
+if (maybeLastKvImport.versionstamp) {
   const inst = new Temporal.Instant(maybeLastKvImport.value);
   console.warn(inst);
 }
