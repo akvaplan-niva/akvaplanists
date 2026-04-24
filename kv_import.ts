@@ -2,12 +2,19 @@ const kv = await Deno.openKv();
 
 const importIntoKv = async (url: string) => {
   const last = await kv.get<bigint>(["kv_import"]);
-  const status = { insert: 0, missing: 0, found: 0, lines: 0, last: BigInt(0) };
+  const status = {
+    insert: 0,
+    missing: 0,
+    found: 0,
+    lines: 0,
+    last: new Temporal.Instant(BigInt(0)),
+  };
   if (last.value) {
     const inst = new Temporal.Instant(last.value);
     status.last = inst;
     console.warn("Last", inst.toZonedDateTimeISO("UTC"));
   }
+
   const r = await fetch(url);
   if (r.ok && r.body) {
     const text = await r.text();
