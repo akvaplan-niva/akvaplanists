@@ -2,9 +2,10 @@ const kv = await Deno.openKv();
 
 const importIntoKv = async (url: string) => {
   const last = await kv.get<bigint>(["kv_import"]);
-  const status = { insert: 0, missing: 0, found: 0, lines: 0 };
+  const status = { insert: 0, missing: 0, found: 0, lines: 0, last: BigInt(0) };
   if (last.value) {
     const inst = new Temporal.Instant(last.value);
+    status.last = inst;
     console.warn("Last", inst.toZonedDateTimeISO("UTC"));
   }
   const r = await fetch(url);
@@ -19,7 +20,6 @@ const importIntoKv = async (url: string) => {
         ++status.found;
         //console.log("In KV", key);
       } else {
-        console.warn("Missing", { key, value });
         ++status.missing;
         const res = await kv.set(key, value);
         if (res.ok) {
@@ -27,13 +27,14 @@ const importIntoKv = async (url: string) => {
         }
       }
     }
-    console.warn(status);
+    return status;
   }
 };
 if (import.meta.main) {
   if (Deno.env.has("KV_IMPORT_URL")) {
-    await importIntoKv(Deno.env.get("KV_IMPORT_URL")!);
+    const status = await importIntoKv(Deno.env.get("KV_IMPORT_URL")!);
     const now = Temporal.Now.instant();
+    console.warn({ status, now });
     await kv.set(["kv_import"], now.epochNanoseconds);
   }
 }
