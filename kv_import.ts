@@ -34,14 +34,14 @@ export const importIntoKv = async (url: string) => {
         }
       }
     }
+    const now = Temporal.Now.instant();
+    await kv.set(["kv_import"], now.epochNanoseconds);
     return status;
   }
 };
 if (import.meta.main) {
   if (Deno.env.has("KV_IMPORT_URL")) {
     const status = await importIntoKv(Deno.env.get("KV_IMPORT_URL")!);
-    const now = Temporal.Now.instant();
-    console.warn({ status, now });
-    await kv.set(["kv_import"], now.epochNanoseconds);
+    console.warn({ status });
   }
 }

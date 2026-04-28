@@ -1,5 +1,9 @@
 import "./cron.ts";
 
+BigInt.prototype.toJSON = function () {
+  return this.toString();
+};
+
 import { getAkvaplanistFromAdCsvExport } from "./fetch.ts";
 
 import sections from "./data/sections.json" with { type: "json" };
@@ -75,6 +79,9 @@ const listSectionsHandler = async (req: Request) =>
 const listLogHandler = (req: Request) =>
   responseFromKvList(listPrefix(["log"]), req);
 
+const listEntriesHandler = (req: Request) =>
+  responseFromKvList(listPrefix([]), req);
+
 const handlers = new Map<URLPattern, RequestHandler>([
   [ptrn("/"), listEmployedAkvaplanistsHandler],
   [ptrn("/all"), listAkvaplanistsHandler],
@@ -85,6 +92,7 @@ const handlers = new Map<URLPattern, RequestHandler>([
   [ptrn("/log"), listLogHandler],
   [ptrnOpenAlexPersonId, openAlexPersonHandler],
   [ptrnNvaPersonId, nvaPersonHandler],
+  [ptrn("/dump"), listEntriesHandler],
 ]);
 
 const handler = (req: Request) => {
@@ -95,11 +103,6 @@ const handler = (req: Request) => {
   }
   return error(400);
 };
-let kvkeys = 0;
-for await (const { key } of kv.list({ prefix: [] })) {
-  ++kvkeys;
-}
-console.warn({ kvkeys });
 
 const maybeServerStart = await kv.get<bigint>(["server_start"]);
 const maybeLastKvImport = await kv.get<bigint>(["kv_import"]);
