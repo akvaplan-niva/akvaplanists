@@ -31,6 +31,7 @@ const manualPatches: [string, Partial<Akvaplanist>][] = [
   ["per", { given: "Paul E." }],
   ["hal", { cristin: 742265 }],
   ["mkr", { expired: new Date("2026-05-12T00:00:00Z") }],
+  ["che", { section: "" }],
 ];
 
 export const patches = new Map(manualPatches);
