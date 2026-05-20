@@ -43,13 +43,16 @@ export const buildAkvaplanistIdVersionstampMap = async () =>
 export const getAkvaplanistEntry = (id: string) =>
   kv.get<Akvaplanist>([person0, id]);
 
+export const saveAkvaplanist = (value: Akvaplanist | PriorAkvaplanist) =>
+  kv.set([person0, value.id], value);
+
 export const listAkvaplanists = (options?: Deno.KvListOptions) =>
   listPrefix<Akvaplanist>([person0], options);
 
 export const getAllAkvaplanists = async () =>
   (await Array.fromAsync(listAkvaplanists())).map(({ value }) => value);
 
-const toPrior = (akvaplanist: Akvaplanist) => {
+export const toPrior = (akvaplanist: Akvaplanist) => {
   const {
     id,
     family,

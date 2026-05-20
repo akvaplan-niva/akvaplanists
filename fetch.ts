@@ -8,9 +8,13 @@ import { toTransformStream } from "@std/streams";
 import { chunkArray, ndjson } from "./cli_helpers.ts";
 import {
   buildAkvaplanistIdVersionstampMap,
+  getAkvaplanistEntry,
   getAll,
   getAllAkvaplanists,
+  kv,
+  saveAkvaplanist,
   setAkvaplanists,
+  toPrior,
 } from "./kv.ts";
 export const fetchAkvaplanists = async (
   { etag = "", method = "GET" }: { etag?: string; method?: "GET" | "HEAD" },
@@ -86,6 +90,19 @@ export const fetchAndIngestAkvaplanists = async () => {
   const missing = currentIds.difference(received);
   const added = received.difference(currentIds);
   console.warn({ before: currentIds.size, now: received.size, missing, added });
+
+  if (missing.size > 0) {
+    for (const missingId of missing) {
+      const { value } = await getAkvaplanistEntry(missingId);
+      if (value) {
+        const expired = new Date();
+        value.expired = expired;
+        const prior = toPrior(value);
+        console.warn(`Missing in CSV, set as expired`, prior);
+        await saveAkvaplanist(prior);
+      }
+    }
+  }
 };
 
 if (import.meta.main) {
