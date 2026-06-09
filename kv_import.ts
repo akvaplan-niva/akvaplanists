@@ -34,8 +34,8 @@ export const importIntoKv = async (url: string) => {
         }
       }
     }
-    const now = Temporal.Now.instant();
-    await kv.set(["kv_import"], now.epochNanoseconds);
+    // const now = Temporal.Now.instant();
+    // await kv.set(["kv_import"], now.epochNanoseconds);
     return status;
   }
 };

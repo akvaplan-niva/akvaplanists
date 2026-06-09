@@ -104,19 +104,19 @@ const handler = (req: Request) => {
   return error(400);
 };
 
-const maybeServerStart = await kv.get<bigint>(["server_start"]);
-const maybeLastKvImport = await kv.get<bigint>(["kv_import"]);
-console.warn({ maybeServerStart, maybeLastKvImport });
-if (maybeLastKvImport.versionstamp) {
-  console.warn("Last KV import", new Temporal.Instant(maybeLastKvImport.value));
-}
-if (maybeServerStart.versionstamp) {
-  console.warn(
-    "Last server start",
-    new Temporal.Instant(maybeServerStart.value),
-  );
-}
+// const maybeServerStart = await kv.get<bigint>(["server_start"]);
+// const maybeLastKvImport = await kv.get<bigint>(["kv_import"]);
+// console.warn({ maybeServerStart, maybeLastKvImport });
+// if (maybeLastKvImport.versionstamp) {
+//   console.warn("Last KV import", new Temporal.Instant(maybeLastKvImport.value));
+// }
+// if (maybeServerStart.versionstamp) {
+//   console.warn(
+//     "Last server start",
+//     new Temporal.Instant(maybeServerStart.value),
+//   );
+// }
 
-const now = Temporal.Now.instant();
-await kv.set(["server_start"], now.epochNanoseconds);
+// const now = Temporal.Now.instant();
+// await kv.set(["server_start"], now.epochNanoseconds);
 Deno.serve(handler);
